@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "testimonials": "Testimonials",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Book Your Session"
+  },
+  "hero": {
+    "badge": "🚀 The new standard in enterprise AI — Because your success deserves excellence",
+    "title": "Turn your vision into reality with strategic artificial intelligence",
+    "subtitle": "At KENSA AI, we don't just deliver AI solutions. We shape the future of your business. From strategy to full implementation, our global team of experts drives exponential growth — with visible ROI in under 6 months.",
+    "trustedBy": "Trusted by 500+ clients worldwide",
+    "aiAssistant": "KENSA AI Assistant",
+    "online": "Online",
+    "chatQuestion": "I need help implementing AI for my e-commerce business. Can you help me find the right experts?",
+    "chatResponse": "Absolutely! I can connect you with specialized AI experts for e-commerce. Let me find the best matches for your specific needs. What's your primary focus - customer personalization, inventory optimization, or chatbot integration?",
+    "chatFollowUp": "Customer personalization and recommendation engines",
+    "chatFinalResponse": "Perfect! I've found 3 AI experts who specialize in e-commerce personalization. Here are their profiles with 98% client satisfaction rates...",
+    "chatPlaceholder": "Type your message...",
+    "features": {
+      "roi": "Guaranteed ROI in under 6 months",
+      "support": "24/7 support, 365 days a year",
+      "experts": "Certified experts in 25+ countries"
+    },
+    "cta": {
+      "primary": "🚀 Transform my business",
+      "secondary": "Watch Demo"
+    }
+  },
+  "trusted": {
+    "title": "Trusted by industry leaders"
+  },
+  "whyChoose": {
+    "title": "Why Choose KENSA AI?",
+    "subtitle": "Because we push boundaries — delivering real results, bulletproof security, and tailor-made strategies.",
+    "features": {
+      "roi": "Guaranteed ROI in under 6 months",
+      "support": "24/7 support, 365 days a year",
+      "experts": "Certified experts in 25+ countries",
+      "security": "GDPR-compliant with enterprise-grade security"
+    }
+  },
+  "process": {
+    "title": "How It Works",
+    "subtitle": "From consultation to transformation in 4 simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Strategic Consultation",
+        "description": "We analyze your business needs and identify AI opportunities."
+      },
+      {
+        "number": "02",
+        "title": "Custom Development",
+        "description": "Our experts build tailored AI solutions for your specific use case."
+      },
+      {
+        "number": "03",
+        "title": "Seamless Integration",
+        "description": "We integrate AI solutions into your existing workflow."
+      },
+      {
+        "number": "04",
+        "title": "Ongoing Support",
+        "description": "24/7 monitoring and optimization to ensure peak performance."
+      }
+    ]
+  },
+  "services": {
+    "badge": "Our Solutions",
+    "title": "Unleashing AI Power — Made Simple for Your Success",
+    "subtitle": "We turn tech complexity into actionable innovation. Whether you're a fast-growing startup or a Fortune 500 enterprise, our customized AI solutions integrate seamlessly with your operations.",
+    "coreTitle": "Our Core Services",
+    "getStarted": "Get Started",
+    "joinExperts": "Join as an AI Expert",
+    "companies": {
+      "title": "For Businesses",
+      "description": "Custom AI solutions designed to transform your business operations and drive measurable growth.",
+      "benefit1": "Strategic AI consultation and roadmap development",
+      "benefit2": "Custom algorithm development and integration",
+      "benefit3": "24/7 support and performance optimization"
+    },
+    "experts": {
+      "title": "For AI Experts",
+      "description": "Join our global network of AI specialists and work on cutting-edge projects with leading companies.",
+      "benefit1": "Access to high-value AI consulting projects",
+      "benefit2": "Global client network and collaboration opportunities",
+      "benefit3": "Continuous learning and certification programs"
+    },
+    "items": {
+      "audit": {
+        "title": "🔍 Tech Audit & Strategic Roadmap",
+        "description": "Clear, goal-aligned strategies tailored to your business vision."
+      },
+      "integration": {
+        "title": "🧠 AI Integration & Algorithm Development",
+        "description": "Custom-built solutions designed for your industry."
+      },
+      "automation": {
+        "title": "⚙️ Smart Automation & API Deployment",
+        "description": "Boost productivity, cut costs, and scale faster."
+      },
+      "training": {
+        "title": "📚 Training & Enablement",
+        "description": "Empower your teams with the skills to lead in the AI era."
+      }
+    }
+  },
+  "industries": {
+    "title": "Our Expertise Across Sectors",
+    "items": {
+      "manufacturing": {
+        "title": "Manufacturing & Industry",
+        "description": "Production optimization"
+      },
+      "smartCities": {
+        "title": "Smart Cities",
+        "description": "Smart urban innovations"
+      },
+      "retail": {
+        "title": "Retail & E-Commerce",
+        "description": "Hyper-personalized customer experience"
+      },
+      "finance": {
+        "title": "Finance & Insurance",
+        "description": "Risk automation & fraud detection"
+      },
+      "digital": {
+        "title": "Digital Transformation",
+        "description": "Legacy systems modernization"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Trusted by 500+ Clients Worldwide",
+    "subtitle": "Real results that speak for themselves",
+    "items": [
+      {
+        "quote": "In just 6 months, KENSA AI automated 40% of our processes and doubled our efficiency.",
+        "author": "Marie Dubois",
+        "title": "Innovation Director",
+        "company": "TechCorp France"
+      },
+      {
+        "quote": "Their conversational AI transformed our customer service — satisfaction increased by 35%.",
+        "author": "Jean-Pierre Martin",
+        "title": "CEO",
+        "company": "RetailMax"
+      },
+      {
+        "quote": "We're saving €2M a year with their fraud detection system.",
+        "author": "Sophie Chen",
+        "title": "CTO",
+        "company": "FinanceSecure"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Platform Statistics",
+    "subtitle": "Growing ecosystem of AI experts and businesses finding their perfect match",
+    "companies": "500+ companies served",
+    "satisfaction": "98% client satisfaction",
+    "countries": "25 countries impacted",
+    "companiesServed": {
+      "label": "Companies Served"
+    },
+    "countriesImpacted": {
+      "label": "Countries Impacted"
+    },
+    "successfulMatches": "Successful Projects",
+    "clientSatisfaction": {
+      "label": "Client Satisfaction"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Our promise: Clear answers. Global expertise. Tangible transformation.",
+    "items": [
+      {
+        "question": "How long does it take to see results?",
+        "answer": "Our clients typically see initial results within 4-6 weeks of implementation start. Significant results appear within 3-6 months depending on project complexity."
+      },
+      {
+        "question": "How secure are your solutions?",
+        "answer": "We adhere to the highest security standards (ISO 27001, GDPR). All data is encrypted and we sign strict confidentiality agreements with all our clients."
+      },
+      {
+        "question": "Do you work with small and mid-sized businesses?",
+        "answer": "We work with companies of all sizes, from startups to multinationals. Our solutions are tailored to the specific needs and budgets of each client."
+      },
+      {
+        "question": "Do you offer training programs?",
+        "answer": "Absolutely! Training is an integral part of our approach. We offer customized training so your teams can get the most out of the implemented AI solutions."
+      }
+    ]
+  },
+  "about": {
+    "title": "Join the Innovation Elite",
+    "subtitle": "📍 Born in Toronto, built for global impact",
+    "description": "With 5+ years of AI excellence, 50+ certified experts, and one mission: To turn your business into a market leader.",
+    "cta": "Meet the Team",
+    "commitment": "Our Commitment: Excellence | Collaboration | Innovation"
+  },
+  "demo": {
+    "title": "Unlock Your Future with a Powerful AI Strategy",
+    "subtitle": "See how our AI solutions are driving real transformation for companies like yours.",
+    "videoTitle": "▶️ 5-Minute Interactive Walkthrough",
+    "videoDescription": "Discover how top businesses are scaling faster with strategic AI.",
+    "cta": "Explore Demo"
+  },
+  "finalCta": {
+    "title": "Ready to Take the Lead?",
+    "subtitle": "Book your free 30-minute strategic consultation. Let's assess your AI potential and show you how we can help you thrive.",
+    "primary": "Book Your Session",
+    "secondary": "Download our AI guide"
+  },
+  "footer": {
+    "description": "Where global strategy meets AI excellence.",
+    "location": "🌍 Global impact, proudly based in Toronto",
+    "contact": {
+      "email": "contact@kensaai.com",
+      "phone": "+1 (437) 873-47 82",
+      "location": "Global impact, proudly based in Toronto",
+      "hours": "Mon–Fri | 9AM–6PM EST"
+    },
+    "copyright": "© 2025 KENSA AI. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Legal Notice"
+    }
+  }
+}
