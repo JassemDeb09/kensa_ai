@@ -91,19 +91,19 @@
     },
     "items": {
       "audit": {
-        "title": "🔍 Tech Audit & Strategic Roadmap",
+        "title": "Tech Audit & Strategic Roadmap",
         "description": "Clear, goal-aligned strategies tailored to your business vision."
       },
       "integration": {
-        "title": "🧠 AI Integration & Algorithm Development",
+        "title": "AI Integration & Algorithm Development",
         "description": "Custom-built solutions designed for your industry."
       },
       "automation": {
-        "title": "⚙️ Smart Automation & API Deployment",
+        "title": "Smart Automation & API Deployment",
         "description": "Boost productivity, cut costs, and scale faster."
       },
       "training": {
-        "title": "📚 Training & Enablement",
+        "title": "Training & Enablement",
         "description": "Empower your teams with the skills to lead in the AI era."
       }
     }
