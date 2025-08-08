@@ -45,12 +45,12 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
                    <div className="relative">
                      <div className="relative">
                        {/* Main Logo */}
-                       <div className="w-15 h-15 relative group-hover:scale-105 transition-all duration-300">
+                       <div className="w-20 h-20 relative group-hover:scale-105 transition-all duration-300">
                          <Image
                            src="/logo.png"
                            alt="KENSA AI"
-                           width={60}
-                           height={60}
+                           width={80}
+                           height={80}
                            className="w-full h-full object-contain dark:brightness-0 dark:invert"
                          />
                          {/* Light/Dark Mode Glow Effect */}

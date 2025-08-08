@@ -120,8 +120,8 @@ export function StatsSection() {
         </div>
         
         {/* Bottom Section */}
-        <div className="text-center mt-24 pt-16 border-t border-gray-200/50 dark:border-gray-700/50">
-          <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="text-center mt-12 pt-6 border-t border-gray-200/50 dark:border-gray-700/50">
+          <div className="flex items-center justify-center gap-3">
             <Cpu className="w-5 h-5 text-[#1e90e8]" />
             <span className="text-[16px] text-gray-600 dark:text-gray-400 font-light">
               Powering AI innovation since 2019

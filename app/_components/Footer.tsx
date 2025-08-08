@@ -44,7 +44,7 @@ export function Footer() {
                     alt="KENSA AI"
                     width={80}
                     height={80}
-                    className="w-full h-full object-contain dark:brightness-0 dark:invert"
+                    className="w-full h-full object-contain brightness-0 invert"
                   />
                   {/* AI Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1e90e8]/20 to-[#3d50e3]/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
