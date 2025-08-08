@@ -2,10 +2,11 @@
   "nav": {
     "services": "Services",
     "process": "Process",
+    "expertise": "Expertise",
     "testimonials": "Testimonials",
     "about": "About",
     "contact": "Contact",
-    "getStarted": "Book Your Session"
+    "getStarted": "Book Consultation"
   },
   "hero": {
     "badge": "🚀 The new standard in enterprise AI — Because your success deserves excellence",

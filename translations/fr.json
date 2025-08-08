@@ -2,10 +2,11 @@
   "nav": {
     "services": "Services",
     "process": "Processus",
+    "expertise": "Expertise",
     "testimonials": "Témoignages",
     "about": "À propos",
     "contact": "Contact",
-    "getStarted": "Réservez votre session"
+    "getStarted": "Réserver une consultation"
   },
   "hero": {
     "badge": "🚀 La nouvelle référence en IA d'entreprise — Parce que votre succès mérite l'excellence",

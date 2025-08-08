@@ -1,140 +1,144 @@
 "use client"
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { Brain, Cpu, Settings, GraduationCap, ArrowUpRight, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card"
-import { CheckCircle, Users } from "lucide-react"
-import AnimatedSection from "@/components/animated-section"
-import AnimatedCard from "@/components/animated-card"
-import AnimatedButton from "@/components/animated-button"
 
 export function ServicesSection() {
   const { t } = useLanguage()
 
+  const services = [
+    {
+      icon: Brain,
+      title: t("services.items.audit.title") || "AI Strategy & Consulting",
+      description: t("services.items.audit.description") || "Comprehensive AI readiness assessment and strategic roadmap development tailored to your business objectives.",
+      features: ["AI opportunity analysis", "Technology assessment", "Strategic roadmap", "ROI modeling"],
+      color: "#1e90e8"
+    },
+    {
+      icon: Cpu,
+      title: t("services.items.integration.title") || "Custom AI Development",
+      description: t("services.items.integration.description") || "Bespoke AI solutions built from the ground up to solve your unique business challenges.",
+      features: ["Machine learning models", "Deep learning systems", "Computer vision", "Natural language processing"],
+      color: "#3d50e3"
+    },
+    {
+      icon: Settings,
+      title: t("services.items.automation.title") || "AI Integration & Deployment",
+      description: t("services.items.automation.description") || "Seamless integration of AI solutions into your existing infrastructure with minimal disruption.",
+      features: ["System integration", "Cloud deployment", "API development", "Performance optimization"],
+      color: "#1e90e8"
+    },
+    {
+      icon: GraduationCap,
+      title: t("services.items.training.title") || "AI Training & Support",
+      description: t("services.items.training.description") || "Comprehensive training programs and ongoing support to maximize your AI investment.",
+      features: ["Team training", "Change management", "Best practices", "24/7 support"],
+      color: "#3d50e3"
+    }
+  ]
+
   return (
-    <section id="services" className="py-20 md:py-28 bg-gradient-to-r from-[#f1f4f9] via-[#f1f4f9] to-[#f1f4f9] dark:from-[#121212]/95 dark:via-[#121212]/95 dark:to-[#121212]/95 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.05] dark:opacity-[0.03]"></div>
+    <section id="services" className="relative py-32 bg-white dark:bg-gray-900 overflow-hidden">
+      {/* AI Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,232,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.01)_1px,transparent_1px)] bg-[size:64px_64px] dark:bg-[linear-gradient(rgba(30,144,232,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.02)_1px,transparent_1px)]"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-[10%] w-64 h-64 rounded-full bg-[#3A86FF]/5 blur-3xl animate-float-slow"></div>
-        <div className="absolute bottom-40 left-[5%] w-96 h-96 rounded-full bg-[#9B5DE5]/5 blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
-        
-        {/* Subtle geometric shapes */}
-        <div className="absolute top-[30%] left-[15%] w-16 h-16 border border-[#3A86FF]/20 rounded-md rotate-45 animate-spin-slow"></div>
-        <div className="absolute bottom-[25%] right-[20%] w-24 h-24 border border-[#9B5DE5]/20 rounded-full animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute top-[60%] right-[30%] w-12 h-12 border-2 border-[#3A86FF]/10 rounded-full animate-ping" style={{ animationDuration: '10s' }}></div>
-      </div>
+      {/* AI Gradient Overlays */}
+      <div className="absolute top-40 left-32 w-80 h-80 bg-gradient-to-r from-[#1e90e8]/5 to-[#3d50e3]/5 rounded-full blur-3xl dark:from-[#1e90e8]/10 dark:to-[#3d50e3]/10"></div>
+      <div className="absolute bottom-40 right-32 w-96 h-96 bg-gradient-to-r from-[#3d50e3]/5 to-[#1e90e8]/5 rounded-full blur-3xl dark:from-[#3d50e3]/10 dark:to-[#1e90e8]/10"></div>
       
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <AnimatedSection type="fade" className="text-center mb-16">
-          <div className="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-800 px-4 py-1.5 mb-6 text-sm font-medium text-[#121212] dark:text-[#F5F5F5] bg-white dark:bg-gray-900 shadow-sm">
-            <Users className="h-4 w-4 text-[#3A86FF] mr-2" />
-            <span className="text-[#3A86FF] font-medium">{t("services.badge") || "Our Solutions"}</span>
+      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[#1e90e8]/10 to-[#3d50e3]/10 border border-[#1e90e8]/20 backdrop-blur-sm mb-8">
+            <Zap className="w-4 h-4 text-[#1e90e8]" />
+            <span className="text-[#1e90e8] font-medium text-[14px]">
+              {t("services.badge") || "AI Solutions Portfolio"}
+            </span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl mx-auto text-gray-900 dark:text-white text-center">
-            {t("services.title")}
+          <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
+            End-to-end <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI transformation</span>
           </h2>
-          <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-lg text-center">
-            {t("services.subtitle")}
+          <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-[1.5]">
+            {t("services.subtitle") || "From strategic planning to deployment and support, we deliver comprehensive AI solutions that drive measurable business outcomes."}
           </p>
-        </AnimatedSection>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="group relative">
+              {/* AI Glow Effect */}
+              <div className={`absolute -inset-1 bg-gradient-to-r ${
+                service.color === "#1e90e8" ? "from-[#1e90e8]/20 to-[#3d50e3]/20" : "from-[#3d50e3]/20 to-[#1e90e8]/20"
+              } rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+              
+              {/* Card */}
+              <div className="relative bg-white dark:bg-gray-800 border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-12 h-full transition-all duration-500 hover:border-[#1e90e8]/30 dark:hover:border-[#1e90e8]/30 hover:shadow-[0_24px_64px_rgba(30,144,232,0.08)]">
+                {/* Icon */}
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-8 transition-all duration-300 ${
+                  service.color === "#1e90e8" 
+                    ? "bg-[#1e90e8]/10 group-hover:bg-[#1e90e8]/20 dark:bg-[#1e90e8]/20 dark:group-hover:bg-[#1e90e8]/30" 
+                    : "bg-[#3d50e3]/10 group-hover:bg-[#3d50e3]/20 dark:bg-[#3d50e3]/20 dark:group-hover:bg-[#3d50e3]/30"
+                }`}>
+                  <service.icon className={`w-8 h-8 ${
+                    service.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
+                  }`} />
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-[24px] font-medium text-gray-900 dark:text-white mb-4 leading-tight group-hover:text-[#1e90e8] dark:group-hover:text-[#1e90e8] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-[16px] text-gray-600 dark:text-gray-300 leading-[1.5] mb-8">
+                  {service.description}
+                </p>
+                
+                {/* Features */}
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3 text-[14px] text-gray-600 dark:text-gray-400">
+                      <div className={`w-1.5 h-1.5 rounded-full ${
+                        service.color === "#1e90e8" ? "bg-[#1e90e8]" : "bg-[#3d50e3]"
+                      }`}></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Learn More Link */}
+                <div className={`flex items-center gap-2 text-[14px] font-medium group-hover:gap-3 transition-all duration-300 cursor-pointer ${
+                  service.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
+                }`}>
+                  <span>Explore solution</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </div>
+                
+                {/* Decorative Number */}
+                <div className={`absolute top-8 right-8 text-[96px] font-light leading-none select-none opacity-10 ${
+                  service.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
+                }`}>
+                  {(index + 1).toString().padStart(2, '0')}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         
-        <AnimatedSection delay={400} className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            {t("services.coreTitle")}
-          </h3>
-        </AnimatedSection>
-        
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <AnimatedSection type="slide" direction="up" delay={200}>
-            <AnimatedCard 
-              hoverEffect="lift" 
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 text-center h-full relative group transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#3A86FF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3A86FF]/10 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#3A86FF]">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {t("services.items.audit.title")}
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {t("services.items.audit.description")}
-              </p>
-            </AnimatedCard>
-          </AnimatedSection>
-          
-          <AnimatedSection type="slide" direction="up" delay={300}>
-            <AnimatedCard 
-              hoverEffect="lift" 
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 text-center h-full relative group transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#9B5DE5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#9B5DE5]/10 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#9B5DE5]">
-                  <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {t("services.items.integration.title")}
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {t("services.items.integration.description")}
-              </p>
-            </AnimatedCard>
-          </AnimatedSection>
-          
-          <AnimatedSection type="slide" direction="up" delay={400}>
-            <AnimatedCard 
-              hoverEffect="lift" 
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 text-center h-full relative group transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#3A86FF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3A86FF]/10 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#3A86FF]">
-                  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {t("services.items.automation.title")}
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {t("services.items.automation.description")}
-              </p>
-            </AnimatedCard>
-          </AnimatedSection>
-          
-          <AnimatedSection type="slide" direction="up" delay={500}>
-            <AnimatedCard 
-              hoverEffect="lift" 
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 text-center h-full relative group transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#9B5DE5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#9B5DE5]/10 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#9B5DE5]">
-                  <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {t("services.items.training.title")}
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {t("services.items.training.description")}
-              </p>
-            </AnimatedCard>
-          </AnimatedSection>
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="inline-flex flex-col sm:flex-row gap-4">
+            <Button className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25">
+              <span className="flex items-center gap-3">
+                <Brain className="w-5 h-5" />
+                Start AI Transformation
+                <ArrowUpRight className="w-5 h-5" />
+              </span>
+            </Button>
+            <Button variant="outline" className="border-[#1e90e8]/30 text-[#1e90e8] hover:bg-[#1e90e8]/5 dark:border-[#1e90e8]/50 dark:text-[#1e90e8] font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300">
+              View AI Case Studies
+            </Button>
+          </div>
         </div>
       </div>
     </section>

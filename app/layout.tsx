@@ -1,9 +1,15 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import { Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import './globals.css'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'KENSA AI - Strategic Artificial Intelligence',
@@ -17,16 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>
+      <body className={`${poppins.variable} font-poppins`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

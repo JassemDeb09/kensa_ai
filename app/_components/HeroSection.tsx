@@ -1,15 +1,9 @@
 "use client"
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { ArrowRight, Play, Star, Brain, Sparkles, Zap, Bot } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import AnimatedSection from "@/components/animated-section"
-import AnimatedGradientText from "@/components/animated-gradient-text"
-import AnimatedBackground from "@/components/animated-background"
-import AnimatedButton from "@/components/animated-button"
-import AIChatPreview from "@/components/ai-chat-preview"
-import Image from "next/image"
+import { useState, useEffect } from "react"
 
 interface HeroSectionProps {
   onSectionClick: (sectionId: string) => void
@@ -17,134 +11,116 @@ interface HeroSectionProps {
 
 export function HeroSection({ onSectionClick }: HeroSectionProps) {
   const { t } = useLanguage()
+
+
   
   return (
-    <AnimatedBackground 
-      className="relative pt-32 pb-24 min-h-[70vh] overflow-hidden bg-gradient-to-br from-[#3A86FF]/10 via-[#3A86FF]/15 to-[#9B5DE5]/20 dark:from-[#121212]/95 dark:via-[#121212]/90 dark:to-[#121212]/95"
-      dotSize={4}
-      dotCount={60}
-      speed={0.7}
-      dotColor="rgba(155, 93, 229, 0.25)"
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-          <AnimatedSection type="slide" direction="right" duration={800}>
-            <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border border-[#3A86FF]/30 bg-[#3A86FF]/5 px-3 py-1 text-sm font-medium text-[#3A86FF] backdrop-blur-sm dark:border-[#3A86FF]/20 dark:bg-[#3A86FF]/10 dark:text-[#3A86FF]/90">
-                <span className="mr-1 h-2 w-2 rounded-full bg-[#3A86FF]"></span>
-                {t("hero.badge") || "Strategic AI Solutions"}
-              </div>
-              <AnimatedGradientText
-                text={t("hero.title")}
-                className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
-                gradientColors={["#3A86FF", "#9B5DE5", "#3A86FF"]}
-                duration={5000}
-              />
-              <AnimatedSection delay={300} duration={800}>
-                <p className="max-w-[600px] text-muted-foreground text-lg md:text-xl leading-relaxed">{t("hero.subtitle")}</p>
-              </AnimatedSection>
-              <AnimatedSection delay={600} duration={800}>
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                  <AnimatedButton
-                    size="lg"
-                    className="bg-gradient-to-r from-[#3A86FF] to-[#9B5DE5] hover:from-[#3A86FF]/90 hover:to-[#9B5DE5]/90 text-[#F5F5F5] shadow-lg rounded-full px-8"
-                    hoverEffect="glow"
-                    clickEffect="ripple"
-                    onClick={() => onSectionClick('services')}
-                  >
-                    <span className="flex items-center gap-2">
-                      {t("hero.cta.primary")} <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </AnimatedButton>
-                  <AnimatedButton 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-[#9B5DE5]/50 text-[#9B5DE5] hover:bg-[#9B5DE5]/5 rounded-full px-8"
-                    hoverEffect="scale" 
-                    clickEffect="bounce"
-                    onClick={() => onSectionClick('demo')}
-                  >
-                    <span>{t("hero.cta.secondary")}</span>
-                  </AnimatedButton>
-                </div>
-              </AnimatedSection>
-              <AnimatedSection delay={800} duration={800}>
-                <div className="flex items-center gap-4 mt-8 text-sm text-muted-foreground">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="h-8 w-8 rounded-full border-2 border-background overflow-hidden">
-                        <Image
-                          src={`/${i}.png`}
-                          alt={`User ${i}`}
-                          width={32}
-                          height={32}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <span>{t("hero.trustedBy")}</span>
-                </div>
-              </AnimatedSection>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection type="fade" delay={400} duration={1000} className="relative z-10">
-            <div className="relative group perspective-1000">
-              {/* Animated floating elements */}
-              <div className="absolute -top-8 -left-8 h-16 w-16 rounded-full bg-[#3A86FF]/20 blur-xl animate-float-slow"></div>
-              <div className="absolute -bottom-8 -right-8 h-16 w-16 rounded-full bg-[#9B5DE5]/20 blur-xl animate-float-slow" style={{ animationDelay: '1.5s' }}></div>
-              <div className="absolute top-1/4 -right-6 h-12 w-12 rounded-full bg-[#3A86FF]/15 blur-lg animate-float" style={{ animationDelay: '0.7s' }}></div>
-              <div className="absolute bottom-1/4 -left-6 h-12 w-12 rounded-full bg-[#9B5DE5]/15 blur-lg animate-float" style={{ animationDelay: '2.1s' }}></div>
-              
-              {/* Glowing border effect */}
-              <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#3A86FF] to-[#9B5DE5] opacity-30 blur-xl animate-pulse-slow"></div>
-              
-              {/* Main chat container with 3D hover effect */}
-              <div className="relative overflow-hidden rounded-2xl border border-[#3A86FF]/20 bg-background/90 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:shadow-[0_0_25px_rgba(58,134,255,0.3)] transform group-hover:rotate-y-3 group-hover:rotate-x-2">
-                {/* Background patterns */}
-                <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#3A86FF]/5 via-transparent to-[#9B5DE5]/5"></div>
-                
-                {/* Chat header with glowing effect */}
-                <div className="relative p-3 border-b border-[#3A86FF]/10 bg-gradient-to-r from-[#3A86FF]/5 to-[#9B5DE5]/5 flex items-center">
-                  <div className="h-3 w-3 rounded-full bg-[#FF5F56] mr-2"></div>
-                  <div className="h-3 w-3 rounded-full bg-[#FFBD2E] mr-2"></div>
-                  <div className="h-3 w-3 rounded-full bg-[#27C93F] mr-3"></div>
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300">{t("hero.aiAssistant") || "KENSA AI Assistant"}</div>
-                  <div className="ml-auto flex items-center space-x-1">
-                    <div className="h-2 w-2 rounded-full bg-[#3A86FF] animate-pulse"></div>
-                    <span className="text-xs text-[#3A86FF] font-medium">{t("hero.online") || "Online"}</span>
-                  </div>
-                </div>
-                
-                {/* Chat content */}
-                <div className="p-1 rounded-xl overflow-hidden">
-                  <div className="w-full h-[420px]">
-                    <AIChatPreview 
-                      className="w-full h-full" 
-                      primaryColor="#3A86FF"
-                      secondaryColor="#9B5DE5"
-                      companyName="KENSA AI"
-                      userName="Client"
-                      animate={true}
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Animated glow effects */}
-              <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-[#3A86FF]/20 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute -top-6 -left-6 h-32 w-32 rounded-full bg-[#9B5DE5]/20 blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-              
-              {/* Particle effects */}
-              <div className="absolute top-0 left-1/4 w-1 h-1 rounded-full bg-[#3A86FF] animate-float-particle"></div>
-              <div className="absolute top-1/3 right-1/4 w-1 h-1 rounded-full bg-[#9B5DE5] animate-float-particle" style={{ animationDelay: '0.5s' }}></div>
-              <div className="absolute bottom-1/4 left-1/3 w-1 h-1 rounded-full bg-[#3A86FF] animate-float-particle" style={{ animationDelay: '1.2s' }}></div>
-              <div className="absolute bottom-0 right-1/3 w-1 h-1 rounded-full bg-[#9B5DE5] animate-float-particle" style={{ animationDelay: '1.7s' }}></div>
-            </div>
-          </AnimatedSection>
-        </div>
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+        </video>
+        
+        {/* Video Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+        
+        {/* Brand Color Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1e90e8]/20 via-transparent to-[#3d50e3]/20"></div>
       </div>
-    </AnimatedBackground>
+      
+      {/* Additional AI Gradient Overlays for depth */}
+      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-gradient-to-br from-[#1e90e8]/10 to-transparent rounded-full blur-3xl z-10"></div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-[#3d50e3]/10 to-transparent rounded-full blur-3xl z-10"></div>
+      
+      {/* Floating AI Elements */}
+      <div className="absolute top-20 right-20 w-32 h-32 border border-white/30 rounded-3xl rotate-45 animate-spin opacity-50 z-20" style={{ animationDuration: '20s' }}></div>
+      <div className="absolute bottom-32 left-32 w-24 h-24 border border-white/30 rounded-full animate-pulse opacity-60 z-20" style={{ animationDuration: '3s' }}></div>
+      
+      <div className="relative max-w-[1200px] mx-auto px-8 lg:px-12 pt-40 pb-24 z-20">
+        <div className="flex flex-col items-center text-center space-y-12">
+            {/* AI Status Badge */}
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+              <div className="w-2 h-2 bg-[#1e90e8] rounded-full animate-pulse"></div>
+              <span className="text-white font-medium text-[14px]">
+                {t("hero.badge") || "AI-Powered Solutions"}
+              </span>
+            </div>
+            
+          {/* Main Headline */}
+          <div className="space-y-6">
+            <h1 className="text-[56px] lg:text-[72px] xl:text-[84px] font-light tracking-[-0.02em] leading-[0.9] text-white">
+              <span className="block">The future of</span>
+              <span className="block font-medium bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent">
+                artificial intelligence
+              </span>
+              <span className="block text-white/80">
+                is here
+              </span>
+            </h1>
+            
+            {/* AI Accent Line */}
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-16 h-px bg-gradient-to-r from-[#1e90e8] to-[#3d50e3]"></div>
+              <Sparkles className="w-5 h-5 text-white" />
+              <div className="w-16 h-px bg-gradient-to-r from-[#3d50e3] to-[#1e90e8]"></div>
+            </div>
+          </div>
+            
+          {/* Subtitle */}
+          <p className="text-[20px] lg:text-[24px] text-white/90 leading-[1.4] max-w-[800px] font-light">
+            {t("hero.subtitle") || "Transform your business with cutting-edge AI solutions designed for the modern enterprise. Built for scale, security, and intelligent automation."}
+          </p>
+          
+          {/* CTA Section */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
+              <Button
+                onClick={() => onSectionClick('services')}
+                className="group bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25"
+              >
+                <span className="flex items-center gap-3">
+                  <Brain className="w-5 h-5" />
+                  {t("hero.cta.primary") || "Start AI Transformation"}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
+              
+              <Button
+                variant="outline"
+                onClick={() => onSectionClick('demo')}
+                className="group border-white/50 bg-white/10 text-white hover:bg-white/20 hover:border-white/70 backdrop-blur-md font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 shadow-lg"
+              >
+                <span className="flex items-center gap-3">
+                  <Play className="w-4 h-4" />
+                  Watch AI Demo
+                </span>
+            </Button>
+          </div>
+          
+          {/* AI Social Proof */}
+          <div className="flex items-center justify-center gap-8 pt-12">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-[#1e90e8] fill-current" />
+                ))}
+              </div>
+              <span className="text-white/80 text-[14px] font-medium ml-2">
+                4.9/5 from 500+ AI implementations
+              </span>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </section>
   )
 }

@@ -1,113 +1,132 @@
 "use client"
 
 import { useLanguage } from '@/contexts/LanguageContext'
-import { Building2, UserPlus, Handshake, BarChart3 } from "lucide-react"
-import AnimatedSection from "@/components/animated-section"
+import { Building2, UserPlus, BarChart3, TrendingUp, Brain, Cpu } from "lucide-react"
 import AnimatedCounter from "@/components/animated-counter"
 
 export function StatsSection() {
   const { t } = useLanguage()
 
+  const stats = [
+    {
+      icon: Building2,
+      number: 500,
+      suffix: "+",
+      label: t("stats.companiesServed.label") || "AI Deployments",
+      description: "Enterprise AI solutions successfully implemented worldwide",
+      color: "#1e90e8"
+    },
+    {
+      icon: BarChart3,
+      number: 98,
+      suffix: "%",
+      label: t("stats.clientSatisfaction.label") || "Success Rate",
+      description: "AI projects delivered on time with measurable ROI",
+      color: "#3d50e3"
+    },
+    {
+      icon: Brain,
+      number: 25,
+      suffix: "+",
+      label: t("stats.countriesImpacted.label") || "AI Models",
+      description: "Custom machine learning models trained and deployed",
+      color: "#1e90e8"
+    }
+  ]
+
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-br from-[#f1f4f9] to-[#f8f9fa] dark:from-[#121212]/95 dark:to-[#121212]/90 backdrop-blur-sm border-y border-gray-200 dark:border-[#3A86FF]/20 relative overflow-hidden">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0 bg-[url('/subtle-dots.png')] opacity-[0.02] dark:opacity-[0.05]"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-[#3A86FF]/5 pointer-events-none"></div>
+    <section className="relative py-32 overflow-hidden">
+      {/* AI Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,232,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.01)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(rgba(30,144,232,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.02)_1px,transparent_1px)]"></div>
       
-      {/* Animated glowing orbs */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#3A86FF]/5 blur-3xl animate-pulse" style={{ animationDuration: '10s' }}></div>
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#9B5DE5]/5 blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '1s' }}></div>
+      {/* AI Gradient Overlays */}
+      <div className="absolute top-32 left-20 w-72 h-72 bg-gradient-to-r from-[#1e90e8]/5 to-[#3d50e3]/5 rounded-full blur-3xl dark:from-[#1e90e8]/10 dark:to-[#3d50e3]/10"></div>
+      <div className="absolute bottom-32 right-20 w-96 h-96 bg-gradient-to-r from-[#3d50e3]/5 to-[#1e90e8]/5 rounded-full blur-3xl dark:from-[#3d50e3]/10 dark:to-[#1e90e8]/10"></div>
       
-      {/* Subtle geometric shapes */}
-      <div className="absolute top-[20%] right-[15%] w-32 h-32 border border-[#3A86FF]/10 rounded-full animate-spin-slow opacity-30"></div>
-      <div className="absolute bottom-[15%] left-[10%] w-24 h-24 border border-[#9B5DE5]/10 rounded-md rotate-45 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '25s' }}></div>
-      
-      {/* Floating particles */}
-      <div className="absolute top-[25%] left-[30%] w-2 h-2 rounded-full bg-[#3A86FF]/20 animate-float-slow"></div>
-      <div className="absolute bottom-[35%] right-[25%] w-3 h-3 rounded-full bg-[#9B5DE5]/20 animate-float-slow" style={{ animationDelay: '2s', animationDuration: '10s' }}></div>
-      
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <AnimatedSection type="fade" className="text-center mb-10">
-          <div className="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-800 px-4 py-1.5 mb-4 text-sm font-medium bg-white dark:bg-gray-900 shadow-sm">
-            <BarChart3 className="h-4 w-4 text-[#3A86FF] mr-2" />
-            <span className="text-[#3A86FF]">{t("stats.title") || "Platform Statistics"}</span>
+      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[#1e90e8]/10 to-[#3d50e3]/10 border border-[#1e90e8]/20 backdrop-blur-sm mb-8">
+            <TrendingUp className="w-4 h-4 text-[#1e90e8]" />
+            <span className="text-[#1e90e8] font-medium text-[14px]">
+              {t("stats.title") || "AI Performance Metrics"}
+            </span>
           </div>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2 text-gray-900 dark:text-white">{t("stats.title") || "Platform Statistics"}</h2>
-          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">{t("stats.subtitle") || "Growing ecosystem of AI experts and businesses finding their perfect match"}</p>
-        </AnimatedSection>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <AnimatedSection type="fade" delay={100}>
-            <div className="relative p-6 rounded-xl bg-white dark:bg-[#121212]/90 border border-gray-200 dark:border-gray-800 shadow-lg group hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-center items-center overflow-hidden">
-              {/* Inner shadow for depth */}
-              <div className="absolute inset-0 rounded-xl shadow-inner pointer-events-none opacity-20 dark:opacity-40"></div>
-              {/* Gradient overlay for contrast */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-transparent dark:from-[#3A86FF]/5 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#3A86FF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <div className="mb-3 p-3 rounded-full bg-[#3A86FF]/10 dark:bg-[#3A86FF]/20 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3A86FF]/30 dark:group-hover:bg-[#3A86FF]/40 shadow-md">
-                <Building2 className="h-6 w-6 text-[#3A86FF] drop-shadow-sm" />
+          <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
+            Proven AI excellence
+          </h2>
+          <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
+            {t("stats.subtitle") || "Leading the AI transformation with measurable results and innovative solutions that drive business growth."}
+          </p>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="group relative">
+              {/* Card */}
+              <div className="relative h-full p-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-3xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-200/20 dark:hover:shadow-gray-900/40 text-center">
+                
+                {/* Gradient Background on Hover */}
+                <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                  stat.color === "#1e90e8" 
+                    ? "bg-gradient-to-br from-[#1e90e8]/5 to-[#3d50e3]/5 dark:from-[#1e90e8]/10 dark:to-[#3d50e3]/10" 
+                    : "bg-gradient-to-br from-[#3d50e3]/5 to-[#1e90e8]/5 dark:from-[#3d50e3]/10 dark:to-[#1e90e8]/10"
+                }`}></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 transition-all duration-500 group-hover:scale-110 ${
+                    stat.color === "#1e90e8" 
+                      ? "bg-[#1e90e8]/10 group-hover:bg-[#1e90e8]/20 dark:bg-[#1e90e8]/20 dark:group-hover:bg-[#1e90e8]/30" 
+                      : "bg-[#3d50e3]/10 group-hover:bg-[#3d50e3]/20 dark:bg-[#3d50e3]/20 dark:group-hover:bg-[#3d50e3]/30"
+                  }`}>
+                    <stat.icon className={`w-8 h-8 transition-all duration-500 group-hover:scale-110 ${
+                      stat.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
+                    }`} />
+                  </div>
+                  
+                  {/* Number */}
+                  <div className="mb-4">
+                    <AnimatedCounter 
+                      end={stat.number} 
+                      suffix={stat.suffix}
+                      className={`text-[56px] lg:text-[64px] font-light leading-none transition-all duration-500 group-hover:scale-105 ${
+                        stat.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
+                      }`}
+                      duration={2500} 
+                    />
+                  </div>
+                  
+                  {/* Label */}
+                  <h3 className="text-[18px] font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-100">
+                    {stat.label}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-[14px] text-gray-600 dark:text-gray-400 leading-[1.5] transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
+                    {stat.description}
+                  </p>
+                </div>
+
+                {/* Hover Border Effect */}
+                <div className={`absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-current transition-all duration-500 ${
+                  stat.color === "#1e90e8" ? "group-hover:text-[#1e90e8]/20" : "group-hover:text-[#3d50e3]/20"
+                }`}></div>
               </div>
-              <AnimatedCounter 
-                end={500} 
-                suffix="+" 
-                className="text-4xl md:text-5xl font-bold text-[#3A86FF] transition-all duration-300 group-hover:scale-110" 
-                duration={2500} 
-              />
-              <p className="text-sm font-medium mt-2 text-gray-700 dark:text-gray-300 transition-colors duration-300 group-hover:text-[#3A86FF]">{t("stats.companiesServed.label")}</p>
             </div>
-          </AnimatedSection>
-          <AnimatedSection type="fade" delay={300}>
-            <div className="relative p-6 rounded-xl bg-white dark:bg-[#121212]/90 border border-gray-200 dark:border-gray-800 shadow-md group hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-center items-center overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#9B5DE5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <div className="mb-3 p-3 rounded-full bg-[#9B5DE5]/10 dark:bg-[#9B5DE5]/20 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-[#9B5DE5]/30 dark:group-hover:bg-[#9B5DE5]/40">
-                <UserPlus className="h-6 w-6 text-[#9B5DE5]" />
-              </div>
-              <AnimatedCounter 
-                end={25} 
-                suffix="+" 
-                className="text-4xl md:text-5xl font-bold text-[#9B5DE5] transition-all duration-300 group-hover:scale-110" 
-                duration={2500} 
-              />
-              <p className="text-sm font-medium mt-2 text-gray-700 dark:text-gray-300 transition-colors duration-300 group-hover:text-[#9B5DE5]">{t("stats.countriesImpacted.label")}</p>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection type="fade" delay={500}>
-            <div className="relative p-6 rounded-xl bg-white dark:bg-[#121212]/90 border border-gray-200 dark:border-gray-800 shadow-lg group hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-center items-center overflow-hidden">
-              {/* Inner shadow for depth */}
-              <div className="absolute inset-0 rounded-xl shadow-inner pointer-events-none opacity-20 dark:opacity-40"></div>
-              {/* Gradient overlay for contrast */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-transparent dark:from-[#3A86FF]/5 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#3A86FF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <div className="mb-3 p-3 rounded-full bg-[#3A86FF]/10 dark:bg-[#3A86FF]/20 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3A86FF]/30 dark:group-hover:bg-[#3A86FF]/40 shadow-md">
-                <Handshake className="h-6 w-6 text-[#3A86FF] drop-shadow-sm" />
-              </div>
-              <AnimatedCounter 
-                end={350} 
-                suffix="+" 
-                className="text-4xl md:text-5xl font-bold text-[#3A86FF] transition-all duration-300 group-hover:scale-110" 
-                duration={2500} 
-              />
-              <p className="text-sm font-medium mt-2 text-gray-700 dark:text-gray-300 transition-colors duration-300 group-hover:text-[#3A86FF]">{t("stats.successfulMatches") || "Successful Projects"}</p>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection type="fade" delay={700}>
-            <div className="relative p-6 rounded-xl bg-white dark:bg-[#121212]/90 border border-gray-200 dark:border-gray-800 shadow-lg group hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-center items-center overflow-hidden">
-              {/* Inner shadow for depth */}
-              <div className="absolute inset-0 rounded-xl shadow-inner pointer-events-none opacity-20 dark:opacity-40"></div>
-              {/* Gradient overlay for contrast */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-transparent dark:from-[#9B5DE5]/5 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#9B5DE5] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              <div className="mb-3 p-3 rounded-full bg-[#9B5DE5]/10 dark:bg-[#9B5DE5]/20 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-[#9B5DE5]/30 dark:group-hover:bg-[#9B5DE5]/40 shadow-md">
-                <BarChart3 className="h-6 w-6 text-[#9B5DE5] drop-shadow-sm" />
-              </div>
-              <AnimatedCounter 
-                end={98} 
-                suffix="%" 
-                className="text-4xl md:text-5xl font-bold text-[#9B5DE5] transition-all duration-300 group-hover:scale-110" 
-                duration={2500} 
-              />
-              <p className="text-sm font-medium mt-2 text-gray-700 dark:text-gray-300 transition-colors duration-300 group-hover:text-[#9B5DE5]">{t("stats.clientSatisfaction.label")}</p>
-            </div>
-          </AnimatedSection>
+          ))}
+        </div>
+        
+        {/* Bottom Section */}
+        <div className="text-center mt-24 pt-16 border-t border-gray-200/50 dark:border-gray-700/50">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Cpu className="w-5 h-5 text-[#1e90e8]" />
+            <span className="text-[16px] text-gray-600 dark:text-gray-400 font-light">
+              Powering AI innovation since 2019
+            </span>
+          </div>
         </div>
       </div>
     </section>

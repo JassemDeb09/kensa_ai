@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { useLanguage } from '@/contexts/LanguageContext'
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, MapPin, ExternalLink } from "lucide-react"
+import { Menu, X, ArrowUpRight, Bot, Zap } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { SimpleLanguageSwitcher } from "@/components/simple-language-switcher"
 import { ClientOnly } from "@/components/client-only"
@@ -17,90 +17,123 @@ interface HeaderProps {
 export function Header({ scrollY, onSectionClick }: HeaderProps) {
   const { t } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  const navItems = [
+    { key: 'services', label: t('nav.services') || 'AI Solutions' },
+    { key: 'industries', label: t('nav.expertise') || 'Industries' },
+    { key: 'about', label: t('nav.about') || 'Company' },
+    { key: 'contact', label: t('nav.contact') || 'Contact' }
+  ]
+
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        mounted && scrollY > 100 
-          ? "bg-white/98 dark:bg-gray-900/98 backdrop-blur-md shadow-lg" 
-          : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md"
+      className={`fixed top-0 w-full z-50 transition-all duration-700 ${
+        mounted && scrollY > 50 
+          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-[0_8px_32px_rgba(30,144,232,0.08)]" 
+          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl"
       }`}
     >
-      {/* Top info bar */}
-      <div className="hidden sm:block border-b border-gray-200/70 dark:border-gray-800/80 bg-[#3A86FF]/5 dark:bg-[#3A86FF]/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-8 flex items-center justify-between text-[13px] text-gray-700 dark:text-gray-300">
+      <nav className="max-w-[1400px] mx-auto px-8 lg:px-12">
+        <div className="flex items-center justify-between h-20">
+                           {/* Logo */}
+                 <div className="flex items-center group cursor-pointer">
+                   <div className="relative">
+                     <div className="relative">
+                       {/* Main Logo */}
+                       <div className="w-15 h-15 relative group-hover:scale-105 transition-all duration-300">
+                         <Image
+                           src="/logo.png"
+                           alt="KENSA AI"
+                           width={60}
+                           height={60}
+                           className="w-full h-full object-contain dark:brightness-0 dark:invert"
+                         />
+                         {/* Light/Dark Mode Glow Effect */}
+                         <div className="absolute inset-0 bg-gradient-to-br from-[#1e90e8]/20 to-[#3d50e3]/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                       </div>
+
+                     </div>
+                   </div>
+                 </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-12">
+            {navItems.map((item) => (
+              <button
+                key={item.key}
+                onClick={() => onSectionClick(item.key)}
+                className="group relative text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] dark:hover:text-[#1e90e8] font-medium transition-colors duration-300 text-[15px]"
+              >
+                <span className="relative">
+                  {item.label}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] group-hover:w-full transition-all duration-300"></div>
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Right Side */}
           <div className="flex items-center gap-6">
-            <span className="inline-flex items-center gap-2"><Phone className="h-3.5 w-3.5 text-[#3A86FF]" />{t('footer.contact.phone')}</span>
-            <span className="inline-flex items-center gap-2"><Mail className="h-3.5 w-3.5 text-[#3A86FF]" />{t('footer.contact.email')}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="h-3.5 w-3.5 text-[#3A86FF]" />
-            <span className="truncate max-w-[260px] sm:max-w-xs">{t('footer.contact.location')}</span>
-            <ExternalLink className="h-3.5 w-3.5 opacity-70" />
-          </div>
-        </div>
-      </div>
-
-      <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Image 
-              src="/logo.png" 
-              alt="KENSA AI" 
-              width={120} 
-              height={40} 
-              className="h-10 w-auto dark:brightness-0 dark:invert"
-            />
-          </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => onSectionClick("services")}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors"
-            >
-              {t('nav.services')}
-            </button>
-            <button
-              onClick={() => onSectionClick("process")}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors"
-            >
-              {t('nav.process')}
-            </button>
-            <button
-              onClick={() => onSectionClick("testimonials")}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors"
-            >
-              {t('nav.testimonials')}
-            </button>
-            <button
-              onClick={() => onSectionClick("about")}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors"
-            >
-              {t('nav.about')}
-            </button>
-            <button
-              onClick={() => onSectionClick("contact")}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors"
-            >
-              {t('nav.contact')}
-            </button>
-          </div>
-
-          <div className="flex items-center gap-4">
             <ClientOnly>
-              <SimpleLanguageSwitcher />
-              <ThemeToggle />
+              <div className="hidden lg:flex items-center gap-4">
+                <SimpleLanguageSwitcher />
+                <ThemeToggle />
+              </div>
             </ClientOnly>
+            
             <Button
               onClick={() => onSectionClick("contact")}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#1e90e8]/25 text-[15px]"
             >
-              {t('nav.getStarted')}
+              Book AI Consultation
+              <ArrowUpRight className="w-4 h-4" />
             </Button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-0.5' : ''}`}></div>
+                <div className={`w-5 h-0.5 bg-current mt-1 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-0.5' : ''}`}></div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="py-8 space-y-6 border-t border-gray-200/50 dark:border-gray-800/50">
+            {navItems.map((item) => (
+              <button
+                key={item.key}
+                onClick={() => {
+                  onSectionClick(item.key)
+                  setMobileMenuOpen(false)
+                }}
+                className="block w-full text-left text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
+              >
+                {item.label}
+              </button>
+            ))}
+            <div className="pt-4">
+              <Button
+                onClick={() => {
+                  onSectionClick("contact")
+                  setMobileMenuOpen(false)
+                }}
+                className="w-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2"
+              >
+                Book AI Consultation
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
