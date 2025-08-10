@@ -10,8 +10,8 @@
   },
   "hero": {
     "badge": "🚀 La nouvelle référence en IA d'entreprise — Parce que votre succès mérite l'excellence",
-    "title": "Transformez votre vision en réalité grâce à l'intelligence artificielle stratégique",
-    "subtitle": "Chez KENSA AI, nous ne proposons pas simplement des solutions d'IA. Nous façonnons l'avenir de votre entreprise. De la stratégie à l'implémentation, notre équipe d'experts mondiaux vous propulse vers une croissance exponentielle, avec un ROI visible en moins de 6 mois.",
+    "title": "Transformation IA de Pointe",
+    "subtitle": "KENSA AI : Votre futur, conçu. Votre croissance, accélérée. 🚀",
     "trustedBy": "Plus de 500 entreprises nous font confiance",
     "aiAssistant": "Assistant KENSA AI",
     "online": "En ligne",
@@ -26,7 +26,7 @@
       "experts": "Experts certifiés, présents dans les 5 continents"
     },
     "cta": {
-      "primary": "🚀 Transformer mon entreprise",
+      "primary": "Commencer Votre Transformation",
       "secondary": "Voir la démo"
     }
   },
@@ -39,7 +39,7 @@
     "features": {
       "roi": "ROI garanti en moins de 6 mois",
       "support": "Support 24/7, 365 jours",
-      "experts": "Experts certifiés, présents dans les 5 continents",
+      "experts": "Experts certifiés, présents dans 25+ villes",
       "security": "Conformité RGPD et sécurité de niveau mondial"
     }
   },
@@ -71,8 +71,8 @@
   },
   "services": {
     "badge": "Nos Solutions",
-    "title": "La puissance de l'IA, simplifiée pour votre réussite",
-    "subtitle": "Nous transformons la complexité technologique en leviers d'innovation concrets. Que vous soyez une startup ou un groupe du Fortune 500, nos solutions IA sur-mesure s'intègrent parfaitement à votre écosystème.",
+    "title": "Solutions IA, Simplifiées",
+    "subtitle": "Nous créons des solutions IA personnalisées qui s'intègrent parfaitement dans vos opérations. Offrant des résultats concrets pour les startups comme pour les entreprises.",
     "coreTitle": "Nos services clés :",
     "getStarted": "Commencer",
     "joinExperts": "Rejoindre en tant qu'expert IA",
@@ -136,7 +136,7 @@
   },
   "testimonials": {
     "title": "La preuve par l'expertise : Nos clients parlent",
-    "subtitle": "Des résultats concrets qui parlent d'eux-mêmes",
+    "subtitle": "Découvrez l'impact tangible que nous avons livré à nos partenaires et voyez à quoi ressemble le succès.",
     "items": [
       {
         "quote": "En 6 mois, KENSA AI a automatisé 40% de nos processus, doublant notre efficacité.",
@@ -163,12 +163,12 @@
     "subtitle": "Écosystème croissant d'experts IA et d'entreprises trouvant leur correspondance parfaite",
     "companies": "Plus de 500 entreprises accompagnées",
     "satisfaction": "98% de satisfaction",
-    "countries": "impact dans 25 pays",
+    "cities": "impact dans 25 villes",
     "companiesServed": {
       "label": "Entreprises Servies"
     },
-    "countriesImpacted": {
-      "label": "Pays Impactés"
+    "citiesImpacted": {
+      "label": "Villes Impactées"
     },
     "successfulMatches": "Projets Réussis",
     "clientSatisfaction": {
@@ -177,7 +177,7 @@
   },
   "faq": {
     "title": "Questions fréquentes",
-    "subtitle": "Notre promesse : une réponse claire, une expertise mondiale, et une transformation tangible.",
+    "subtitle": "Au-delà du Bruit : Votre Parcours IA, Défini. Nous fournissons la clarté, l'expertise mondiale et la transformation tangible dont vous avez besoin pour naviguer dans la complexité et favoriser le succès.",
     "items": [
       {
         "question": "Combien de temps pour voir des résultats ?",
@@ -199,8 +199,12 @@
   },
   "about": {
     "title": "Rejoignez l'élite de l'innovation",
-    "subtitle": "Née à Toronto, pensée pour un impact global",
-    "description": "Plus de 5 ans d'expertise IA, 50+ experts certifiés, une vision : faire de votre entreprise un leader de demain.",
+    "foundation": "Notre Fondation",
+    "subtitle": "Nous sommes plus qu'une entreprise ; nous sommes une mission conçue pour votre succès.",
+    "location": "Née à Toronto, conçue pour un impact global",
+    "experience": "5+ années d'excellence en IA",
+    "experts": "50+ experts certifiés",
+    "mission": "Une mission : faire de votre entreprise un leader du marché.",
     "cta": "Découvrir notre équipe",
     "commitment": "Notre engagement : excellence, collaboration, innovation"
   },

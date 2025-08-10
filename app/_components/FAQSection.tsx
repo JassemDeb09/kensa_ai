@@ -59,7 +59,7 @@ export function FAQSection() {
             AI questions <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">answered</span>
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
-            {t('faq.subtitle') || "Common questions about AI transformation, implementation, and our services. Can't find what you're looking for? Contact our AI experts."}
+            {t('faq.subtitle') || "Beyond the Noise: Your AI Journey, Defined. We provide the clarity, global expertise, and tangible transformation you need to navigate complexity and drive success."}
           </p>
         </div>
 

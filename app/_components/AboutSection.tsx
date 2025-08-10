@@ -55,20 +55,28 @@ export function AboutSection() {
               {t('about.title') || "leaders"}
             </h2>
             
-            {/* Company DNA */}
+            {/* Company Foundation */}
             <h3 className="text-[24px] font-medium text-gray-900 dark:text-white mb-6">
-              {t('about.dna') || "Our AI DNA"}
+              {t('about.foundation') || "Our Foundation"}
             </h3>
             
             {/* Subtitle */}
             <p className="text-[20px] text-gray-700 dark:text-gray-300 mb-8 font-medium leading-[1.4]">
-              {t('about.subtitle') || "We are the AI transformation experts that Fortune 500 companies trust to deliver measurable results."}
+              {t('about.subtitle') || "We are more than a company; we are a mission built for your success."}
             </p>
             
             {/* Description */}
-            <p className="text-[18px] text-gray-600 dark:text-gray-400 leading-[1.5] mb-12">
-              {t('about.description') || "Based in Toronto with global reach, our team of AI specialists, machine learning engineers, and data scientists has successfully deployed 500+ AI solutions across 25+ countries, delivering an average ROI of 300% within 12 months."}
-            </p>
+            <div className="text-[18px] text-gray-600 dark:text-gray-400 leading-[1.6] mb-12 space-y-3">
+              <p className="flex items-center gap-2">
+                <span>📍</span>
+                <span>{t('about.location') || "Born in Toronto, built for global impact"}</span>
+              </p>
+              <p>{t('about.experience') || "5+ years of AI excellence"}</p>
+              <p>{t('about.experts') || "50+ certified experts"}</p>
+              <p className="font-medium text-gray-700 dark:text-gray-300">
+                {t('about.mission') || "One mission: To turn your business into a market leader."}
+              </p>
+            </div>
 
             {/* Stats Cards */}
             <div className="grid grid-cols-2 gap-6 mb-12">

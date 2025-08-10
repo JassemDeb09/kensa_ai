@@ -25,7 +25,7 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/bg.mp4" type="video/mp4" />
+          <source src="/AI_Powered_transformation.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
         </video>
         
@@ -57,12 +57,11 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
           {/* Main Headline */}
           <div className="space-y-6">
             <h1 className="text-[56px] lg:text-[72px] xl:text-[84px] font-light tracking-[-0.02em] leading-[0.9] text-white">
-              <span className="block">The future of</span>
               <span className="block font-medium bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent">
-                artificial intelligence
+                {t("hero.title") || "AI-Powered Transformation"}
               </span>
-              <span className="block text-white/80">
-                is here
+              <span className="block text-white/80 text-[32px] lg:text-[40px] xl:text-[48px] mt-4">
+                by KENSA AI
               </span>
             </h1>
             
@@ -76,32 +75,22 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
             
           {/* Subtitle */}
           <p className="text-[20px] lg:text-[24px] text-white/90 leading-[1.4] max-w-[800px] font-light">
-            {t("hero.subtitle") || "Transform your business with cutting-edge AI solutions designed for the modern enterprise. Built for scale, security, and intelligent automation."}
+            {t("hero.subtitle") || "KENSA AI: Your future, engineered. Your growth, accelerated. 🚀"}
           </p>
           
           {/* CTA Section */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
+          <div className="flex justify-center pt-8">
               <Button
                 onClick={() => onSectionClick('services')}
-                className="group bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25"
+                className="group bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-10 py-5 rounded-xl text-[18px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25"
               >
                 <span className="flex items-center gap-3">
-                  <Brain className="w-5 h-5" />
-                  {t("hero.cta.primary") || "Start AI Transformation"}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Brain className="w-6 h-6" />
+                  {t("hero.cta.primary") || "Start Your Transformation"}
+                  {/* Alternative CTA text: "Transform My Business" */}
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
-              
-              <Button
-                variant="outline"
-                onClick={() => onSectionClick('demo')}
-                className="group border-white/50 bg-white/10 text-white hover:bg-white/20 hover:border-white/70 backdrop-blur-md font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 shadow-lg"
-              >
-                <span className="flex items-center gap-3">
-                  <Play className="w-4 h-4" />
-                  Watch AI Demo
-                </span>
-            </Button>
           </div>
           
           {/* AI Social Proof */}

@@ -22,7 +22,7 @@ export function WhyChooseUsSection() {
     {
       icon: Users,
       title: t('whyChoose.features.experts') || "AI Specialists",
-      description: "World-class team of ML engineers and AI researchers",
+      description: "World-class team spanning 25+ cities globally",
       color: "#1e90e8"
     },
     {

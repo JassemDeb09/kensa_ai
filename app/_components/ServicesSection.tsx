@@ -57,10 +57,10 @@ export function ServicesSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            End-to-end <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI transformation</span>
+            <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI Solutions</span>, Simplified
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-[1.5]">
-            {t("services.subtitle") || "From strategic planning to deployment and support, we deliver comprehensive AI solutions that drive measurable business outcomes."}
+            {t("services.subtitle") || "We build custom AI solutions that seamlessly integrate into your operations. Delivering real results for startups and enterprises alike."}
           </p>
         </div>
 

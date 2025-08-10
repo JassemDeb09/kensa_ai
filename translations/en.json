@@ -10,8 +10,8 @@
   },
   "hero": {
     "badge": "🚀 The new standard in enterprise AI — Because your success deserves excellence",
-    "title": "Turn your vision into reality with strategic artificial intelligence",
-    "subtitle": "At KENSA AI, we don't just deliver AI solutions. We shape the future of your business. From strategy to full implementation, our global team of experts drives exponential growth — with visible ROI in under 6 months.",
+    "title": "AI-Powered Transformation",
+    "subtitle": "KENSA AI: Your future, engineered. Your growth, accelerated. 🚀",
     "trustedBy": "Trusted by 500+ clients worldwide",
     "aiAssistant": "KENSA AI Assistant",
     "online": "Online",
@@ -26,7 +26,7 @@
       "experts": "Certified experts in 25+ countries"
     },
     "cta": {
-      "primary": "🚀 Transform my business",
+      "primary": "Start Your Transformation",
       "secondary": "Watch Demo"
     }
   },
@@ -39,7 +39,7 @@
     "features": {
       "roi": "Guaranteed ROI in under 6 months",
       "support": "24/7 support, 365 days a year",
-      "experts": "Certified experts in 25+ countries",
+      "experts": "Certified experts in 25+ cities",
       "security": "GDPR-compliant with enterprise-grade security"
     }
   },
@@ -71,8 +71,8 @@
   },
   "services": {
     "badge": "Our Solutions",
-    "title": "Unleashing AI Power — Made Simple for Your Success",
-    "subtitle": "We turn tech complexity into actionable innovation. Whether you're a fast-growing startup or a Fortune 500 enterprise, our customized AI solutions integrate seamlessly with your operations.",
+    "title": "AI Solutions, Simplified",
+    "subtitle": "We build custom AI solutions that seamlessly integrate into your operations. Delivering real results for startups and enterprises alike.",
     "coreTitle": "Our Core Services",
     "getStarted": "Get Started",
     "joinExperts": "Join as an AI Expert",
@@ -136,7 +136,7 @@
   },
   "testimonials": {
     "title": "Trusted by 500+ Clients Worldwide",
-    "subtitle": "Real results that speak for themselves",
+    "subtitle": "Explore the tangible impact we've delivered to our partners and see what success looks like.",
     "items": [
       {
         "quote": "In just 6 months, KENSA AI automated 40% of our processes and doubled our efficiency.",
@@ -163,12 +163,12 @@
     "subtitle": "Growing ecosystem of AI experts and businesses finding their perfect match",
     "companies": "500+ companies served",
     "satisfaction": "98% client satisfaction",
-    "countries": "25 countries impacted",
+    "cities": "25 cities impacted",
     "companiesServed": {
       "label": "Companies Served"
     },
-    "countriesImpacted": {
-      "label": "Countries Impacted"
+    "citiesImpacted": {
+      "label": "Cities Impacted"
     },
     "successfulMatches": "Successful Projects",
     "clientSatisfaction": {
@@ -177,7 +177,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Our promise: Clear answers. Global expertise. Tangible transformation.",
+    "subtitle": "Beyond the Noise: Your AI Journey, Defined. We provide the clarity, global expertise, and tangible transformation you need to navigate complexity and drive success.",
     "items": [
       {
         "question": "How long does it take to see results?",
@@ -199,8 +199,12 @@
   },
   "about": {
     "title": "Join the Innovation Elite",
-    "subtitle": "📍 Born in Toronto, built for global impact",
-    "description": "With 5+ years of AI excellence, 50+ certified experts, and one mission: To turn your business into a market leader.",
+    "foundation": "Our Foundation",
+    "subtitle": "We are more than a company; we are a mission built for your success.",
+    "location": "Born in Toronto, built for global impact",
+    "experience": "5+ years of AI excellence",
+    "experts": "50+ certified experts",
+    "mission": "One mission: To turn your business into a market leader.",
     "cta": "Meet the Team",
     "commitment": "Our Commitment: Excellence | Collaboration | Innovation"
   },

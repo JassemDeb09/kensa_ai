@@ -28,8 +28,8 @@ export function StatsSection() {
       icon: Brain,
       number: 25,
       suffix: "+",
-      label: t("stats.countriesImpacted.label") || "AI Models",
-      description: "Custom machine learning models trained and deployed",
+      label: t("stats.citiesImpacted.label") || "Cities Impacted",
+      description: "Cities worldwide transformed through AI innovation",
       color: "#1e90e8"
     }
   ]
