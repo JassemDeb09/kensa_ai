@@ -15,7 +15,7 @@ export function IndustriesSection() {
       key: 'manufacturing', 
       title: t('industries.items.manufacturing.title') || 'Manufacturing', 
       desc: t('industries.items.manufacturing.description') || 'AI-powered production optimization', 
-      img: '/industries.png',
+      img: '/industries.jpg',
       stats: '40% efficiency gain',
       color: '#1e90e8'
     },
@@ -23,7 +23,7 @@ export function IndustriesSection() {
       key: 'smartCities', 
       title: t('industries.items.smartCities.title') || 'Smart Cities', 
       desc: t('industries.items.smartCities.description') || 'Intelligent urban infrastructure', 
-      img: '/smart_city.png',
+      img: '/smart_city.jpg',
       stats: '60% cost reduction',
       color: '#3d50e3'
     },
@@ -31,7 +31,7 @@ export function IndustriesSection() {
       key: 'retail', 
       title: t('industries.items.retail.title') || 'E-Commerce', 
       desc: t('industries.items.retail.description') || 'Personalized shopping experiences', 
-      img: '/ecommerce.png',
+      img: '/ecommerce.jpg',
       stats: '25% revenue boost',
       color: '#1e90e8'
     },
@@ -39,7 +39,7 @@ export function IndustriesSection() {
       key: 'finance', 
       title: t('industries.items.finance.title') || 'Financial Services', 
       desc: t('industries.items.finance.description') || 'Fraud detection and risk management', 
-      img: '/finance.png',
+      img: '/finance.jpg',
       stats: '90% fraud prevention',
       color: '#3d50e3'
     },
@@ -47,7 +47,7 @@ export function IndustriesSection() {
       key: 'digital', 
       title: t('industries.items.digital.title') || 'Digital Transformation', 
       desc: t('industries.items.digital.description') || 'End-to-end business digitization', 
-      img: '/digital_transformation.png',
+      img: '/digital_transformation.jpg',
       stats: '300% ROI achieved',
       color: '#1e90e8'
     },

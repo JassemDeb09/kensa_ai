@@ -38,94 +38,61 @@ export default function KensaAILanding() {
     <div className="flex flex-col overflow-x-hidden relative">
       <Header scrollY={mounted ? scrollY : 0} onSectionClick={scrollToSection} />
       
-      {/* Hero - White/Dark with gradient fade */}
+      {/* Hero - White/Dark */}
       <div className="relative bg-white dark:bg-gray-900">
         <HeroSection onSectionClick={scrollToSection} />
-        {/* Bottom gradient separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-gray-50/80 dark:to-gray-800/80 pointer-events-none"></div>
       </div>
       
-      {/* Stats - Light Gray/Dark Gray with enhanced borders */}
-      <div className="relative bg-gray-50 dark:bg-gray-800 border-y border-gray-200/60 dark:border-gray-700/60">
+      {/* Stats - Light Gray/Dark Gray */}
+      <div className="relative bg-gray-50 dark:bg-gray-800">
         <StatsSection />
-        {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1e90e8]/30 to-transparent"></div>
-        {/* Bottom gradient separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white/80 dark:to-gray-900/80 pointer-events-none"></div>
       </div>
       
-      {/* Why Choose Us - White/Dark with shadow separation */}
+      {/* Why Choose Us - White/Dark */}
       <div className="relative bg-white dark:bg-gray-900">
         <WhyChooseUsSection />
-        {/* Subtle shadow separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-gray-100/60 dark:to-gray-800/60 pointer-events-none"></div>
       </div>
       
-      {/* Services - Light Gray/Dark Gray with enhanced visual separation */}
-      <div className="relative bg-gray-100 dark:bg-gray-800 border-y border-gray-200/60 dark:border-gray-700/60">
+      {/* Services - Light Gray/Dark Gray */}
+      <div className="relative bg-gray-100 dark:bg-gray-800">
         <ServicesSection />
-        {/* Top AI-themed accent */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3d50e3]/30 to-transparent"></div>
-        {/* Enhanced bottom separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent via-gray-100/40 dark:via-gray-800/40 to-white dark:to-gray-900 pointer-events-none"></div>
       </div>
       
-      {/* Industries - White/Dark with premium separation */}
+      {/* Industries - White/Dark */}
       <div className="relative bg-white dark:bg-gray-900">
         <IndustriesSection />
-        {/* Sophisticated separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-gray-50/70 dark:to-gray-800/70 pointer-events-none"></div>
       </div>
       
-      {/* Testimonials - Enhanced Light Gray/Dark Gray */}
-      <div className="relative bg-gray-50 dark:bg-gray-800 border-y border-gray-200/60 dark:border-gray-700/60">
+      {/* Testimonials - Light Gray/Dark Gray */}
+      <div className="relative bg-gray-50 dark:bg-gray-800">
         <TestimonialsSection />
-        {/* AI brand accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1e90e8]/40 to-transparent"></div>
-        {/* Professional bottom separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white/90 dark:to-gray-900/90 pointer-events-none"></div>
       </div>
       
-      {/* Demo - White/Dark with glow separator */}
+      {/* Demo - White/Dark */}
       <div className="relative bg-white dark:bg-gray-900">
         <DemoSection />
-        {/* Glowing separator for demo section */}
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-b from-transparent to-gray-50/80 dark:to-gray-800/80 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#3d50e3]/20 to-transparent"></div>
       </div>
       
-      {/* FAQ - Enhanced Gray with stronger borders */}
-      <div className="relative bg-gray-50 dark:bg-gray-800 border-y-2 border-gray-200/80 dark:border-gray-700/80">
+      {/* FAQ - Gray */}
+      <div className="relative bg-gray-50 dark:bg-gray-800">
         <ClientOnly>
           <FAQSection />
         </ClientOnly>
-        {/* Distinctive top accent */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1e90e8]/20 via-[#3d50e3]/30 to-[#1e90e8]/20"></div>
-        {/* Strong bottom separator */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent via-gray-50/60 dark:via-gray-800/60 to-white dark:to-gray-900 pointer-events-none"></div>
       </div>
       
-      {/* About - White/Dark with elevated separation */}
-      <div className="relative bg-white dark:bg-gray-900 shadow-inner">
+      {/* About - White/Dark */}
+      <div className="relative bg-white dark:bg-gray-900">
         <AboutSection />
-        {/* Elevated separator before CTA */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-gray-100/30 dark:via-gray-800/30 to-gray-700/20 dark:to-gray-800/60 pointer-events-none"></div>
       </div>
       
-      {/* Final CTA - Premium Gradient with glow */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-900 dark:via-black dark:to-gray-900 border-t-2 border-[#1e90e8]/20">
+      {/* Final CTA - Premium Gradient */}
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-900 dark:via-black dark:to-gray-900">
         <FinalCTASection onSectionClick={scrollToSection} />
-        {/* Premium glow effect */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[#1e90e8]/0 via-[#1e90e8]/50 to-[#3d50e3]/50 via-[#3d50e3]/0"></div>
-        {/* Smooth transition to footer */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-gray-900/60 dark:to-black/60 pointer-events-none"></div>
       </div>
       
-      {/* Footer - Enhanced Dark with premium border */}
-      <div className="relative bg-gray-900 dark:bg-black border-t border-gray-700/60 dark:border-gray-800/60">
+      {/* Footer - Enhanced Dark */}
+      <div className="relative bg-gray-50 dark:bg-gray-900">
         <Footer />
-        {/* Top AI accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1e90e8]/30 via-[#3d50e3]/30 to-transparent"></div>
       </div>
     </div>
   )
