@@ -5,35 +5,42 @@ import { Brain, Cpu, Settings, GraduationCap, ArrowUpRight, Zap } from "lucide-r
 import { Button } from "@/components/ui/button"
 
 export function ServicesSection() {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
+
+  // Helper function to get features array based on translation
+  const getFeatures = (key: string, fallback: string[]) => {
+    const translated = t(key)
+    // If translation exists and is an array, use it, otherwise use fallback
+    return Array.isArray(translated) ? translated : fallback
+  }
 
   const services = [
     {
       icon: Brain,
       title: t("services.items.audit.title") || "AI Strategy & Consulting",
       description: t("services.items.audit.description") || "Comprehensive AI readiness assessment and strategic roadmap development tailored to your business objectives.",
-      features: ["AI opportunity analysis", "Technology assessment", "Strategic roadmap", "ROI modeling"],
+      features: getFeatures("additional.services.features.audit", ["AI opportunity analysis", "Technology assessment", "Strategic roadmap", "ROI modeling"]),
       color: "#1e90e8"
     },
     {
       icon: Cpu,
       title: t("services.items.integration.title") || "Custom AI Development",
       description: t("services.items.integration.description") || "Bespoke AI solutions built from the ground up to solve your unique business challenges.",
-      features: ["Machine learning models", "Deep learning systems", "Computer vision", "Natural language processing"],
+      features: getFeatures("additional.services.features.integration", ["Machine learning models", "Deep learning systems", "Computer vision", "Natural language processing"]),
       color: "#3d50e3"
     },
     {
       icon: Settings,
       title: t("services.items.automation.title") || "AI Integration & Deployment",
       description: t("services.items.automation.description") || "Seamless integration of AI solutions into your existing infrastructure with minimal disruption.",
-      features: ["System integration", "Cloud deployment", "API development", "Performance optimization"],
+      features: getFeatures("additional.services.features.automation", ["System integration", "Cloud deployment", "API development", "Performance optimization"]),
       color: "#1e90e8"
     },
     {
       icon: GraduationCap,
       title: t("services.items.training.title") || "AI Training & Support",
       description: t("services.items.training.description") || "Comprehensive training programs and ongoing support to maximize your AI investment.",
-      features: ["Team training", "Change management", "Best practices", "24/7 support"],
+      features: getFeatures("additional.services.features.training", ["Team training", "Change management", "Best practices", "24/7 support"]),
       color: "#3d50e3"
     }
   ]
@@ -57,7 +64,7 @@ export function ServicesSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI Solutions</span>, Simplified
+            {t('services.title') || 'AI Solutions, Simplified'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-[1.5]">
             {t("services.subtitle") || "We build custom AI solutions that seamlessly integrate into your operations. Delivering real results for startups and enterprises alike."}
@@ -110,12 +117,12 @@ export function ServicesSection() {
                 <div className={`flex items-center gap-2 text-[14px] font-medium group-hover:gap-3 transition-all duration-300 cursor-pointer ${
                   service.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
                 }`}>
-                  <span>Explore solution</span>
+                  <span>{t("additional.services.cta.explore") || "Explore solution"}</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
                 
                 {/* Decorative Number */}
-                <div className={`absolute top-8 right-8 text-[96px] font-light leading-none select-none opacity-10 ${
+                <div className={`absolute top-8 ${isRTL ? 'left-8' : 'right-8'} text-[96px] font-light leading-none select-none opacity-10 ${
                   service.color === "#1e90e8" ? "text-[#1e90e8]" : "text-[#3d50e3]"
                 }`}>
                   {(index + 1).toString().padStart(2, '0')}
@@ -131,12 +138,12 @@ export function ServicesSection() {
             <Button className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25">
               <span className="flex items-center gap-3">
                 <Brain className="w-5 h-5" />
-                Start AI Transformation
+{t("additional.services.cta.primary") || "Start AI Transformation"}
                 <ArrowUpRight className="w-5 h-5" />
               </span>
             </Button>
             <Button variant="outline" className="border-[#1e90e8]/30 text-[#1e90e8] hover:bg-[#1e90e8]/5 dark:border-[#1e90e8]/50 dark:text-[#1e90e8] font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300">
-              View AI Case Studies
+{t("additional.services.cta.secondary") || "View AI Case Studies"}
             </Button>
           </div>
         </div>

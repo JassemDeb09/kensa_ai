@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
 import { Header } from "./_components/Header"
 import { HeroSection } from "./_components/HeroSection"
 import { WhyChooseUsSection } from "./_components/WhyChooseUsSection"
@@ -17,6 +18,7 @@ import { Footer } from "./_components/Footer"
 import { ClientOnly } from "@/components/client-only"
 
 export default function KensaAILanding() {
+  const { isRTL } = useLanguage()
   const [scrollY, setScrollY] = useState(0)
   const [mounted, setMounted] = useState(false)
 
@@ -35,7 +37,7 @@ export default function KensaAILanding() {
   }
 
   return (
-    <div className="flex flex-col overflow-x-hidden relative">
+    <div className={`flex flex-col overflow-x-hidden relative ${isRTL ? 'rtl' : 'ltr'}`}>
       <Header scrollY={mounted ? scrollY : 0} onSectionClick={scrollToSection} />
       
       {/* Hero - White/Dark */}

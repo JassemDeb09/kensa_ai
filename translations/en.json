@@ -223,17 +223,137 @@
   },
   "footer": {
     "description": "Where global strategy meets AI excellence.",
-    "location": "🌍 Global impact, proudly based in Toronto",
+    "location": "🌍 Global impact, proudly based in Toronto,ONTARIO Canada",
     "contact": {
       "email": "contact@kensaai.com",
       "phone": "+1 (437) 873-47 82",
-      "location": "Global impact, proudly based in Toronto",
+      "location": "Global impact, proudly based in Toronto,ONTARIO Canada",
       "hours": "Mon–Fri | 9AM–6PM EST"
     },
     "copyright": "© 2025 KENSA AI. All rights reserved.",
     "legal": {
       "privacy": "Privacy Policy",
-      "terms": "Legal Notice"
+      "terms": "Legal Notice",
+      "ethics": "AI Ethics"
+    }
+  },
+  "additional": {
+    "stats": {
+      "provenExcellence": "Proven AI excellence",
+      "metricsTitle": "AI Performance Metrics",
+      "subtitle": "Leading the AI transformation with measurable results and innovative solutions that drive business growth.",
+      "deployments": "AI Deployments",
+      "deploymentsDesc": "Enterprise AI solutions successfully implemented worldwide",
+      "successRate": "Success Rate", 
+      "successRateDesc": "AI projects delivered on time with measurable ROI",
+      "citiesDesc": "Cities worldwide transformed through AI innovation",
+      "powering": "Powering AI innovation since 2019"
+    },
+    "whyChoose": {
+      "advantageTitle": "The AI advantage you need",
+      "advantageSubtitle": "Four key differentiators that make us the preferred AI transformation partner for enterprise leaders worldwide.",
+      "provenRoi": "Proven ROI",
+      "provenRoiDesc": "Average 300% ROI within 12 months of AI implementation",
+      "aiSupport": "24/7 AI Support",
+      "aiSupportDesc": "Round-the-clock monitoring and support for your AI systems",
+      "aiSpecialists": "AI Specialists",
+      "aiSpecialistsDesc": "World-class team spanning 25+ cities globally",
+      "aiSecurity": "AI Security",
+      "aiSecurityDesc": "Enterprise-grade security with GDPR compliance",
+      "trustedBy": "Trusted by 500+ companies worldwide for AI transformation excellence"
+    },
+    "services": {
+      "portfolioTitle": "AI Solutions Portfolio",
+      "features": {
+        "audit": ["AI opportunity analysis", "Technology assessment", "Strategic roadmap", "ROI modeling"],
+        "integration": ["Machine learning models", "Deep learning systems", "Computer vision", "Natural language processing"],
+        "automation": ["System integration", "Cloud deployment", "API development", "Performance optimization"],
+        "training": ["Team training", "Change management", "Best practices", "24/7 support"]
+      },
+      "cta": {
+        "primary": "Start AI Transformation",
+        "secondary": "View AI Case Studies",
+        "explore": "Explore solution"
+      }
+    },
+    "industries": {
+      "solutionsTitle": "AI Industry Solutions",
+      "subtitle": "From manufacturing to finance, we deliver tailored AI implementations that drive measurable results across diverse business sectors.",
+      "stats": {
+        "manufacturing": "40% efficiency gain",
+        "smartCities": "60% cost reduction", 
+        "retail": "25% revenue boost",
+        "finance": "90% fraud prevention",
+        "digital": "300% ROI achieved"
+      }
+    },
+    "demo": {
+      "inAction": "AI in Action",
+      "seeTitle": "See our AI solutions in action",
+      "seeSubtitle": "Watch a 5-minute walkthrough of our AI platform and see how we're transforming businesses across industries with intelligent automation.",
+      "fiveMinuteTitle": "5-Minute AI Transformation Walkthrough",
+      "fiveMinuteDesc": "Discover how our AI platform identifies opportunities, automates processes, and delivers measurable ROI for enterprise clients across different industries.",
+      "liveBadge": "Live AI Demo",
+      "watchDemo": "Watch Full Demo",
+      "scheduleLive": "Schedule Live Demo",
+      "joinElite": "Join the Innovation Elite",
+      "features": {
+        "realtime": "Real-time Analytics",
+        "realtimeDesc": "Live AI performance metrics",
+        "automation": "Smart Automation",
+        "automationDesc": "Intelligent process optimization",
+        "security": "Enterprise Security",
+        "securityDesc": "SOC2 compliant infrastructure"
+      }
+    },
+    "about": {
+      "aboutTitle": "About KENSA AI",
+      "transformationLeaders": "AI transformation leaders",
+      "aiCommitment": "Our AI Commitment",
+      "values": {
+        "excellence": {
+          "title": "AI Excellence",
+          "description": "Cutting-edge AI solutions that drive measurable results"
+        },
+        "partnership": {
+          "title": "Partnership", 
+          "description": "Close collaboration throughout your AI transformation journey"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Leading-edge machine learning and AI technologies"
+        }
+      },
+      "stats": {
+        "years": "5+ Years",
+        "yearsLabel": "AI Expertise",
+        "experts": "50+ Experts",
+        "expertsLabel": "Certified AI Specialists"
+      },
+      "ctaText": "Meet Our AI Team"
+    },
+    "faq": {
+      "answeredTitle": "AI questions answered",
+      "stillQuestions": "Still have questions about AI implementation?",
+      "contactSpecialists": "Contact our AI specialists →"
+    },
+    "finalCta": {
+      "readyBadge": "Ready for AI Transformation?",
+      "startJourney": "Start your AI journey today",
+      "joinSubtitle": "Join 500+ enterprises already transforming their business with our AI solutions. Get a free consultation and discover your AI opportunities.",
+      "bookConsultation": "Book Free AI Consultation",
+      "caseStudies": "View AI Case Studies",
+      "stats": {
+        "projects": "500+ AI Projects",
+        "successRate": "98% Success Rate",
+        "support": "24/7 AI Support"
+      }
+    },
+    "hero": {
+      "socialProof": "4.9/5 from 500+ AI implementations"
+    },
+    "testimonials": {
+      "trustedTitle": "Trusted by industry leaders"
     }
   }
 }

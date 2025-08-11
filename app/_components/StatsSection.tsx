@@ -13,7 +13,7 @@ export function StatsSection() {
       number: 500,
       suffix: "+",
       label: t("stats.companiesServed.label") || "AI Deployments",
-      description: "Enterprise AI solutions successfully implemented worldwide",
+      description: t("additional.stats.deploymentsDesc") || "Enterprise AI solutions successfully implemented worldwide",
       color: "#1e90e8"
     },
     {
@@ -21,7 +21,7 @@ export function StatsSection() {
       number: 98,
       suffix: "%",
       label: t("stats.clientSatisfaction.label") || "Success Rate",
-      description: "AI projects delivered on time with measurable ROI",
+      description: t("additional.stats.successRateDesc") || "AI projects delivered on time with measurable ROI",
       color: "#3d50e3"
     },
     {
@@ -29,7 +29,7 @@ export function StatsSection() {
       number: 25,
       suffix: "+",
       label: t("stats.citiesImpacted.label") || "Cities Impacted",
-      description: "Cities worldwide transformed through AI innovation",
+      description: t("additional.stats.citiesDesc") || "Cities worldwide transformed through AI innovation",
       color: "#1e90e8"
     }
   ]
@@ -53,7 +53,7 @@ export function StatsSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            Proven AI excellence
+            {t('additional.stats.provenExcellence') || 'Proven AI excellence'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
             {t("stats.subtitle") || "Leading the AI transformation with measurable results and innovative solutions that drive business growth."}
@@ -124,7 +124,7 @@ export function StatsSection() {
           <div className="flex items-center justify-center gap-3">
             <Cpu className="w-5 h-5 text-[#1e90e8]" />
             <span className="text-[16px] text-gray-600 dark:text-gray-400 font-light">
-              Powering AI innovation since 2019
+              {t("additional.stats.powering") || "Powering AI innovation since 2019"}
             </span>
           </div>
         </div>

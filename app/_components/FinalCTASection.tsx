@@ -70,17 +70,17 @@ export function FinalCTASection({ onSectionClick }: FinalCTASectionProps) {
         <div className="flex items-center justify-center gap-8 mt-16 pt-12 border-t border-white/20">
           <div className="text-center">
             <div className="text-[24px] font-light text-white">500+</div>
-            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">AI Projects</div>
+            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">{t('additional.finalCta.stats.projects') || 'AI Projects'}</div>
           </div>
           <div className="w-px h-12 bg-white/20"></div>
           <div className="text-center">
             <div className="text-[24px] font-light text-white">98%</div>
-            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">Success Rate</div>
+            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">{t('additional.finalCta.stats.successRate') || 'Success Rate'}</div>
           </div>
           <div className="w-px h-12 bg-white/20"></div>
           <div className="text-center">
             <div className="text-[24px] font-light text-white">24/7</div>
-            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">AI Support</div>
+            <div className="text-[12px] text-white/70 font-medium tracking-wide uppercase">{t('additional.finalCta.stats.support') || 'AI Support'}</div>
           </div>
         </div>
       </div>

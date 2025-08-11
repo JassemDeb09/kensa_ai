@@ -6,9 +6,18 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Building2, Zap } from "lucide-react"
 
 export function IndustriesSection() {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+
+  // Initialize slide position based on direction
+  useEffect(() => {
+    if (isRTL) {
+      setCurrentSlide(4) // Start from last slide (industries.length - 1)
+    } else {
+      setCurrentSlide(0) // Start from first slide
+    }
+  }, [isRTL])
 
   const industries = [
     { 
@@ -16,7 +25,7 @@ export function IndustriesSection() {
       title: t('industries.items.manufacturing.title') || 'Manufacturing', 
       desc: t('industries.items.manufacturing.description') || 'AI-powered production optimization', 
       img: '/industries.jpg',
-      stats: '40% efficiency gain',
+      stats: t('additional.industries.stats.manufacturing') || '40% efficiency gain',
       color: '#1e90e8'
     },
     { 
@@ -24,7 +33,7 @@ export function IndustriesSection() {
       title: t('industries.items.smartCities.title') || 'Smart Cities', 
       desc: t('industries.items.smartCities.description') || 'Intelligent urban infrastructure', 
       img: '/smart_city.jpg',
-      stats: '60% cost reduction',
+      stats: t('additional.industries.stats.smartCities') || '60% cost reduction',
       color: '#3d50e3'
     },
     { 
@@ -32,7 +41,7 @@ export function IndustriesSection() {
       title: t('industries.items.retail.title') || 'E-Commerce', 
       desc: t('industries.items.retail.description') || 'Personalized shopping experiences', 
       img: '/ecommerce.jpg',
-      stats: '25% revenue boost',
+      stats: t('additional.industries.stats.retail') || '25% revenue boost',
       color: '#1e90e8'
     },
     { 
@@ -40,7 +49,7 @@ export function IndustriesSection() {
       title: t('industries.items.finance.title') || 'Financial Services', 
       desc: t('industries.items.finance.description') || 'Fraud detection and risk management', 
       img: '/finance.jpg',
-      stats: '90% fraud prevention',
+      stats: t('additional.industries.stats.finance') || '90% fraud prevention',
       color: '#3d50e3'
     },
     { 
@@ -48,7 +57,7 @@ export function IndustriesSection() {
       title: t('industries.items.digital.title') || 'Digital Transformation', 
       desc: t('industries.items.digital.description') || 'End-to-end business digitization', 
       img: '/digital_transformation.jpg',
-      stats: '300% ROI achieved',
+      stats: t('additional.industries.stats.digital') || '300% ROI achieved',
       color: '#1e90e8'
     },
   ]
@@ -58,18 +67,30 @@ export function IndustriesSection() {
     if (!isAutoPlaying) return
     
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % industries.length)
+      if (isRTL) {
+        setCurrentSlide((prev) => (prev - 1 + industries.length) % industries.length)
+      } else {
+        setCurrentSlide((prev) => (prev + 1) % industries.length)
+      }
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying, industries.length])
+  }, [isAutoPlaying, industries.length, isRTL])
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % industries.length)
+    if (isRTL) {
+      setCurrentSlide((prev) => (prev - 1 + industries.length) % industries.length)
+    } else {
+      setCurrentSlide((prev) => (prev + 1) % industries.length)
+    }
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + industries.length) % industries.length)
+    if (isRTL) {
+      setCurrentSlide((prev) => (prev + 1) % industries.length)
+    } else {
+      setCurrentSlide((prev) => (prev - 1 + industries.length) % industries.length)
+    }
   }
 
   const goToSlide = (index: number) => {
@@ -99,10 +120,10 @@ export function IndustriesSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            AI solutions for <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">every industry</span>
+{t('additional.industries.solutionsTitle') || 'AI solutions for every industry'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
-            From manufacturing to finance, we deliver tailored AI implementations that drive measurable results across diverse business sectors.
+{t('additional.industries.subtitle') || 'From manufacturing to finance, we deliver tailored AI implementations that drive measurable results across diverse business sectors.'}
           </p>
         </div>
 
@@ -110,7 +131,11 @@ export function IndustriesSection() {
         <div className="relative mb-16">
           <div 
             className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            style={{ 
+              transform: isRTL 
+                ? `translateX(${currentSlide * 100}%)` 
+                : `translateX(-${currentSlide * 100}%)`
+            }}
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
@@ -119,7 +144,11 @@ export function IndustriesSection() {
                 <div className="max-w-6xl mx-auto">
                   <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Content */}
-                    <div className={`space-y-8 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                    <div className={`space-y-8 ${
+                      isRTL 
+                        ? (index % 2 === 0 ? 'lg:order-2' : 'lg:order-1')
+                        : (index % 2 === 0 ? 'lg:order-1' : 'lg:order-2')
+                    }`}>
                       <div className="space-y-6">
                         <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
                           industry.color === '#1e90e8' 
@@ -156,7 +185,11 @@ export function IndustriesSection() {
         </div>
 
                     {/* Image */}
-                    <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                    <div className={`relative ${
+                      isRTL 
+                        ? (index % 2 === 0 ? 'lg:order-1' : 'lg:order-2')
+                        : (index % 2 === 0 ? 'lg:order-2' : 'lg:order-1')
+                    }`}>
                       <div className="relative group">
                         {/* AI Glow Effect */}
                         <div className={`absolute -inset-6 rounded-3xl blur-2xl opacity-40 ${

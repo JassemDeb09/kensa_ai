@@ -10,25 +10,25 @@ export function WhyChooseUsSection() {
     {
       icon: Target,
       title: t('whyChoose.features.roi') || "Proven ROI",
-      description: "Average 300% ROI within 12 months of AI implementation",
+      description: t('additional.whyChoose.provenRoiDesc') || "Average 300% ROI within 12 months of AI implementation",
       color: "#1e90e8"
     },
     {
       icon: Clock,
       title: t('whyChoose.features.support') || "24/7 AI Support",
-      description: "Round-the-clock monitoring and support for your AI systems",
+      description: t('additional.whyChoose.aiSupportDesc') || "Round-the-clock monitoring and support for your AI systems",
       color: "#3d50e3"
     },
     {
       icon: Users,
       title: t('whyChoose.features.experts') || "AI Specialists",
-      description: "World-class team spanning 25+ cities globally",
+      description: t('additional.whyChoose.aiSpecialistsDesc') || "World-class team spanning 25+ cities globally",
       color: "#1e90e8"
     },
     {
       icon: Shield,
       title: t('whyChoose.features.security') || "AI Security",
-      description: "Enterprise-grade security with GDPR compliance",
+      description: t('additional.whyChoose.aiSecurityDesc') || "Enterprise-grade security with GDPR compliance",
       color: "#3d50e3"
     }
   ]
@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            The <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI advantage</span> you need
+            {t('additional.whyChoose.advantageTitle') || 'The AI advantage you need'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-[1.5]">
             {t('whyChoose.subtitle') || "Four key differentiators that make us the preferred AI transformation partner for enterprise leaders worldwide."}
@@ -107,7 +107,7 @@ export function WhyChooseUsSection() {
         {/* Bottom Section */}
         <div className="text-center mt-20">
           <p className="text-[16px] text-gray-600 dark:text-gray-400 font-light">
-            Trusted by 500+ companies worldwide for AI transformation excellence
+            {t('additional.whyChoose.trustedBy') || 'Trusted by 500+ companies worldwide for AI transformation excellence'}
           </p>
         </div>
       </div>

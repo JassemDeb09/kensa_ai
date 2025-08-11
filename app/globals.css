@@ -189,3 +189,45 @@
 .rotate-x-2 {
   transform: rotateX(2deg);
 }
+
+/* RTL Support */
+[dir="rtl"] .rtl\:mr-2 {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .rtl\:ml-2 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .rtl\:space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:text-left {
+  text-align: left;
+}
+
+[dir="rtl"] .rtl\:flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Arabic font support */
+[dir="rtl"] {
+  font-family: var(--font-cairo), 'Cairo', 'Noto Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-cairo), 'Cairo', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Fix button spacing in RTL */
+[dir="rtl"] .rtl\:gap-reverse {
+  gap: 0.5rem;
+  flex-direction: row-reverse;
+}

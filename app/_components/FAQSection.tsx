@@ -56,7 +56,7 @@ export function FAQSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            AI questions <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">answered</span>
+{t('additional.faq.answeredTitle') || 'AI questions answered'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
             {t('faq.subtitle') || "Beyond the Noise: Your AI Journey, Defined. We provide the clarity, global expertise, and tangible transformation you need to navigate complexity and drive success."}
@@ -111,10 +111,10 @@ export function FAQSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-16 pt-12 border-t border-gray-200/50 dark:border-gray-700/50">
           <p className="text-[16px] text-gray-600 dark:text-gray-400 mb-4">
-            Still have questions about AI implementation?
+            {t('additional.faq.stillQuestions') || 'Still have questions about AI implementation?'}
           </p>
           <button className="text-[#1e90e8] hover:text-[#3d50e3] font-medium transition-colors duration-300">
-            Contact our AI specialists →
+            {t('additional.faq.contactSpecialists') || 'Contact our AI specialists →'}
           </button>
         </div>
       </div>

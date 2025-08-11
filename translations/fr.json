@@ -223,17 +223,137 @@
   },
   "footer": {
     "description": "Là où la stratégie mondiale rencontre l'intelligence artificielle d'excellence.",
-    "location": "🌍 Impact mondial, basé à Toronto, ON Canada",
+    "location": "🌍 Impact mondial, basé à Toronto, ONTARIO Canada",
     "contact": {
       "email": "contact@kensaai.com",
       "phone": "+1 (437 873 47 82",
-      "location": "Impact mondial, basé à Toronto, ON Canada",
+      "location": "Impact mondial, basé à Toronto, ONTARIO Canada",
       "hours": "Lun-Ven, 9h-18h EST"
     },
     "copyright": "© 2025 KENSA AI. Tous droits réservés.",
     "legal": {
       "privacy": "Politique de confidentialité",
-      "terms": "Mentions légales"
+      "terms": "Mentions légales",
+      "ethics": "Éthique de l'IA"
+    }
+  },
+  "additional": {
+    "stats": {
+      "provenExcellence": "Excellence IA prouvée",
+      "metricsTitle": "Métriques de Performance IA",
+      "subtitle": "Leader de la transformation IA avec des résultats mesurables et des solutions innovantes qui stimulent la croissance des entreprises.",
+      "deployments": "Déploiements IA",
+      "deploymentsDesc": "Solutions IA d'entreprise implémentées avec succès dans le monde entier",
+      "successRate": "Taux de Réussite",
+      "successRateDesc": "Projets IA livrés à temps avec un ROI mesurable",
+      "citiesDesc": "Villes du monde entier transformées par l'innovation IA",
+      "powering": "Alimenter l'innovation IA depuis 2019"
+    },
+    "whyChoose": {
+      "advantageTitle": "L'avantage IA dont vous avez besoin",
+      "advantageSubtitle": "Quatre différenciateurs clés qui font de nous le partenaire de transformation IA privilégié des leaders d'entreprise dans le monde entier.",
+      "provenRoi": "ROI Prouvé",
+      "provenRoiDesc": "ROI moyen de 300% dans les 12 mois suivant l'implémentation IA",
+      "aiSupport": "Support IA 24/7",
+      "aiSupportDesc": "Surveillance et support en continu pour vos systèmes IA",
+      "aiSpecialists": "Spécialistes IA",
+      "aiSpecialistsDesc": "Équipe de classe mondiale répartie dans plus de 25 villes",
+      "aiSecurity": "Sécurité IA",
+      "aiSecurityDesc": "Sécurité de niveau entreprise avec conformité RGPD",
+      "trustedBy": "Fait confiance par plus de 500 entreprises dans le monde pour l'excellence de la transformation IA"
+    },
+    "services": {
+      "portfolioTitle": "Portfolio de Solutions IA",
+      "features": {
+        "audit": ["Analyse d'opportunités IA", "Évaluation technologique", "Feuille de route stratégique", "Modélisation ROI"],
+        "integration": ["Modèles d'apprentissage automatique", "Systèmes d'apprentissage profond", "Vision par ordinateur", "Traitement du langage naturel"],
+        "automation": ["Intégration système", "Déploiement cloud", "Développement API", "Optimisation des performances"],
+        "training": ["Formation d'équipe", "Gestion du changement", "Meilleures pratiques", "Support 24/7"]
+      },
+      "cta": {
+        "primary": "Démarrer la Transformation IA",
+        "secondary": "Voir les Études de Cas IA",
+        "explore": "Explorer la solution"
+      }
+    },
+    "industries": {
+      "solutionsTitle": "Solutions IA Sectorielles",
+      "subtitle": "Du manufacturing à la finance, nous livrons des implémentations IA sur mesure qui génèrent des résultats mesurables dans divers secteurs d'activité.",
+      "stats": {
+        "manufacturing": "40% de gain d'efficacité",
+        "smartCities": "60% de réduction des coûts",
+        "retail": "25% d'augmentation des revenus",
+        "finance": "90% de prévention de fraude",
+        "digital": "300% de ROI atteint"
+      }
+    },
+    "demo": {
+      "inAction": "IA en Action",
+      "seeTitle": "Voyez nos solutions IA en action",
+      "seeSubtitle": "Regardez une présentation de 5 minutes de notre plateforme IA et voyez comment nous transformons les entreprises de tous secteurs avec l'automatisation intelligente.",
+      "fiveMinuteTitle": "Présentation de Transformation IA de 5 Minutes",
+      "fiveMinuteDesc": "Découvrez comment notre plateforme IA identifie les opportunités, automatise les processus et offre un ROI mesurable aux clients d'entreprise de différents secteurs.",
+      "liveBadge": "Démo IA Live",
+      "watchDemo": "Regarder la Démo Complète",
+      "scheduleLive": "Programmer une Démo Live",
+      "joinElite": "Rejoindre l'Élite de l'Innovation",
+      "features": {
+        "realtime": "Analyses en Temps Réel",
+        "realtimeDesc": "Métriques de performance IA en direct",
+        "automation": "Automatisation Intelligente",
+        "automationDesc": "Optimisation intelligente des processus",
+        "security": "Sécurité d'Entreprise",
+        "securityDesc": "Infrastructure conforme SOC2"
+      }
+    },
+    "about": {
+      "aboutTitle": "À propos de KENSA AI",
+      "transformationLeaders": "leaders de la transformation IA",
+      "aiCommitment": "Notre Engagement IA",
+      "values": {
+        "excellence": {
+          "title": "Excellence IA",
+          "description": "Solutions IA de pointe qui génèrent des résultats mesurables"
+        },
+        "partnership": {
+          "title": "Partenariat",
+          "description": "Collaboration étroite tout au long de votre parcours de transformation IA"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Technologies d'apprentissage automatique et IA de pointe"
+        }
+      },
+      "stats": {
+        "years": "5+ Années",
+        "yearsLabel": "Expertise IA",
+        "experts": "50+ Experts",
+        "expertsLabel": "Spécialistes IA Certifiés"
+      },
+      "ctaText": "Rencontrer Notre Équipe IA"
+    },
+    "faq": {
+      "answeredTitle": "Questions IA répondues",
+      "stillQuestions": "Vous avez encore des questions sur l'implémentation IA ?",
+      "contactSpecialists": "Contactez nos spécialistes IA →"
+    },
+    "finalCta": {
+      "readyBadge": "Prêt pour la Transformation IA ?",
+      "startJourney": "Commencez votre parcours IA aujourd'hui",
+      "joinSubtitle": "Rejoignez plus de 500 entreprises qui transforment déjà leur business avec nos solutions IA. Obtenez une consultation gratuite et découvrez vos opportunités IA.",
+      "bookConsultation": "Réserver une Consultation IA Gratuite",
+      "caseStudies": "Voir les Études de Cas IA",
+      "stats": {
+        "projects": "500+ Projets IA",
+        "successRate": "98% Taux de Réussite",
+        "support": "Support IA 24/7"
+      }
+    },
+    "hero": {
+      "socialProof": "4,9/5 sur plus de 500 implémentations IA"
+    },
+    "testimonials": {
+      "trustedTitle": "Leaders de l'industrie nous font confiance"
     }
   }
 }

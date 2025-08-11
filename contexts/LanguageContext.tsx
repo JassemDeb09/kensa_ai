@@ -3,13 +3,15 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 import enTranslations from '../translations/en.json'
 import frTranslations from '../translations/fr.json'
+import arTranslations from '../translations/ar.json'
 
-type Language = 'en' | 'fr'
+type Language = 'en' | 'fr' | 'ar'
 
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
   t: (key: string) => string
+  isRTL: boolean
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -17,7 +19,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Translations loaded from JSON files
 const translations = {
   en: enTranslations,
-  fr: frTranslations
+  fr: frTranslations,
+  ar: arTranslations
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -27,6 +30,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   React.useEffect(() => {
     setMounted(true)
   }, [])
+
+  const isRTL = language === 'ar'
 
   const t = (key: string): string => {
     // Return the key during SSR to avoid hydration mismatches
@@ -42,8 +47,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return value || key
   }
 
+  // Update document direction when language changes
+  React.useEffect(() => {
+    if (mounted) {
+      document.documentElement.dir = isRTL ? 'rtl' : 'ltr'
+      document.documentElement.lang = language
+    }
+  }, [language, isRTL, mounted])
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>
   )

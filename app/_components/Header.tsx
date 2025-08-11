@@ -15,7 +15,7 @@ interface HeaderProps {
 }
 
 export function Header({ scrollY, onSectionClick }: HeaderProps) {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
   const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -62,7 +62,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
                  </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-12">
+          <div className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse space-x-12' : 'space-x-12'}`}>
             {navItems.map((item) => (
               <button
                 key={item.key}
@@ -78,7 +78,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
           </div>
 
           {/* Right Side */}
-          <div className="flex items-center gap-6">
+          <div className={`flex items-center gap-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <ClientOnly>
               <div className="hidden lg:flex items-center gap-4">
                 <SimpleLanguageSwitcher />
@@ -90,7 +90,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
               onClick={() => onSectionClick("contact")}
               className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#1e90e8]/25 text-[15px]"
             >
-              Book AI Consultation
+              {t('nav.getStarted') || 'Book Consultation'}
               <ArrowUpRight className="w-4 h-4" />
             </Button>
 
@@ -130,7 +130,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
                 }}
                 className="w-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2"
               >
-                Book AI Consultation
+                {t('nav.getStarted') || 'Book Consultation'}
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>

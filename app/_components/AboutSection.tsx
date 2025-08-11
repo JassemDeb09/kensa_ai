@@ -10,20 +10,20 @@ export function AboutSection() {
   const values = [
     { 
       icon: Brain, 
-      title: "AI Excellence", 
-      desc: "Cutting-edge AI solutions that drive measurable results",
+      title: t('additional.about.values.excellence.title') || "AI Excellence", 
+      desc: t('additional.about.values.excellence.description') || "Cutting-edge AI solutions that drive measurable results",
       color: "#1e90e8"
     },
     { 
       icon: Users, 
-      title: "Partnership", 
-      desc: "Close collaboration throughout your AI transformation journey",
+      title: t('additional.about.values.partnership.title') || "Partnership", 
+      desc: t('additional.about.values.partnership.description') || "Close collaboration throughout your AI transformation journey",
       color: "#3d50e3"
     },
     { 
       icon: Cpu, 
-      title: "Innovation", 
-      desc: "Leading-edge machine learning and AI technologies",
+      title: t('additional.about.values.innovation.title') || "Innovation", 
+      desc: t('additional.about.values.innovation.description') || "Leading-edge machine learning and AI technologies",
       color: "#1e90e8"
     },
   ]
@@ -51,8 +51,8 @@ export function AboutSection() {
             
             {/* Main Headline */}
             <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI transformation</span><br />
-              {t('about.title') || "leaders"}
+              <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">{t('additional.about.transformationLeaders') || "AI transformation"}</span><br />
+              leaders
             </h2>
             
             {/* Company Foundation */}
@@ -96,12 +96,12 @@ export function AboutSection() {
                     
                     {/* Number */}
                     <p className="font-semibold text-gray-900 dark:text-white text-[20px] mb-2 transition-all duration-500 group-hover:scale-105 group-hover:text-[#1e90e8]">
-                      5+ Years
+                      {t('additional.about.stats.years') || '5+ Years'}
                     </p>
                     
                     {/* Label */}
                     <p className="text-[14px] text-gray-600 dark:text-gray-400 transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
-                      AI Expertise
+                      {t('additional.about.stats.yearsLabel') || 'AI Expertise'}
                     </p>
                   </div>
 
@@ -126,12 +126,12 @@ export function AboutSection() {
                     
                     {/* Number */}
                     <p className="font-semibold text-gray-900 dark:text-white text-[20px] mb-2 transition-all duration-500 group-hover:scale-105 group-hover:text-[#3d50e3]">
-                      50+ Experts
+                      {t('additional.about.stats.experts') || '50+ Experts'}
                     </p>
                     
                     {/* Label */}
                     <p className="text-[14px] text-gray-600 dark:text-gray-400 transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
-                      Certified AI Specialists
+                      {t('additional.about.stats.expertsLabel') || 'Certified AI Specialists'}
                     </p>
                   </div>
 
@@ -144,7 +144,7 @@ export function AboutSection() {
             {/* CTA */}
             <Button className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25">
               <span className="flex items-center gap-3">
-                {t('about.cta') || "Meet Our AI Team"}
+{t('additional.about.ctaText') || "Meet Our AI Team"}
                 <ArrowUpRight className="w-5 h-5" />
               </span>
             </Button>
@@ -158,7 +158,7 @@ export function AboutSection() {
             {/* Main Card */}
             <div className="relative bg-white dark:bg-gray-800 border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-12 shadow-[0_24px_64px_rgba(30,144,232,0.08)]">
               <h3 className="text-[28px] font-medium text-gray-900 dark:text-white mb-8">
-                {t('about.commitment') || "Our AI Commitment"}
+                {t('additional.about.aiCommitment') || "Our AI Commitment"}
               </h3>
               
               <div className="space-y-8">

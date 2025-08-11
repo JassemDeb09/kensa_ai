@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Play, Monitor, ArrowUpRight } from "lucide-react"
+import { Play, Monitor, ArrowUpRight, BarChart3, Zap, Shield } from "lucide-react"
 import { useState } from "react"
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -29,7 +29,7 @@ export function DemoSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            See our <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">AI solutions</span> in action
+{t('additional.demo.seeTitle') || 'See our AI solutions in action'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 mb-16 max-w-3xl mx-auto leading-[1.5]">
             {t('demo.subtitle') || "Watch a 5-minute walkthrough of our AI platform and see how we're transforming businesses across industries with intelligent automation."}
@@ -100,7 +100,7 @@ export function DemoSection() {
                     className="border-[#1e90e8]/30 text-[#1e90e8] hover:bg-[#1e90e8]/5 dark:border-[#1e90e8]/50 dark:text-[#1e90e8] font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300"
                   >
                     <span className="flex items-center gap-3">
-                      Schedule Live Demo
+                      {t('additional.demo.scheduleLive') || 'Schedule Live Demo'}
                       <ArrowUpRight className="w-4 h-4" />
                     </span>
                   </Button>
@@ -113,15 +113,30 @@ export function DemoSection() {
         {/* Innovation Elite Section */}
         <div className="mt-20">
           <h3 className="text-[32px] lg:text-[36px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-12 text-center">
-            Join the <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">Innovation Elite</span>
+            {t('additional.demo.joinElite') || 'Join the Innovation Elite'}
           </h3>
           
           {/* Features Cards */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { title: "Real-time Analytics", desc: "Live AI performance metrics", color: "#1e90e8" },
-              { title: "Smart Automation", desc: "Intelligent process optimization", color: "#3d50e3" },
-              { title: "Enterprise Security", desc: "SOC2 compliant infrastructure", color: "#1e90e8" }
+              { 
+                title: t('additional.demo.features.realtime') || "Real-time Analytics", 
+                desc: t('additional.demo.features.realtimeDesc') || "Live AI performance metrics", 
+                color: "#1e90e8", 
+                icon: BarChart3 
+              },
+              { 
+                title: t('additional.demo.features.automation') || "Smart Automation", 
+                desc: t('additional.demo.features.automationDesc') || "Intelligent process optimization", 
+                color: "#3d50e3", 
+                icon: Zap 
+              },
+              { 
+                title: t('additional.demo.features.security') || "Enterprise Security", 
+                desc: t('additional.demo.features.securityDesc') || "SOC2 compliant infrastructure", 
+                color: "#1e90e8", 
+                icon: Shield 
+              }
             ].map((feature, index) => (
               <div key={index} className="group relative">
                 {/* Card */}
@@ -142,9 +157,9 @@ export function DemoSection() {
                         ? 'bg-[#1e90e8]/10 group-hover:bg-[#1e90e8]/20 dark:bg-[#1e90e8]/20 dark:group-hover:bg-[#1e90e8]/30' 
                         : 'bg-[#3d50e3]/10 group-hover:bg-[#3d50e3]/20 dark:bg-[#3d50e3]/20 dark:group-hover:bg-[#3d50e3]/30'
                     }`}>
-                      <div className={`w-7 h-7 rounded transition-all duration-500 group-hover:scale-110 ${
-                        feature.color === "#1e90e8" ? 'bg-[#1e90e8]' : 'bg-[#3d50e3]'
-                      } opacity-70 group-hover:opacity-100`}></div>
+                      <feature.icon className={`w-7 h-7 transition-all duration-500 group-hover:scale-110 ${
+                        feature.color === "#1e90e8" ? 'text-[#1e90e8]' : 'text-[#3d50e3]'
+                      } opacity-70 group-hover:opacity-100`} />
                     </div>
                     
                     {/* Title */}

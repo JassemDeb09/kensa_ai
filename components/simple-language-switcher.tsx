@@ -12,7 +12,8 @@ import {
 
 const languages = [
   { code: 'en' as const, name: 'English', flag: '🇺🇸' },
-  { code: 'fr' as const, name: 'Français', flag: '🇫🇷' }
+  { code: 'fr' as const, name: 'Français', flag: '🇫🇷' },
+  { code: 'ar' as const, name: 'العربية', flag: '🇸🇦' }
 ]
 
 export function SimpleLanguageSwitcher() {

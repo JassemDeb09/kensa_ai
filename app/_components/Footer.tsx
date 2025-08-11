@@ -5,7 +5,7 @@ import { Facebook, Twitter, Linkedin, ChevronRight, Bot, Mail, Phone, MapPin, Cl
 import { useLanguage } from "@/contexts/LanguageContext"
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
 
   const services = [
     t("services.items.audit.title") || "AI Strategy & Consulting",
@@ -62,7 +62,7 @@ export function Footer() {
             </p>
             
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className={`flex gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <a href="#" className="w-10 h-10 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
                 <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
               </a>
@@ -83,8 +83,8 @@ export function Footer() {
             <div className="space-y-3">
               {services.map((service, index) => (
                 <div key={index} className="group cursor-pointer">
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">
-                    <ChevronRight className="h-4 w-4 text-[#1e90e8] group-hover:translate-x-1 transition-transform duration-300" />
+                  <div className={`flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <ChevronRight className={`h-4 w-4 text-[#1e90e8] transition-transform duration-300 ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
                     <span className="text-[14px]">{service}</span>
                   </div>
                 </div>
@@ -100,8 +100,8 @@ export function Footer() {
             <div className="space-y-3">
               {industries.map((industry, index) => (
                 <div key={index} className="group cursor-pointer">
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">
-                    <ChevronRight className="h-4 w-4 text-[#3d50e3] group-hover:translate-x-1 transition-transform duration-300" />
+                  <div className={`flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <ChevronRight className={`h-4 w-4 text-[#3d50e3] transition-transform duration-300 ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
                     <span className="text-[14px]">{industry}</span>
                   </div>
                 </div>
@@ -115,25 +115,25 @@ export function Footer() {
               {t("nav.contact") || "Get In Touch"}
             </h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="w-8 h-8 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center">
                   <Mail className="w-4 h-4 text-[#1e90e8]" />
                 </div>
                 <span className="text-[14px]">{t("footer.contact.email") || "hello@kensa.ai"}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="w-8 h-8 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center">
                   <Phone className="w-4 h-4 text-[#3d50e3]" />
                 </div>
                 <span className="text-[14px]">{t("footer.contact.phone") || "+1 (416) 555-0123"}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="w-8 h-8 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center">
                   <MapPin className="w-4 h-4 text-[#1e90e8]" />
                 </div>
                 <span className="text-[14px]">{t("footer.contact.location") || "Toronto, ON"}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="w-8 h-8 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center">
                   <Clock className="w-4 h-4 text-[#3d50e3]" />
                 </div>
@@ -145,11 +145,11 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className={`flex flex-col md:flex-row justify-between items-center gap-4 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
             <div className="text-gray-500 dark:text-gray-400 text-[14px]">
               {t("footer.copyright") || "© 2024 KENSA AI. All rights reserved."}
             </div>
-            <div className="flex items-center gap-6 text-[14px]">
+            <div className={`flex items-center gap-6 text-[14px] ${isRTL ? 'flex-row-reverse' : ''}`}>
               <span className="text-gray-500 dark:text-gray-400 hover:text-[#1e90e8] cursor-pointer transition-colors">
                 {t("footer.legal.privacy") || "Privacy Policy"}
               </span>
@@ -157,7 +157,7 @@ export function Footer() {
                 {t("footer.legal.terms") || "Terms of Service"}
               </span>
               <span className="text-gray-500 dark:text-gray-400 hover:text-[#1e90e8] cursor-pointer transition-colors">
-                AI Ethics
+                {t("footer.legal.ethics") || "AI Ethics"}
               </span>
             </div>
           </div>

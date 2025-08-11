@@ -10,7 +10,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onSectionClick }: HeroSectionProps) {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
 
 
   
@@ -47,7 +47,7 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
       <div className="relative max-w-[1200px] mx-auto px-8 lg:px-12 pt-40 pb-24 z-20">
         <div className="flex flex-col items-center text-center space-y-12">
             {/* AI Status Badge */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+            <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md ${isRTL ? 'flex-row-reverse' : ''}`}>
               <div className="w-2 h-2 bg-[#1e90e8] rounded-full animate-pulse"></div>
               <span className="text-white font-medium text-[14px]">
                 {t("hero.badge") || "AI-Powered Solutions"}
@@ -84,11 +84,11 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
                 onClick={() => onSectionClick('services')}
                 className="group bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-10 py-5 rounded-xl text-[18px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25"
               >
-                <span className="flex items-center gap-3">
+                <span className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <Brain className="w-6 h-6" />
                   {t("hero.cta.primary") || "Start Your Transformation"}
                   {/* Alternative CTA text: "Transform My Business" */}
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className={`w-6 h-6 transition-transform ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
                 </span>
               </Button>
           </div>
@@ -102,7 +102,7 @@ export function HeroSection({ onSectionClick }: HeroSectionProps) {
                 ))}
               </div>
               <span className="text-white/80 text-[14px] font-medium ml-2">
-                4.9/5 from 500+ AI implementations
+                {t('additional.hero.socialProof') || '4.9/5 from 500+ AI implementations'}
               </span>
             </div>
           </div>

@@ -57,7 +57,7 @@ export function TestimonialsSection() {
             </span>
           </div>
           <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-6">
-            Trusted by <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">industry leaders</span>
+{t('additional.testimonials.trustedTitle') || 'Trusted by industry leaders'}
           </h2>
           <p className="text-[18px] text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-[1.5]">
             {t('testimonials.subtitle') || "Explore the tangible impact we've delivered to our partners and see what success looks like."}
