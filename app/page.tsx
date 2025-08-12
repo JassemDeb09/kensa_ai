@@ -12,6 +12,7 @@ import { TestimonialsSection } from "./_components/TestimonialsSection"
 import { StatsSection } from "./_components/StatsSection"
 import { FAQSection } from "./_components/FAQSection"
 import { AboutSection } from "./_components/AboutSection"
+import { ExperienceSection } from "./_components/ExperienceSection"
 import { DemoSection } from "./_components/DemoSection"
 import { FinalCTASection } from "./_components/FinalCTASection"
 import { Footer } from "./_components/Footer"
@@ -85,6 +86,11 @@ export default function KensaAILanding() {
       {/* About - White/Dark */}
       <div className="relative bg-white dark:bg-gray-900">
         <AboutSection />
+      </div>
+      
+      {/* Experience - Luxury Black */}
+      <div className="relative">
+        <ExperienceSection />
       </div>
       
       {/* Final CTA - Premium Gradient */}

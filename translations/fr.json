@@ -355,5 +355,54 @@
     "testimonials": {
       "trustedTitle": "Leaders de l'industrie nous font confiance"
     }
+  },
+  "experience": {
+    "title": "L'Expérience",
+    "headline": "Notre Parcours IA en Action",
+    "subtitle": "Explorez les moments qui définissent notre expertise - des conférences mondiales aux innovations révolutionnaires, découvrez comment notre équipe mène la transformation IA.",
+    "items": [
+      {
+        "title": "Conférence Mondiale IA",
+        "description": "Intervenant au sommet international de l'IA"
+      },
+      {
+        "title": "Reconnaissance Industrielle",
+        "description": "Réception du prix d'innovation IA"
+      },
+      {
+        "title": "Partenariat Client",
+        "description": "Réunion d'implémentation IA stratégique"
+      },
+      {
+        "title": "Recherche & Développement",
+        "description": "Présentation de recherche IA avancée"
+      },
+      {
+        "title": "Excellence d'Équipe",
+        "description": "Célébration des jalons de projet"
+      },
+      {
+        "title": "Expansion Mondiale",
+        "description": "Ouverture de nouveau bureau international"
+      },
+      {
+        "title": "Hub d'Innovation",
+        "description": "Espace de travail IA collaboratif"
+      }
+    ],
+    "stats": {
+      "rating": "Reconnaissance Industrielle",
+      "countries": "Présence Mondiale",
+      "events": "Événements & Conférences"
+    },
+    "categories": {
+      "speaking": "Conférence",
+      "awards": "Prix",
+      "partnership": "Partenariat",
+      "research": "Recherche",
+      "achievement": "Réussite",
+      "expansion": "Expansion",
+      "innovation": "Innovation"
+    }
   }
 }

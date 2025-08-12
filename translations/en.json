@@ -355,5 +355,54 @@
     "testimonials": {
       "trustedTitle": "Trusted by industry leaders"
     }
+  },
+  "experience": {
+    "title": "The Experience",
+    "headline": "Our AI Journey in Action",
+    "subtitle": "Explore the moments that define our expertise - from global conferences to breakthrough innovations, see how our team leads the AI transformation.",
+    "items": [
+      {
+        "title": "Global AI Conference",
+        "description": "Speaking at international AI summit"
+      },
+      {
+        "title": "Industry Recognition", 
+        "description": "Receiving AI innovation award"
+      },
+      {
+        "title": "Client Partnership",
+        "description": "Strategic AI implementation meeting"
+      },
+      {
+        "title": "Research & Development",
+        "description": "Advanced AI research presentation"
+      },
+      {
+        "title": "Team Excellence",
+        "description": "Celebrating project milestones"
+      },
+      {
+        "title": "Global Expansion",
+        "description": "Opening new international office"
+      },
+      {
+        "title": "Innovation Hub",
+        "description": "Collaborative AI workspace"
+      }
+    ],
+    "stats": {
+      "rating": "Industry Recognition",
+      "countries": "Global Presence", 
+      "events": "Events & Conferences"
+    },
+    "categories": {
+      "speaking": "Speaking",
+      "awards": "Awards",
+      "partnership": "Partnership",
+      "research": "Research",
+      "achievement": "Achievement",
+      "expansion": "Expansion",
+      "innovation": "Innovation"
+    }
   }
 }
