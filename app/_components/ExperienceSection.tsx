@@ -83,19 +83,19 @@ export function ExperienceSection() {
   }
 
   return (
-    <section id="experience" className="relative py-40 bg-black dark:bg-black overflow-hidden">
+    <section id="experience" className="relative py-40 bg-white dark:bg-black overflow-hidden">
       {/* Luxury Background Effects */}
       <div className="absolute inset-0">
         {/* Premium AI Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,232,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.03)_1px,transparent_1px)] bg-[size:120px_120px]"></div>
         
         {/* Floating Luxury Elements */}
-        <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-to-r from-[#1e90e8]/10 via-[#3d50e3]/10 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute bottom-20 right-20 w-[800px] h-[800px] bg-gradient-to-l from-[#3d50e3]/10 via-[#1e90e8]/10 to-transparent rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s' }}></div>
+        <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-to-r from-[#1e90e8]/5 via-[#3d50e3]/5 to-transparent dark:from-[#1e90e8]/10 dark:via-[#3d50e3]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute bottom-20 right-20 w-[800px] h-[800px] bg-gradient-to-l from-[#3d50e3]/5 via-[#1e90e8]/5 to-transparent dark:from-[#3d50e3]/10 dark:via-[#1e90e8]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s' }}></div>
         
         {/* Premium Accent Lines */}
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-[#1e90e8]/20 to-transparent"></div>
-        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-[#3d50e3]/20 to-transparent"></div>
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-[#1e90e8]/10 dark:via-[#1e90e8]/20 to-transparent"></div>
+        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-[#3d50e3]/10 dark:via-[#3d50e3]/20 to-transparent"></div>
       </div>
       
       <div className="relative max-w-[1600px] mx-auto px-8 lg:px-16">
@@ -108,12 +108,12 @@ export function ExperienceSection() {
             </span>
           </div>
           
-          <h2 className="text-[56px] lg:text-[72px] font-extralight tracking-[-0.02em] text-white mb-8 leading-[0.9]">
+          <h2 className="text-[56px] lg:text-[72px] font-extralight tracking-[-0.02em] text-gray-900 dark:text-white mb-8 leading-[0.9]">
             <span className="block">
               {t('experience.headline') || 'Our AI Journey'}
             </span>
-            <span className="block bg-gradient-to-r from-[#1e90e8] via-white to-[#3d50e3] bg-clip-text text-transparent font-light">
-              in Action
+            <span className="block bg-gradient-to-r from-[#1e90e8] via-gray-900 dark:via-white to-[#3d50e3] bg-clip-text text-transparent font-light">
+              {t('experience.inAction') || 'in Action'}
             </span>
           </h2>
           
@@ -123,7 +123,7 @@ export function ExperienceSection() {
             <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#3d50e3]"></div>
           </div>
           
-          <p className="text-[22px] text-gray-300 max-w-4xl mx-auto leading-[1.6] font-light">
+          <p className="text-[22px] text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-[1.6] font-light">
             {t('experience.subtitle') || "Explore the moments that define our expertise - from global conferences to breakthrough innovations, see how our team leads the AI transformation."}
           </p>
         </div>
@@ -138,7 +138,7 @@ export function ExperienceSection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Premium Glass Container */}
-              <div className="relative w-full h-full overflow-hidden rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 transition-all duration-700 hover:border-[#1e90e8]/50">
+              <div className="relative w-full h-full overflow-hidden rounded-3xl bg-gradient-to-br from-gray-100/50 to-gray-50/30 dark:from-white/5 dark:to-white/[0.02] backdrop-blur-xl border border-gray-200/50 dark:border-white/10 transition-all duration-700 hover:border-[#1e90e8]/50">
                 
                 {/* Luxury Glow Effects */}
                 <div className={`absolute -inset-2 bg-gradient-to-r ${
@@ -158,7 +158,7 @@ export function ExperienceSection() {
                   />
                   
                   {/* Luxury Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-all duration-500 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent dark:from-black/80 dark:via-black/20 opacity-40 dark:opacity-60 group-hover:opacity-70 dark:group-hover:opacity-90 transition-all duration-500 rounded-3xl"></div>
                   <div className={`absolute inset-0 bg-gradient-to-tr ${
                     index % 2 === 0 ? "from-[#1e90e8]/20 to-[#3d50e3]/20" : "from-[#3d50e3]/20 to-[#1e90e8]/20"
                   } opacity-0 group-hover:opacity-30 transition-all duration-500 rounded-3xl`}></div>
@@ -201,10 +201,10 @@ export function ExperienceSection() {
                     ? index % 2 === 0 
                       ? 'bg-[#1e90e8] shadow-lg shadow-[#1e90e8]/50' 
                       : 'bg-[#3d50e3] shadow-lg shadow-[#3d50e3]/50'
-                    : 'bg-white/20 backdrop-blur-xl'
+                    : 'bg-white/80 dark:bg-white/20 backdrop-blur-xl'
                 }`}>
                   <Award className={`w-4 h-4 transition-colors duration-300 ${
-                    hoveredIndex === index ? 'text-white' : 'text-gray-400'
+                    hoveredIndex === index ? 'text-white' : 'text-gray-600 dark:text-gray-400'
                   }`} />
                 </div>
               </div>
@@ -213,7 +213,7 @@ export function ExperienceSection() {
         </div>
         
         {/* Premium Bottom Section */}
-        <div className="mt-32 pt-16 border-t border-white/10">
+        <div className="mt-32 pt-16 border-t border-gray-200/50 dark:border-white/10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Luxury Stats */}
             <div className="flex items-center gap-16">
@@ -223,25 +223,25 @@ export function ExperienceSection() {
                     <Star key={i} className="w-5 h-5 text-[#1e90e8] fill-current transition-all duration-300 group-hover:scale-110" />
                   ))}
                 </div>
-                <div className="text-white text-[16px] font-light">
+                <div className="text-gray-900 dark:text-white text-[16px] font-light">
                   {t('experience.stats.rating') || 'Industry Recognition'}
                 </div>
               </div>
               
-              <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+              <div className="w-px h-16 bg-gradient-to-b from-transparent via-gray-300/50 dark:via-white/20 to-transparent"></div>
               
               <div className="text-center group cursor-pointer">
                 <div className="text-[32px] font-extralight text-[#1e90e8] mb-2 transition-all duration-300 group-hover:scale-110">25+</div>
-                <div className="text-gray-300 text-[14px] font-light tracking-wide">
+                <div className="text-gray-600 dark:text-gray-300 text-[14px] font-light tracking-wide">
                   {t('experience.stats.countries') || 'Global Presence'}
                 </div>
               </div>
               
-              <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+              <div className="w-px h-16 bg-gradient-to-b from-transparent via-gray-300/50 dark:via-white/20 to-transparent"></div>
               
               <div className="text-center group cursor-pointer">
                 <div className="text-[32px] font-extralight text-[#3d50e3] mb-2 transition-all duration-300 group-hover:scale-110">500+</div>
-                <div className="text-gray-300 text-[14px] font-light tracking-wide">
+                <div className="text-gray-600 dark:text-gray-300 text-[14px] font-light tracking-wide">
                   {t('experience.stats.events') || 'Events & Conferences'}
                 </div>
               </div>
@@ -250,8 +250,8 @@ export function ExperienceSection() {
             {/* Premium Accent */}
             <div className="flex items-center gap-4">
               <div className="w-16 h-px bg-gradient-to-r from-[#1e90e8] to-[#3d50e3]"></div>
-              <Sparkles className="w-6 h-6 text-white animate-pulse" />
-              <div className="text-white/60 text-[14px] font-light">Excellence in Motion</div>
+              <Sparkles className="w-6 h-6 text-gray-900 dark:text-white animate-pulse" />
+              <div className="text-gray-600 dark:text-white/60 text-[14px] font-light">{t('experience.excellenceInMotion') || 'Excellence in Motion'}</div>
             </div>
           </div>
         </div>
