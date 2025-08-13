@@ -2,12 +2,25 @@
 
 import Image from "next/image"
 import { useLanguage } from '@/contexts/LanguageContext'
-import { Trophy, Award, Star, Sparkles, Zap, ArrowUpRight } from "lucide-react"
-import { useState } from "react"
+import { Trophy, Award, Star, Sparkles, Zap, ArrowUpRight, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
 
 export function ExperienceSection() {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  // Initialize slide position based on direction
+  useEffect(() => {
+    if (isRTL) {
+      setCurrentSlide(5) // Start from second to last for better centering
+    } else {
+      setCurrentSlide(1) // Start from second slide for better centering
+    }
+  }, [isRTL])
   
   const experienceImages = [
     {
@@ -37,10 +50,10 @@ export function ExperienceSection() {
     {
       src: "/exp4.jpeg",
       alt: "KENSA AI Team Experience 4",
-      title: t('experience.items.3.title') || "Research & Development",
-      description: t('experience.items.3.description') || "Advanced AI research presentation",
-      category: "Research",
-      year: "2023"
+      title: t('experience.items.3.title') || "Government Partnership",
+      description: t('experience.items.3.description') || "Meeting with The Honourable Edith Dumont, 30th Lieutenant Governor of Ontario",
+      category: "Partnership",
+      year: "2024"
     },
     {
       src: "/exp5.jpeg",
@@ -68,22 +81,73 @@ export function ExperienceSection() {
     }
   ]
 
-  // Premium masonry-style layout configuration
-  const getImageLayout = (index: number) => {
-    const layouts = [
-      "row-span-2", // Large
-      "row-span-1", // Small
-      "row-span-2", // Large
-      "row-span-1", // Small
-      "row-span-2", // Large
-      "row-span-1", // Small
-      "row-span-1"  // Small
-    ]
-    return layouts[index] || "row-span-1"
+  // Auto-slideshow functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return
+    
+    const interval = setInterval(() => {
+      if (isRTL) {
+        setCurrentSlide((prev) => (prev - 1 + experienceImages.length) % experienceImages.length)
+      } else {
+        setCurrentSlide((prev) => (prev + 1) % experienceImages.length)
+      }
+    }, 4000) // Change slide every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, experienceImages.length, isRTL])
+
+  // Intersection Observer for animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting)
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  // Luxury carousel navigation
+  const nextSlide = () => {
+    if (isRTL) {
+      setCurrentSlide((prev) => (prev - 1 + experienceImages.length) % experienceImages.length)
+    } else {
+      setCurrentSlide((prev) => (prev + 1) % experienceImages.length)
+    }
+  }
+
+  const prevSlide = () => {
+    if (isRTL) {
+      setCurrentSlide((prev) => (prev + 1) % experienceImages.length)
+    } else {
+      setCurrentSlide((prev) => (prev - 1 + experienceImages.length) % experienceImages.length)
+    }
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
+
+  // Enhanced hover effects
+  const handleCarouselHover = () => {
+    setIsAutoPlaying(false)
+  }
+
+  const handleCarouselLeave = () => {
+    setIsAutoPlaying(true)
   }
 
   return (
-    <section id="experience" className="relative py-40 bg-white dark:bg-black overflow-hidden">
+    <section 
+      ref={sectionRef}
+      id="experience" 
+      className="relative py-40 bg-white dark:bg-black overflow-hidden"
+    >
       {/* Luxury Background Effects */}
       <div className="absolute inset-0">
         {/* Premium AI Grid */}
@@ -128,88 +192,183 @@ export function ExperienceSection() {
           </p>
         </div>
 
-        {/* Premium Masonry Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[200px]">
-          {experienceImages.map((image, index) => (
+        {/* Compact Vertical Carousel Container */}
+        <div 
+          className="relative max-w-[1200px] mx-auto px-8"
+          onMouseEnter={handleCarouselHover}
+          onMouseLeave={handleCarouselLeave}
+        >
+          {/* Carousel Track - Multiple Cards Visible */}
+          <div className="relative overflow-hidden py-4" style={{ width: '964px', margin: '0 auto' }}>
             <div 
-              key={index} 
-              className={`group relative ${getImageLayout(index)} cursor-pointer`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              className="flex gap-8 px-4 transition-transform duration-700 ease-out"
+              style={{ 
+                transform: isRTL 
+                  ? `translateX(${(currentSlide - 1) * 308}px)` 
+                  : `translateX(-${(currentSlide - 1) * 308}px)`
+              }}
             >
-              {/* Premium Glass Container */}
-              <div className="relative w-full h-full overflow-hidden rounded-3xl bg-gradient-to-br from-gray-100/50 to-gray-50/30 dark:from-white/5 dark:to-white/[0.02] backdrop-blur-xl border border-gray-200/50 dark:border-white/10 transition-all duration-700 hover:border-[#1e90e8]/50">
-                
-                {/* Luxury Glow Effects */}
-                <div className={`absolute -inset-2 bg-gradient-to-r ${
-                  index % 2 === 0 
-                    ? "from-[#1e90e8]/30 via-[#3d50e3]/20 to-[#1e90e8]/30" 
-                    : "from-[#3d50e3]/30 via-[#1e90e8]/20 to-[#3d50e3]/30"
-                } rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700`}></div>
-                
-                {/* Premium Image Container */}
-                <div className="relative w-full h-full">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-all duration-1000 group-hover:scale-110 rounded-3xl"
-                  />
-                  
-                  {/* Luxury Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent dark:from-black/80 dark:via-black/20 opacity-40 dark:opacity-60 group-hover:opacity-70 dark:group-hover:opacity-90 transition-all duration-500 rounded-3xl"></div>
-                  <div className={`absolute inset-0 bg-gradient-to-tr ${
-                    index % 2 === 0 ? "from-[#1e90e8]/20 to-[#3d50e3]/20" : "from-[#3d50e3]/20 to-[#1e90e8]/20"
-                  } opacity-0 group-hover:opacity-30 transition-all duration-500 rounded-3xl`}></div>
-                  
-
-                  
-                  {/* Luxury Content Overlay */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className={`transform transition-all duration-700 ${
-                      hoveredIndex === index ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}>
-                      <h3 className="text-white text-[20px] lg:text-[24px] font-light mb-3 leading-tight">
+              {experienceImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="flex-shrink-0 group cursor-pointer"
+                  style={{ width: '300px' }}
+                  onClick={() => goToSlide(index)}
+                >
+                  {/* Vertical Card Container */}
+                  <div className={`relative h-[500px] overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50/50 to-white/30 dark:from-white/5 dark:to-white/[0.02] backdrop-blur-xl border border-gray-200/30 dark:border-white/10 transition-all duration-500 ${
+                    index === currentSlide 
+                      ? 'ring-2 ring-[#1e90e8]/50 ring-offset-2 ring-offset-white dark:ring-offset-black transform scale-102' 
+                      : 'hover:shadow-xl hover:shadow-[#1e90e8]/20 hover:border-[#1e90e8]/30'
+                  }`}>
+                    
+                    {/* Card Glow Effect */}
+                    <div className={`absolute -inset-2 bg-gradient-to-r ${
+                      index % 2 === 0 
+                        ? "from-[#1e90e8]/20 via-[#3d50e3]/10 to-[#1e90e8]/20" 
+                        : "from-[#3d50e3]/20 via-[#1e90e8]/10 to-[#3d50e3]/20"
+                    } rounded-2xl blur-xl transition-all duration-500 ${
+                      index === currentSlide ? 'opacity-60' : 'opacity-0 group-hover:opacity-40'
+                    }`}></div>
+                    
+                    {/* Image Container - Top 60% */}
+                    <div className="relative h-3/5 overflow-hidden rounded-t-2xl">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="320px"
+                        className="object-cover object-top transition-all duration-700 group-hover:scale-110"
+                      />
+                      
+                      {/* Image Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${
+                        index % 2 === 0 ? "from-[#1e90e8]/20 to-[#3d50e3]/20" : "from-[#3d50e3]/20 to-[#1e90e8]/20"
+                      } opacity-0 group-hover:opacity-30 transition-all duration-500`}></div>
+                      
+                      {/* Category Badge */}
+                      <div className="absolute top-4 left-4">
+                                                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20">
+                            <Award className="w-3 h-3 text-white" />
+                            <span className="text-white/90 text-xs font-medium">
+                              {t(`experience.categories.${image.category.toLowerCase()}`) || image.category}
+                            </span>
+                            <span className="text-white/60 text-xs">•</span>
+                            <span className="text-white/60 text-xs">{image.year}</span>
+                          </div>
+                      </div>
+                      
+                      {/* Current Slide Indicator */}
+                      {index === currentSlide && (
+                        <div className="absolute top-4 right-4">
+                          <div className="w-3 h-3 rounded-full bg-[#1e90e8] animate-pulse"></div>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Content Container - Bottom 40% */}
+                    <div className="relative h-2/5 p-6 flex flex-col justify-between">
+                      
+                      {/* Title */}
+                      <h3 className="text-gray-900 dark:text-white text-lg font-light mb-2 leading-tight line-clamp-2">
                         {image.title}
                       </h3>
-                      <p className="text-gray-300 text-[14px] leading-relaxed mb-4">
+                      
+                      {/* Description */}
+                      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
                         {image.description}
                       </p>
                       
-                      {/* Premium CTA */}
-                      <div className="flex items-center gap-2 text-[#1e90e8] text-[13px] font-medium group-hover:text-white transition-colors">
-                        <span>Explore</span>
-                        <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      {/* CTA */}
+                      <div className="flex items-center gap-2 text-[#1e90e8] text-sm font-medium group-hover:text-[#3d50e3] transition-colors">
+                        <span>{t('experience.viewDetails') || 'View Details'}</span>
+                        <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </div>
+                      
                     </div>
+                    
                   </div>
-                  
-                  {/* Premium Hover Border */}
-                  <div className={`absolute inset-0 rounded-3xl border-2 border-transparent ${
-                    hoveredIndex === index 
-                      ? index % 2 === 0 
-                        ? 'border-[#1e90e8]/50' 
-                        : 'border-[#3d50e3]/50'
-                      : ''
-                  } transition-all duration-500`}></div>
                 </div>
-                
-                {/* Premium Award Accent */}
-                <div className={`absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
-                  hoveredIndex === index 
-                    ? index % 2 === 0 
-                      ? 'bg-[#1e90e8] shadow-lg shadow-[#1e90e8]/50' 
-                      : 'bg-[#3d50e3] shadow-lg shadow-[#3d50e3]/50'
-                    : 'bg-white/80 dark:bg-white/20 backdrop-blur-xl'
-                }`}>
-                  <Award className={`w-4 h-4 transition-colors duration-300 ${
-                    hoveredIndex === index ? 'text-white' : 'text-gray-600 dark:text-gray-400'
-                  }`} />
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+            
+            {/* Compact Navigation Controls */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 dark:bg-black/80 hover:bg-white dark:hover:bg-black/90 backdrop-blur-xl border border-gray-200/50 dark:border-white/20 flex items-center justify-center transition-all duration-300 group z-10 shadow-lg"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-700 dark:text-white transition-transform group-hover:-translate-x-0.5" />
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 dark:bg-black/80 hover:bg-white dark:hover:bg-black/90 backdrop-blur-xl border border-gray-200/50 dark:border-white/20 flex items-center justify-center transition-all duration-300 group z-10 shadow-lg"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-700 dark:text-white transition-transform group-hover:translate-x-0.5" />
+            </button>
+            
+          </div>
+          
+          {/* Compact Carousel Controls */}
+          <div className="flex items-center justify-center gap-6 mt-8">
+            
+            {/* Play/Pause Control */}
+            <button
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`group flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                isAutoPlaying 
+                  ? 'bg-[#1e90e8]/10 text-[#1e90e8] border border-[#1e90e8]/20 hover:bg-[#1e90e8]/20' 
+                  : 'bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 border border-gray-200/50 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10'
+              }`}
+            >
+              {isAutoPlaying ? (
+                <Pause className="w-3 h-3 transition-transform group-hover:scale-110" />
+              ) : (
+                <Play className="w-3 h-3 transition-transform group-hover:scale-110" />
+              )}
+              <span className="text-xs font-medium">
+                {isAutoPlaying ? (t('experience.pause') || 'Pause') : (t('experience.play') || 'Play')}
+              </span>
+            </button>
+            
+            {/* Compact Slide Indicators */}
+            <div className="flex items-center gap-2">
+              {experienceImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`relative transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'w-8 h-2' 
+                      : 'w-2 h-2 hover:w-4'
+                  }`}
+                >
+                  <div className={`w-full h-full rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-gradient-to-r from-[#1e90e8] to-[#3d50e3]' 
+                      : 'bg-gray-300 dark:bg-white/20 hover:bg-[#1e90e8]/50'
+                  }`}></div>
+                  {index === currentSlide && (
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] animate-pulse opacity-50"></div>
+                  )}
+                </button>
+              ))}
+            </div>
+            
+          </div>
+          
+          {/* Explore More Button */}
+          <div className="flex justify-center mt-16">
+            <a
+              href="/expertise"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#1e90e8]/25"
+            >
+              <span>{t('experience.exploreMore') || 'Explore More'}</span>
+              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+          </div>
+          
         </div>
         
         {/* Premium Bottom Section */}

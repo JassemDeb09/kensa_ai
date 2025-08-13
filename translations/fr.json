@@ -111,6 +111,13 @@
   },
   "industries": {
     "title": "Nos domaines d'excellence",
+    "categories": {
+      "manufacturing": "Industrie",
+      "smartCities": "Villes Intelligentes",
+      "retail": "Commerce",
+      "finance": "Finance",
+      "digital": "Numérique"
+    },
     "items": {
       "manufacturing": {
         "title": "Industrie & Fabrication",
@@ -358,7 +365,7 @@
   },
   "experience": {
     "title": "L'Expérience",
-    "headline": "Notre Parcours IA en Action",
+    "headline": "Notre Parcours IA",
     "subtitle": "Explorez les moments qui définissent notre expertise - des conférences mondiales aux innovations révolutionnaires, découvrez comment notre équipe mène la transformation IA.",
     "items": [
       {
@@ -374,8 +381,8 @@
         "description": "Réunion d'implémentation IA stratégique"
       },
       {
-        "title": "Recherche & Développement",
-        "description": "Présentation de recherche IA avancée"
+        "title": "Partenariat Gouvernemental",
+        "description": "Rencontre avec L'honorable Edith Dumont, 30e lieutenante-gouverneure de l'Ontario - la première francophone à occuper cette fonction, suivant une longue et brillante carrière dans le domaine de l'éducation"
       },
       {
         "title": "Excellence d'Équipe",
@@ -405,6 +412,128 @@
       "innovation": "Innovation"
     },
     "inAction": "en Action",
-    "excellenceInMotion": "Excellence en Mouvement"
+    "excellenceInMotion": "Excellence en Mouvement",
+    "viewDetails": "Voir les Détails",
+    "pause": "Pause",
+    "play": "Lecture",
+    "exploreMore": "Explorer Plus"
+  },
+  "expertise": {
+    "hero": {
+      "badge": "Visionnaire IA & Catalyseur Mondial",
+      "credentials": "Coach Internationale\nMulti-Récompensée,\nConférencière Forbes, TedX\nConférencière, Formatrice & Auteure.",
+      "name": "FatimaZahra KHOUKH",
+      "title": "Fondatrice & PDG de KENSA AI",
+      "description": "Commandez le Leadership du Marché avec la Croissance et l'Innovation Pilotées par l'IA. Je collabore avec des PDG visionnaires et des équipes dirigeantes pour livrer des solutions IA qui stimulent une croissance mesurable, optimisent les opérations et élèvent les expériences client.",
+      "website": "www.kensaai.com",
+      "social": {
+        "instagram": "@ceo_fatimazahra",
+        "linkedin": "www.linkedin.com/in/fatimazahra-khoukh",
+        "email": "contact@kensaai.com"
+      },
+      "cta": {
+        "primary": "Découvrir le Parcours",
+        "secondary": "Connectons-nous"
+      }
+    },
+    "story": {
+      "badge": "PARCOURS DE TRANSFORMATION EXÉCUTIVE",
+      "title": "L'Histoire de la Transformation IA",
+      "subtitle": "Un parcours d'innovation stratégique, de leadership exécutif et de transformation mesurable",
+      "description": "À travers les industries mondiales, autonomisant les leaders visionnaires à architecturer l'avenir des affaires",
+      "chapterLabel": "CHAPITRE",
+      "chapters": [
+        {
+          "title": "La Vision",
+          "subtitle": "Où l'Innovation Rencontre le Leadership",
+          "content": "L'IA est l'avantage décisif qui sépare les leaders des suiveurs. Chaque transformation commence par une vision - le courage de voir au-delà du présent et d'architecturer l'avenir."
+        },
+        {
+          "title": "Le Parcours",
+          "subtitle": "Résultats Transformateurs à Travers les Industries",
+          "content": "Grâce à une collaboration stratégique avec des PDG visionnaires et des équipes dirigeantes, nous livrons des solutions IA qui stimulent une croissance mesurable, optimisent les opérations et élèvent les expériences client."
+        },
+        {
+          "title": "L'Impact",
+          "subtitle": "Commandez le Leadership du Marché",
+          "content": "Notre approche est stratégique, collaborative et implacablement axée sur les résultats - autonomisant les leaders à transformer, surpasser la concurrence et sécuriser la domination du marché."
+        },
+        {
+          "title": "L'Avenir",
+          "subtitle": "Votre Histoire de Succès IA",
+          "content": "Prêt à stimuler la croissance et l'innovation menées par l'IA ? Connectons-nous et architecturons votre histoire de succès - débloquant de nouveaux flux de revenus, l'excellence opérationnelle et un avantage concurrentiel inégalé."
+        }
+      ]
+    },
+    "results": {
+      "badge": "IMPACT MESURABLE",
+      "title": "Résultats Transformateurs",
+      "subtitle": "À Travers les Industries, À Travers les Continents - Résultats Réels Qui Stimulent les Affaires",
+      "description": "Métriques de transformation quantifiables qui démontrent la puissance de l'implémentation IA stratégique",
+      "metrics": [
+        {
+          "value": "40%+",
+          "description": "Engagement apprenant stimulé grâce à la personnalisation et l'apprentissage adaptatif pilotés par l'IA"
+        },
+        {
+          "value": "60%",
+          "description": "Processus répétitifs automatisés, libérant les équipes pour innover et évoluer"
+        },
+        {
+          "value": "5%",
+          "description": "Traitement des réclamations raccourci, détection de fraude améliorée, satisfaction client élevée"
+        },
+        {
+          "value": "95%+",
+          "description": "Précision de détection de défauts atteinte, minimisant les déchets et les rappels coûteux"
+        },
+        {
+          "value": "30%+",
+          "description": "Croissance des ventes livrée en alimentant des expériences d'achat hyper-personnalisées"
+        },
+        {
+          "value": "Révolutionnaire",
+          "description": "Mobilité urbaine et efficacité énergétique transformées avec les intégrations IA et IoT"
+        },
+        {
+          "value": "Semaines à Jours",
+          "description": "Cycles de recrutement réduits utilisant le criblage de candidats IA de précision"
+        },
+        {
+          "value": "ROI Plus Élevé",
+          "description": "Routes optimisées et coûts réduits grâce à la logistique alimentée par l'IA"
+        }
+      ]
+    },
+    "collaborate": {
+      "title": "Pourquoi Collaborer Avec Moi ?",
+      "description": "L'IA est la pierre angulaire du leadership durable. Je traduis l'innovation IA de pointe en valeur commerciale tangible - parfaitement alignée avec votre vision et vos priorités opérationnelles.",
+      "approach": "Mon approche est stratégique, collaborative et implacablement axée sur les résultats - autonomisant les PDG et les équipes dirigeantes à mener la transformation, surpasser la concurrence et sécuriser la domination du marché.",
+      "points": [
+        "Consultation IA stratégique alignée avec la vision d'entreprise",
+        "Approche collaborative avec les équipes dirigeantes",
+        "Implémentation et optimisation axées sur les résultats",
+        "Leadership du marché grâce à l'innovation IA"
+      ]
+    },
+    "contact": {
+      "badge": "Prêt à Transformer ?",
+      "title": "Architecturons Votre Histoire de Succès IA",
+      "description": "Débloquez de nouveaux flux de revenus, l'excellence opérationnelle et un avantage concurrentiel inégalé grâce à la transformation IA stratégique.",
+      "labels": {
+        "email": "Email",
+        "phone": "Téléphone",
+        "website": "Site Web"
+      },
+      "info": {
+        "email": "contact@kensaai.com",
+        "phone": "+1 437 873 47 82",
+        "website": "www.kensaai.org"
+      },
+      "cta": {
+        "primary": "Commencer la Conversation",
+        "secondary": "Retour à l'Accueil"
+      }
+    }
   }
 }

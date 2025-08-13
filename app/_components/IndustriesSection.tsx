@@ -157,7 +157,7 @@ export function IndustriesSection() {
                         }`}>
                           <Building2 className="w-4 h-4" />
                           <span className="text-[12px] font-medium uppercase tracking-wide">
-                            {industry.key.replace(/([A-Z])/g, ' $1').trim()}
+                            {t(`industries.categories.${industry.key}`) || industry.key.replace(/([A-Z])/g, ' $1').trim()}
                           </span>
                         </div>
                         

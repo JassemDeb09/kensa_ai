@@ -149,6 +149,68 @@
   }
 }
 
+@keyframes slideshow-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(30, 144, 232, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(30, 144, 232, 0.6), 0 0 60px rgba(61, 80, 227, 0.4);
+  }
+}
+
+@keyframes dynamic-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-wave {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 300% 50%;
+  }
+}
+
+@keyframes timeline-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 144, 232, 0.7);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 0 10px rgba(30, 144, 232, 0);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -167,6 +229,18 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-slideshow-glow {
+  animation: slideshow-glow 3s ease-in-out infinite;
+}
+
+.animate-dynamic-scale {
+  animation: dynamic-scale 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
 }
 
 /* Grid pattern background */

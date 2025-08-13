@@ -111,6 +111,13 @@
   },
   "industries": {
     "title": "Our Expertise Across Sectors",
+    "categories": {
+      "manufacturing": "Manufacturing",
+      "smartCities": "Smart Cities",
+      "retail": "Retail",
+      "finance": "Finance",
+      "digital": "Digital"
+    },
     "items": {
       "manufacturing": {
         "title": "Manufacturing & Industry",
@@ -358,7 +365,7 @@
   },
   "experience": {
     "title": "The Experience",
-    "headline": "Our AI Journey in Action",
+    "headline": "Our AI Journey",
     "subtitle": "Explore the moments that define our expertise - from global conferences to breakthrough innovations, see how our team leads the AI transformation.",
     "items": [
       {
@@ -374,8 +381,8 @@
         "description": "Strategic AI implementation meeting"
       },
       {
-        "title": "Research & Development",
-        "description": "Advanced AI research presentation"
+        "title": "Government Partnership",
+        "description": "Meeting with The Honourable Edith Dumont, 30th Lieutenant Governor of Ontario - the first francophone to hold this position, following a distinguished career in education"
       },
       {
         "title": "Team Excellence",
@@ -405,6 +412,128 @@
       "innovation": "Innovation"
     },
     "inAction": "in Action",
-    "excellenceInMotion": "Excellence in Motion"
+    "excellenceInMotion": "Excellence in Motion",
+    "viewDetails": "View Details",
+    "pause": "Pause",
+    "play": "Play",
+    "exploreMore": "Explore More"
+  },
+  "expertise": {
+    "hero": {
+      "badge": "AI Visionary & Global Catalyst",
+      "credentials": "Multi Award Winning\nInternational Coach,\nForbes Speaker, TedX\nSpeaker, Trainer & Author.",
+      "name": "FatimaZahra KHOUKH",
+      "title": "Founder & CEO of KENSA AI",
+      "description": "Command Market Leadership with AI-Driven Growth and Innovation. I collaborate with visionary CEOs and executive teams to deliver AI solutions that drive measurable growth, optimize operations, and elevate customer experiences.",
+      "website": "www.kensaai.com",
+      "social": {
+        "instagram": "@ceo_fatimazahra",
+        "linkedin": "www.linkedin.com/in/fatimazahra-khoukh",
+        "email": "contact@kensaai.com"
+      },
+      "cta": {
+        "primary": "Discover the Journey",
+        "secondary": "Let's Connect"
+      }
+    },
+    "story": {
+      "badge": "EXECUTIVE TRANSFORMATION JOURNEY",
+      "title": "The AI Transformation Story",
+      "subtitle": "A journey of strategic innovation, executive leadership, and measurable transformation",
+      "description": "Across industries worldwide, empowering visionary leaders to architect the future of business",
+      "chapterLabel": "CHAPTER",
+      "chapters": [
+        {
+          "title": "The Vision",
+          "subtitle": "Where Innovation Meets Leadership",
+          "content": "AI is the decisive advantage that separates leaders from followers. Every transformation begins with a vision - the courage to see beyond the present and architect the future."
+        },
+        {
+          "title": "The Journey",
+          "subtitle": "Transformative Results Across Industries",
+          "content": "Through strategic collaboration with visionary CEOs and executive teams, we deliver AI solutions that drive measurable growth, optimize operations, and elevate customer experiences."
+        },
+        {
+          "title": "The Impact",
+          "subtitle": "Command Market Leadership",
+          "content": "Our approach is strategic, collaborative, and relentlessly results-driven - empowering leaders to transform, outperform competition, and secure market dominance."
+        },
+        {
+          "title": "The Future",
+          "subtitle": "Your AI Success Story",
+          "content": "Ready to drive AI-led growth and innovation? Let's connect and architect your success story - unlocking new revenue streams, operational excellence, and unmatched competitive advantage."
+        }
+      ]
+    },
+    "results": {
+      "badge": "MEASURABLE IMPACT",
+      "title": "Transformative Results",
+      "subtitle": "Across Industries, Across Continents - Real Results That Drive Business Forward",
+      "description": "Quantifiable transformation metrics that demonstrate the power of strategic AI implementation",
+      "metrics": [
+        {
+          "value": "40%+",
+          "description": "Boosted learner engagement through AI-driven personalization and adaptive learning"
+        },
+        {
+          "value": "60%",
+          "description": "Automated repetitive processes, unleashing teams to innovate and scale"
+        },
+        {
+          "value": "5%",
+          "description": "Shortened claims processing, enhanced fraud detection, elevated client satisfaction"
+        },
+        {
+          "value": "95%+",
+          "description": "Achieved defect detection accuracy, minimizing waste and costly recalls"
+        },
+        {
+          "value": "30%+",
+          "description": "Delivered sales growth by powering hyper-personalized shopping experiences"
+        },
+        {
+          "value": "Revolutionary",
+          "description": "Transformed urban mobility and energy efficiency with AI and IoT integrations"
+        },
+        {
+          "value": "Weeks to Days",
+          "description": "Cut recruitment cycles using precision AI candidate screening"
+        },
+        {
+          "value": "Higher ROI",
+          "description": "Optimized routes and lowered costs through AI-powered logistics"
+        }
+      ]
+    },
+    "collaborate": {
+      "title": "Why Collaborate With Me?",
+      "description": "AI is the cornerstone of sustainable leadership. I translate cutting-edge AI innovation into tangible business value - perfectly aligned with your vision and operational priorities.",
+      "approach": "My approach is strategic, collaborative, and relentlessly results-driven - empowering CEOs and executive teams to lead transformation, outperform competition, and secure market dominance.",
+      "points": [
+        "Strategic AI consultation aligned with business vision",
+        "Collaborative approach with executive teams",
+        "Results-driven implementation and optimization",
+        "Market leadership through AI innovation"
+      ]
+    },
+    "contact": {
+      "badge": "Ready to Transform?",
+      "title": "Let's Architect Your AI Success Story",
+      "description": "Unlock new revenue streams, operational excellence, and unmatched competitive advantage through strategic AI transformation.",
+      "labels": {
+        "email": "Email",
+        "phone": "Phone",
+        "website": "Website"
+      },
+      "info": {
+        "email": "contact@kensaai.com",
+        "phone": "+1 437 873 47 82",
+        "website": "www.kensaai.org"
+      },
+      "cta": {
+        "primary": "Start the Conversation",
+        "secondary": "Back to Home"
+      }
+    }
   }
 }

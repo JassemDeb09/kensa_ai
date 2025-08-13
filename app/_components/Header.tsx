@@ -41,7 +41,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
       <nav className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
                            {/* Logo */}
-                 <div className="flex items-center group cursor-pointer">
+                 <a href="/" className="flex items-center group cursor-pointer">
                    <div className="relative">
                      <div className="relative">
                        {/* Main Logo */}
@@ -59,7 +59,7 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
 
                      </div>
                    </div>
-                 </div>
+                 </a>
 
           {/* Desktop Navigation */}
           <div className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse space-x-12' : 'space-x-12'}`}>
