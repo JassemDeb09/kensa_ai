@@ -1,8 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Globe } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import ReactCountryFlag from "react-country-flag"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 const languages = [
-  { code: 'en' as const, name: 'English', flag: '🇺🇸' },
-  { code: 'fr' as const, name: 'Français', flag: '🇫🇷' },
-  { code: 'ar' as const, name: 'العربية', flag: '🇸🇦' }
+  { code: 'en' as const, name: 'English', countryCode: 'US' },
+  { code: 'fr' as const, name: 'Français', countryCode: 'FR' },
+  { code: 'ar' as const, name: 'Arabic', countryCode: 'SA' }
 ]
 
 export function SimpleLanguageSwitcher() {
@@ -25,9 +25,28 @@ export function SimpleLanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="w-auto h-9 px-2">
-          <Globe className="h-4 w-4 mr-2" />
-          <span className="hidden sm:inline">{currentLanguage?.flag} {currentLanguage?.name}</span>
-          <span className="sm:hidden">{currentLanguage?.flag}</span>
+          <span className="hidden sm:inline-flex items-center">
+            <ReactCountryFlag
+              countryCode={currentLanguage?.countryCode || 'US'}
+              svg
+              style={{
+                width: '1.5em',
+                height: '1.5em',
+                marginRight: '0.5rem'
+              }}
+            />
+            <span>{currentLanguage?.name}</span>
+          </span>
+          <span className="sm:hidden">
+            <ReactCountryFlag
+              countryCode={currentLanguage?.countryCode || 'US'}
+              svg
+              style={{
+                width: '1.5em',
+                height: '1.5em',
+              }}
+            />
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -37,7 +56,15 @@ export function SimpleLanguageSwitcher() {
             onClick={() => setLanguage(lang.code)}
             className={`cursor-pointer ${language === lang.code ? 'bg-gray-100 dark:bg-gray-800' : ''}`}
           >
-            <span className="mr-2">{lang.flag}</span>
+            <ReactCountryFlag
+              countryCode={lang.countryCode}
+              svg
+              style={{
+                width: '1.5em',
+                height: '1.5em',
+                marginRight: '0.75rem'
+              }}
+            />
             {lang.name}
           </DropdownMenuItem>
         ))}

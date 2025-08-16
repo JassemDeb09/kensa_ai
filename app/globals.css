@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -305,3 +307,483 @@
   gap: 0.5rem;
   flex-direction: row-reverse;
 }
+
+/* Professional Carousel Animations */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Sequential Card Animations */
+@keyframes cardExit {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes imageZoomOut {
+  from {
+    transform: scale(1.3);
+    filter: brightness(0.6) saturate(0.7);
+  }
+  to {
+    transform: scale(1.1);
+    filter: brightness(1) saturate(1.1);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes badgeBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) rotate(-15deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.15) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes featurePopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animation Classes */
+.animate-card-exit {
+  animation: cardExit 0.3s ease-in forwards;
+}
+
+.animate-card-enter {
+  animation: cardEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+}
+
+.animate-image-zoom-out {
+  animation: imageZoomOut 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+}
+
+.animate-overlay-fade-in {
+  animation: overlayFadeIn 0.4s ease-out 0.3s forwards;
+}
+
+.animate-text-slide-in {
+  opacity: 0;
+  animation: textSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-badge-bounce-in {
+  animation: badgeBounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s forwards;
+}
+
+.animate-feature-pop-in {
+  opacity: 0;
+  animation: featurePopIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out 1.2s infinite;
+}
+
+/* Super Smooth Transitions */
+.carousel-container * {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Luxury Hero Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.card-transition {
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-transition {
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-transition {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-card-enter,
+  .animate-image-zoom-out,
+  .animate-overlay-fade-in,
+  .animate-text-slide-in,
+  .animate-badge-bounce-in,
+  .animate-feature-pop-in,
+  .animate-glow-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Testimonials Carousel Specific Styles */
+.testimonials-carousel {
+  padding: 2rem 0;
+}
+
+.testimonials-carousel .carousel-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced testimonial card styling */
+.testimonials-carousel .card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(30, 144, 232, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.dark .testimonials-carousel .card {
+  background: rgba(17, 24, 39, 0.98);
+  border: 2px solid rgba(30, 144, 232, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced larger card layout */
+.testimonials-carousel.enhanced .card {
+  min-height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-carousel.enhanced .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1e90e8, #3d50e3, #1e90e8);
+  background-size: 200% 100%;
+  animation: gradient-flow 3s ease-in-out infinite;
+}
+
+/* Testimonial-specific animations */
+@keyframes testimonial-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(30, 144, 232, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(30, 144, 232, 0.2), 0 0 60px rgba(61, 80, 227, 0.1);
+  }
+}
+
+.testimonials-carousel .card:hover {
+  animation: testimonial-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced quote-style for larger cards */
+.testimonials-carousel.enhanced .card .description {
+  position: relative;
+  font-style: italic;
+  color: #374151;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  padding: 1.5rem 2rem;
+  background: rgba(30, 144, 232, 0.02);
+  border-radius: 16px;
+  margin: 1rem 0;
+  border-left: 4px solid rgba(30, 144, 232, 0.3);
+}
+
+.dark .testimonials-carousel.enhanced .card .description {
+  color: #d1d5db;
+  background: rgba(30, 144, 232, 0.05);
+}
+
+.testimonials-carousel.enhanced .card .description::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(30, 144, 232, 0.4);
+  position: absolute;
+  left: -0.5rem;
+  top: -1rem;
+  font-family: Georgia, serif;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.testimonials-carousel.enhanced .card .description::after {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(30, 144, 232, 0.4);
+  position: absolute;
+  right: 0.5rem;
+  bottom: -1.5rem;
+  font-family: Georgia, serif;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* Enhanced content spacing for larger cards */
+.testimonials-carousel.enhanced .card .content-section {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.testimonials-carousel.enhanced .card .title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #1e90e8, #3d50e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.testimonials-carousel.enhanced .card .features-section {
+  margin: 1.5rem 0;
+}
+
+.testimonials-carousel.enhanced .card .feature-tag {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(30, 144, 232, 0.1), rgba(61, 80, 227, 0.1));
+  border: 1px solid rgba(30, 144, 232, 0.2);
+  color: #1e90e8;
+  transition: all 0.3s ease;
+}
+
+.testimonials-carousel.enhanced .card .feature-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(30, 144, 232, 0.2);
+}
+
+/* Enhanced star ratings */
+.testimonials-carousel .star-rating {
+  filter: drop-shadow(0 2px 4px rgba(30, 144, 232, 0.3));
+}
+
+/* Enhanced professional author section styling */
+.testimonials-carousel.enhanced .author-section {
+  border-top: 2px solid rgba(30, 144, 232, 0.15);
+  padding: 1.5rem 0 0 0;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.dark .testimonials-carousel.enhanced .author-section {
+  border-top: 2px solid rgba(30, 144, 232, 0.25);
+}
+
+.testimonials-carousel.enhanced .author-section::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #1e90e8, #3d50e3);
+  border-radius: 2px;
+}
+
+.testimonials-carousel.enhanced .author-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 144, 232, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(30, 144, 232, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .testimonials-carousel.enhanced .author-info {
+  background: rgba(30, 144, 232, 0.08);
+  border: 1px solid rgba(30, 144, 232, 0.2);
+}
+
+.testimonials-carousel.enhanced .author-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 144, 232, 0.15);
+}
+
+.testimonials-carousel.enhanced .author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: linear-gradient(135deg, #1e90e8, #3d50e3) padding-box,
+              linear-gradient(135deg, #1e90e8, #3d50e3) border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-carousel.enhanced .author-details h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.dark .testimonials-carousel.enhanced .author-details h4 {
+  color: #f9fafb;
+}
+
+.testimonials-carousel.enhanced .author-details p {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dark .testimonials-carousel.enhanced .author-details p {
+  color: #9ca3af;
+}
+
+/* Enhanced badge styling */
+.testimonials-carousel.enhanced .badge {
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1e90e8, #3d50e3);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 16px rgba(30, 144, 232, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effects for enhanced cards */
+.testimonials-carousel.enhanced .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  animation: testimonial-glow 2s ease-in-out infinite;
+}
+
+.dark .testimonials-carousel.enhanced .card:hover {
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* New Testimonial Carousel Styles */
+.testimonial-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(30, 144, 232, 0.1);
+}
+
+.dark .testimonial-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(30, 144, 232, 0.2);
+}
+
+/* Testimonial card responsive design */
+@media (max-width: 768px) {
+  .testimonial-card .flex {
+    flex-direction: column;
+  }
+  
+  .testimonial-card .w-\[30\%\] {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .testimonial-card .w-\[70\%\] {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .testimonial-card .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .testimonial-card .lg\:text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* Enhanced testimonial typography */
+.testimonial-card .italic {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+

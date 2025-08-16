@@ -7,7 +7,7 @@ import { useState } from "react"
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export function DemoSection() {
-  const [open, setOpen] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
   const { t } = useLanguage()
   
   return (
@@ -44,34 +44,61 @@ export function DemoSection() {
           {/* Main Container */}
           <div className="relative bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-3xl p-3 shadow-2xl">
             <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
-              {/* Video Preview */}
-              <div className="relative cursor-pointer group" onClick={() => setOpen(true)} role="button" aria-label="Play AI demo video">
-                <Image
-                  src="/demo.png"
-                  alt="KENSA AI Demo Preview"
-                  width={1000}
-                  height={562}
-                  className="w-full h-auto object-cover"
-                />
-                
-                {/* Play Overlay */}
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-500">
-                  <div className="relative">
-                    {/* Play Button */}
-                    <div className="w-24 h-24 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-                      <Play className="w-12 h-12 text-[#1e90e8] ml-1" />
+              {/* Video Preview / Player */}
+              <div className="relative">
+                {!isPlaying ? (
+                  <div className="relative cursor-pointer group" onClick={() => setIsPlaying(true)} role="button" aria-label="Play AI demo video">
+                    <Image
+                      src="/demo.png"
+                      alt="KENSA AI Demo Preview"
+                      width={1000}
+                      height={562}
+                      className="w-full h-auto object-cover"
+                    />
+                    
+                    {/* Play Overlay */}
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-500">
+                      <div className="relative">
+                        {/* Play Button */}
+                        <div className="w-24 h-24 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                          <Play className="w-12 h-12 text-[#1e90e8] ml-1" />
+                        </div>
+                        
+                        {/* Pulse Animation */}
+                        <div className="absolute inset-0 bg-white/30 rounded-full animate-ping"></div>
+                      </div>
                     </div>
                     
-                    {/* Pulse Animation */}
-                    <div className="absolute inset-0 bg-white/30 rounded-full animate-ping"></div>
+                    {/* Live Demo Badge */}
+                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-[#1e90e8]/20">
+                      <div className="w-2 h-2 bg-[#1e90e8] rounded-full animate-pulse"></div>
+                      <span className="text-[#1e90e8] text-[12px] font-medium">Live AI Demo</span>
+                    </div>
                   </div>
-                </div>
-                
-                {/* Live Demo Badge */}
-                <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-[#1e90e8]/20">
-                  <div className="w-2 h-2 bg-[#1e90e8] rounded-full animate-pulse"></div>
-                  <span className="text-[#1e90e8] text-[12px] font-medium">Live AI Demo</span>
-                </div>
+                ) : (
+                  <div className="relative">
+                    <video
+                      className="w-full h-auto object-cover rounded-lg"
+                      controls
+                      autoPlay
+                      muted
+                      playsInline
+                      onEnded={() => setIsPlaying(false)}
+                    >
+                      <source src="/demo_video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    
+                    {/* Back to Thumbnail Button */}
+                    <button
+                      onClick={() => setIsPlaying(false)}
+                      className="absolute top-4 right-4 w-10 h-10 bg-black/70 hover:bg-black/90 text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                      aria-label="Back to thumbnail"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                )}
               </div>
               
               {/* Demo Content */}
@@ -86,7 +113,7 @@ export function DemoSection() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button 
-                    onClick={() => setOpen(true)} 
+                    onClick={() => setIsPlaying(true)} 
                     className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-8 py-4 rounded-xl text-[16px] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-[#1e90e8]/25"
                   >
                     <span className="flex items-center gap-3">
@@ -183,27 +210,7 @@ export function DemoSection() {
           </div>
         </div>
         
-        {/* Modal Video */}
-        {open && (
-          <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-4" onClick={() => setOpen(false)}>
-            <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
-                title="KENSA AI Demo - Enterprise AI Solutions"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Close AI demo"
-                className="absolute -top-4 -right-4 w-12 h-12 bg-white text-gray-900 rounded-full shadow-xl hover:scale-110 transition-transform duration-300 flex items-center justify-center font-bold"
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+
       </div>
     </section>
   )

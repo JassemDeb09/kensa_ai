@@ -24,9 +24,11 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
   }, [])
 
   const navItems = [
-    { key: 'services', label: t('nav.services') || 'AI Solutions' },
-    { key: 'industries', label: t('nav.expertise') || 'Industries' },
-    { key: 'about', label: t('nav.about') || 'Company' },
+    { key: 'services', label: t('nav.services') || 'Services' },
+    { key: 'industries', label: t('nav.industries') || 'Industries' },
+    { key: 'testimonials', label: t('nav.testimonials') || 'Testimonials' },
+    { key: 'experience', label: t('nav.experience') || 'Experience' },
+    { key: 'about', label: t('nav.about') || 'About' },
     { key: 'contact', label: t('nav.contact') || 'Contact' }
   ]
 
@@ -53,8 +55,6 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
                            height={80}
                            className="w-full h-full object-contain dark:brightness-0 dark:invert"
                          />
-                         {/* Light/Dark Mode Glow Effect */}
-                         <div className="absolute inset-0 bg-gradient-to-br from-[#1e90e8]/20 to-[#3d50e3]/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                        </div>
 
                      </div>
@@ -64,25 +64,42 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
           {/* Desktop Navigation */}
           <div className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse space-x-12' : 'space-x-12'}`}>
             {navItems.map((item) => (
-              <button
-                key={item.key}
-                onClick={() => onSectionClick(item.key)}
-                className="group relative text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] dark:hover:text-[#1e90e8] font-medium transition-colors duration-300 text-[15px]"
-              >
-                <span className="relative">
-                  {item.label}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] group-hover:w-full transition-all duration-300"></div>
-                </span>
-              </button>
+              (item as any).href ? (
+                <a
+                  key={item.key}
+                  href={(item as any).href}
+                  className="group relative text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] dark:hover:text-[#1e90e8] font-medium transition-colors duration-300 text-[15px]"
+                >
+                  <span className="relative">
+                    {item.label}
+                    <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] group-hover:w-full transition-all duration-300"></div>
+                  </span>
+                </a>
+              ) : (
+                <button
+                  key={item.key}
+                  onClick={() => onSectionClick(item.key)}
+                  className="group relative text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] dark:hover:text-[#1e90e8] font-medium transition-colors duration-300 text-[15px]"
+                >
+                  <span className="relative">
+                    {item.label}
+                    <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] group-hover:w-full transition-all duration-300"></div>
+                  </span>
+                </button>
+              )
             ))}
           </div>
 
           {/* Right Side */}
           <div className={`flex items-center gap-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <ClientOnly>
-              <div className="hidden lg:flex items-center gap-4">
-                <SimpleLanguageSwitcher />
-                <ThemeToggle />
+              <div className="hidden lg:flex items-center gap-3">
+                <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full px-3 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+                  <SimpleLanguageSwitcher />
+                </div>
+                <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full p-2 shadow-sm hover:shadow-md transition-all duration-300">
+                  <ThemeToggle />
+                </div>
               </div>
             </ClientOnly>
             
@@ -111,16 +128,27 @@ export function Header({ scrollY, onSectionClick }: HeaderProps) {
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="py-8 space-y-6 border-t border-gray-200/50 dark:border-gray-800/50">
             {navItems.map((item) => (
-              <button
-                key={item.key}
-                onClick={() => {
-                  onSectionClick(item.key)
-                  setMobileMenuOpen(false)
-                }}
-                className="block w-full text-left text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
-              >
-                {item.label}
-              </button>
+              (item as any).href ? (
+                <a
+                  key={item.key}
+                  href={(item as any).href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-left text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.key}
+                  onClick={() => {
+                    onSectionClick(item.key)
+                    setMobileMenuOpen(false)
+                  }}
+                  className="block w-full text-left text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
             <div className="pt-4">
               <Button

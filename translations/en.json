@@ -3,7 +3,9 @@
     "services": "Services",
     "process": "Process",
     "expertise": "Expertise",
+    "industries": "Industries",
     "testimonials": "Testimonials",
+    "experience": "Experience",
     "about": "About",
     "contact": "Contact",
     "getStarted": "Book Consultation"
@@ -228,6 +230,155 @@
     "primary": "Book Your Session",
     "secondary": "Download our AI guide"
   },
+  "portfolio_2": {
+    "company": {
+      "badge": "AI TRANSFORMATION LEADERS",
+      "title": "KENSA AI",
+      "subtitle": "PORTFOLIO",
+      "description": "Your One-Stop Partner for AI Transformation",
+      "tagline": "💡 From strategy to execution — driving the future of business with AI",
+      "stats": {
+        "solutions": "Solutions from $20K+",
+        "reach": "Global Reach"
+      },
+      "cta": {
+        "primary": "BOOK FREE AI AUDIT",
+        "secondary": "WATCH DEMO",
+        "start": "START TRANSFORMATION"
+      }
+    },
+    "profile": {
+      "badge": "AI VISIONARY & GLOBAL CATALYST",
+      "name": "FatimaZahra",
+      "surname": "KHOUKH",
+      "title": "Founder & CEO of KENSA AI",
+      "tagline": "Command Market Leadership with AI-Driven Growth and Innovation",
+      "description": "AI is the decisive advantage that separates leaders from followers. I collaborate with visionary CEOs and executive teams to deliver AI solutions that drive measurable growth, optimize operations, and elevate customer experiences.",
+      "contact": {
+        "email": "contact@kensaai.com",
+        "phone": "+1 437 873 47 82",
+        "website": "www.kensaai.org"
+      },
+      "cta": {
+        "connect": "CONNECT NOW"
+      }
+    },
+    "tabs": {
+      "company": "KENSA AI Portfolio",
+      "profile": "CEO Profile"
+    },
+    "services": {
+      "badge": "HOW WE HELP",
+      "title": "Comprehensive AI Solutions",
+      "subtitle": "We blend strategic consulting expertise with cutting-edge technology execution to deliver measurable business impact.",
+      "items": [
+        {
+          "title": "Strategy & Consulting",
+          "description": "We identify high-impact AI opportunities tailored to your business",
+          "features": [
+            "Data management & security",
+            "Digital transformation roadmaps",
+            "Governance & compliance",
+            "AI adoption at scale"
+          ]
+        },
+        {
+          "title": "Education & Training",
+          "description": "We empower your workforce through comprehensive AI education",
+          "features": [
+            "Executive AI masterclasses",
+            "Custom industry-specific workshops",
+            "Hands-on training for AI tools",
+            "Innovation & adoption programs"
+          ]
+        },
+        {
+          "title": "End-to-End Execution",
+          "description": "From idea to impact, we deliver cutting-edge AI solutions",
+          "features": [
+            "Custom Agentic AI Solutions",
+            "Robotics & Automation Systems",
+            "Multi-Agent AI Architectures",
+            "Quantum AI Applications",
+            "ERP & Data Platforms",
+            "CRM & Customer Intelligence",
+            "Cloud Infrastructure & Automation",
+            "Blockchain-Integrated Solutions"
+          ]
+        },
+        {
+          "title": "Hire Top AI Talent",
+          "description": "Onboard elite AI professionals globally with flexible engagement models",
+          "features": [
+            "Onshore / Offshore / Nearshore",
+            "Pay only for time & expertise needed",
+            "SOW-based engagement models",
+            "Global talent network access"
+          ]
+        }
+      ]
+    },
+    "results": {
+      "badge": "TRANSFORMATIVE RESULTS",
+      "title": "Measurable Impact",
+      "subtitle": {
+        "company": "Proven results across industries and business functions",
+        "profile": "Real transformation delivered across industries and continents"
+      },
+      "metrics": [
+        {
+          "value": "40%+",
+          "description": "Boosted learner engagement through AI-driven personalization and adaptive learning"
+        },
+        {
+          "value": "60%",
+          "description": "Automated repetitive processes, unleashing teams to innovate and scale"
+        },
+        {
+          "value": "5%",
+          "description": "Shortened claims processing, enhanced fraud detection, elevated client satisfaction"
+        },
+        {
+          "value": "95%+",
+          "description": "Achieved defect detection accuracy, minimizing waste and costly recalls"
+        },
+        {
+          "value": "30%+",
+          "description": "Delivered sales growth by powering hyper-personalized shopping experiences"
+        },
+        {
+          "value": "Revolutionary",
+          "description": "Transformed urban mobility and energy efficiency with AI and IoT integrations"
+        },
+        {
+          "value": "Weeks to Days",
+          "description": "Cut recruitment cycles using precision AI candidate screening"
+        },
+        {
+          "value": "Higher ROI",
+          "description": "Optimized routes and lowered costs through AI-powered logistics"
+        }
+      ]
+    },
+    "whyChoose": {
+      "badge": {
+        "company": "WHY KENSA AI?",
+        "profile": "WHY COLLABORATE WITH ME?"
+      },
+      "title": {
+        "company": "Strategic Excellence",
+        "profile": "Sustainable Leadership"
+      },
+      "description": {
+        "company": "We blend strategic consulting expertise with cutting-edge technology execution to deliver measurable business impact. Whether you're exploring AI for the first time or scaling enterprise-wide initiatives, we're your trusted partner.",
+        "profile": "AI is the cornerstone of sustainable leadership. I translate cutting-edge AI innovation into tangible business value - perfectly aligned with your vision and operational priorities. My approach is strategic, collaborative, and relentlessly results-driven."
+      },
+      "cta": {
+        "company": "📩 Let's start your AI transformation today.",
+        "profile": "Ready to Drive AI-Led Growth & Innovation?"
+      }
+    }
+  },
   "footer": {
     "description": "Where global strategy meets AI excellence.",
     "location": "🌍 Global impact, proudly based in Toronto,ONTARIO Canada",
@@ -416,7 +567,7 @@
     "viewDetails": "View Details",
     "pause": "Pause",
     "play": "Play",
-    "exploreMore": "Explore More"
+    "exploreMore": "Explore More About Kensa AI"
   },
   "expertise": {
     "hero": {
@@ -534,6 +685,366 @@
         "primary": "Start the Conversation",
         "secondary": "Back to Home"
       }
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title": "Portfolio Companies",
+      "subtitle": "Discover the innovative companies transforming industries with our AI solutions",
+      "description": "From startups to Fortune 500 enterprises, explore our portfolio of successful AI implementations across diverse sectors."
+    },
+    "filters": {
+      "all": "All Companies",
+      "manufacturing": "Manufacturing",
+      "smartCities": "Smart Cities",
+      "retail": "Retail & E-Commerce",
+      "finance": "Finance & Insurance",
+      "digital": "Digital Transformation",
+      "healthcare": "Healthcare",
+      "education": "Education"
+    },
+    "companies": [
+      {
+        "id": "techcorp-france",
+        "name": "TechCorp France",
+        "category": "manufacturing",
+        "description": "Revolutionized production efficiency with AI-powered predictive maintenance and quality control systems.",
+        "results": "40% increase in operational efficiency",
+        "image": "/portofolio.png",
+        "tags": ["Predictive Maintenance", "Quality Control", "IoT Integration"]
+      },
+      {
+        "id": "retailmax",
+        "name": "RetailMax",
+        "category": "retail",
+        "description": "Enhanced customer experience through AI-driven personalization and intelligent recommendation engines.",
+        "results": "35% improvement in customer satisfaction",
+        "image": "/exp6.jpeg",
+        "tags": ["Personalization", "Recommendation Engine", "Customer Analytics"]
+      },
+      {
+        "id": "financesecure",
+        "name": "FinanceSecure",
+        "category": "finance",
+        "description": "Implemented advanced fraud detection and risk assessment systems using machine learning algorithms.",
+        "results": "€2M annual savings through fraud prevention",
+        "image": "/portofolio.png",
+        "tags": ["Fraud Detection", "Risk Assessment", "Machine Learning"]
+      },
+      {
+        "id": "smart-toronto",
+        "name": "Smart Toronto Initiative",
+        "category": "smartCities",
+        "description": "Developed intelligent urban mobility solutions and energy optimization systems for sustainable city management.",
+        "results": "60% reduction in energy consumption",
+        "image": "/exp6.jpeg",
+        "tags": ["Urban Mobility", "Energy Optimization", "IoT"]
+      },
+      {
+        "id": "healthtech-solutions",
+        "name": "HealthTech Solutions",
+        "category": "healthcare",
+        "description": "Accelerated medical diagnosis and treatment planning with AI-powered imaging analysis and decision support.",
+        "results": "50% faster diagnosis accuracy",
+        "image": "/portofolio.png",
+        "tags": ["Medical Imaging", "Diagnosis Support", "Healthcare AI"]
+      },
+      {
+        "id": "edulearn-global",
+        "name": "EduLearn Global",
+        "category": "education",
+        "description": "Transformed learning experiences with adaptive AI tutoring systems and personalized curriculum delivery.",
+        "results": "40% increase in learning engagement",
+        "image": "/exp6.jpeg",
+        "tags": ["Adaptive Learning", "Personalized Education", "AI Tutoring"]
+      },
+      {
+        "id": "digital-transform-corp",
+        "name": "Digital Transform Corp",
+        "category": "digital",
+        "description": "Modernized legacy systems with cloud-native AI solutions and intelligent automation workflows.",
+        "results": "300% ROI within 12 months",
+        "image": "/portofolio.png",
+        "tags": ["Legacy Modernization", "Cloud Migration", "Automation"]
+      },
+      {
+        "id": "manufacturing-plus",
+        "name": "Manufacturing Plus",
+        "category": "manufacturing",
+        "description": "Optimized supply chain management and production scheduling using advanced AI algorithms.",
+        "results": "25% reduction in production costs",
+        "image": "/exp6.jpeg",
+        "tags": ["Supply Chain", "Production Optimization", "AI Algorithms"]
+      }
+    ],
+    "stats": {
+      "totalCompanies": "500+",
+      "totalCompaniesLabel": "Companies Transformed",
+      "averageRoi": "300%",
+      "averageRoiLabel": "Average ROI",
+      "successRate": "98%",
+      "successRateLabel": "Success Rate",
+      "globalReach": "25+",
+      "globalReachLabel": "Countries Served"
+    },
+    "cta": {
+      "primary": "Join Our Portfolio",
+      "secondary": "View Case Studies",
+      "contact": "Discuss Your Project"
+    }
+  },
+  "portfolioV2": {
+    "header": {
+      "home": "Home",
+      "bookConsultation": "Book Consultation"
+    },
+    "hero": {
+      "badges": {
+        "company": "AI TRANSFORMATION LEADERS",
+        "profile": "AI VISIONARY & GLOBAL CATALYST"
+      },
+      "company": {
+        "title": "KENSA AI",
+        "subtitle": "Portfolio",
+        "description": "Your One-Stop Partner for AI Transformation. From strategy to execution — driving the future of business with AI.",
+        "stats": {
+          "solutions": "Solutions from $20K+",
+          "reach": "Global Reach"
+        }
+      },
+      "profile": {
+        "name": "FatimaZahra",
+        "surname": "KHOUKH",
+        "title": "Founder & CEO of KENSA AI | AI Visionary | Global Catalyst for Business Transformation",
+        "subtitle": "Command Market Leadership with AI-Driven Growth and Innovation",
+        "description": "AI is the decisive advantage that separates leaders from followers. I collaborate with visionary CEOs and executive teams to deliver AI solutions that drive measurable growth, optimize operations, and elevate customer experiences.",
+        "contact": {
+          "email": "contact@kensaai.com",
+          "phone": "+1 437 873 47 82",
+          "website": "www.kensaai.org"
+        }
+      },
+      "tabs": {
+        "company": "Portfolio",
+        "profile": "CEO"
+      },
+      "cta": {
+        "primary": {
+          "company": "BOOK FREE AI AUDIT",
+          "profile": "CONNECT NOW"
+        },
+        "secondary": "WATCH DEMO"
+      }
+    },
+    "services": {
+      "badge": "HOW WE HELP",
+      "title": "Our Services",
+      "subtitle": "We blend strategic consulting expertise with cutting-edge technology execution to deliver measurable business impact.",
+      "items": {
+        "strategy": {
+          "title": "Strategy & Consulting",
+          "description": "We identify high-impact AI opportunities tailored to your business and design robust strategies in data management, digital transformation, governance, and AI adoption at scale.",
+          "features": [
+            "Data management & security",
+            "Digital transformation roadmaps",
+            "Governance & compliance",
+            "AI adoption at scale"
+          ]
+        },
+        "education": {
+          "title": "Education & Training",
+          "description": "We empower your workforce through executive AI masterclasses, custom workshops, hands-on training, and comprehensive innovation programs.",
+          "features": [
+            "Executive AI masterclasses",
+            "Custom industry-specific workshops",
+            "Hands-on training for AI tools",
+            "Innovation & adoption programs"
+          ]
+        },
+        "execution": {
+          "title": "End-to-End Execution",
+          "description": "From idea to impact, we deliver custom AI solutions, robotics systems, multi-agent architectures, and complete digital transformation platforms.",
+          "features": [
+            "Custom Agentic AI Solutions",
+            "Robotics & Automation Systems",
+            "Multi-Agent AI Architectures",
+            "Quantum AI Applications",
+            "ERP & Data Platforms",
+            "CRM & Customer Intelligence Solutions",
+            "Cloud Infrastructure & Automation",
+            "Blockchain-Integrated Solutions"
+          ]
+        },
+        "talent": {
+          "title": "Hire Top AI Talent",
+          "description": "Onboard elite AI professionals globally with flexible engagement models including onshore, offshore, and nearshore options with SOW-based pricing.",
+          "features": [
+            "Onshore / Offshore / Nearshore",
+            "Pay only for the time & expertise you need (SOW-based)"
+          ]
+        }
+      },
+      "modal": {
+        "keyFeatures": "Key Features:",
+        "exploreMore": "Explore More"
+      }
+    },
+    "results": {
+      "badges": {
+        "company": "WHY KENSA AI?",
+        "profile": "TRANSFORMATIVE RESULTS ACROSS INDUSTRIES"
+      },
+      "titles": {
+        "company": "Strategic Excellence",
+        "profile": "Measurable Impact"
+      },
+      "subtitles": {
+        "company": "Whether you're exploring AI for the first time or scaling enterprise-wide initiatives, we're your trusted partner.",
+        "profile": "AI is the cornerstone of sustainable leadership. I translate cutting-edge AI innovation into tangible business value."
+      },
+      "company": {
+        "items": [
+          {
+            "title": "Learning Enhancement",
+            "description": "Boosted learner engagement by 40%+ through AI-driven personalization and adaptive learning"
+          },
+          {
+            "title": "Process Automation",
+            "description": "Automated 60% of repetitive processes, unleashing teams to innovate and scale"
+          },
+          {
+            "title": "Claims Processing",
+            "description": "Shortened claims processing by 5%, enhanced fraud detection, elevated client satisfaction"
+          },
+          {
+            "title": "Quality Assurance",
+            "description": "Achieved 95%+ defect detection accuracy, minimizing waste and costly recalls"
+          },
+          {
+            "title": "Sales Growth",
+            "description": "Delivered 30%+ sales growth by powering hyper-personalized shopping experiences"
+          },
+          {
+            "title": "Smart Cities",
+            "description": "Transformed urban mobility and energy efficiency with AI and IoT integrations"
+          },
+          {
+            "title": "Talent Acquisition",
+            "description": "Cut recruitment cycles from weeks to days using precision AI candidate screening"
+          },
+          {
+            "title": "Logistics Optimization",
+            "description": "Optimized routes and lowered costs through AI-powered logistics"
+          }
+        ]
+      },
+      "profile": {
+        "title": "Transformative Results Across Industries",
+        "items": [
+          {
+            "metric": "40%+",
+            "description": "Boosted learner engagement through AI-driven personalization and adaptive learning"
+          },
+          {
+            "metric": "60%",
+            "description": "Automated repetitive processes, unleashing teams to innovate and scale"
+          },
+          {
+            "metric": "5%",
+            "description": "Shortened claims processing, enhanced fraud detection, elevated client satisfaction"
+          },
+          {
+            "metric": "95%+",
+            "description": "Achieved defect detection accuracy, minimizing waste and costly recalls"
+          },
+          {
+            "metric": "30%+",
+            "description": "Delivered sales growth by powering hyper-personalized shopping experiences"
+          },
+          {
+            "metric": "Revolutionary",
+            "description": "Revolutionized urban mobility and energy efficiency with AI and IoT integrations"
+          },
+          {
+            "metric": "Weeks to Days",
+            "description": "Cut recruitment cycles from weeks to days using precision AI candidate screening"
+          },
+          {
+            "metric": "Higher ROI",
+            "description": "Optimized routes and lowered costs, driving higher ROI through AI-powered logistics"
+          }
+        ],
+        "collaborate": {
+          "title": "Why Collaborate With Me?",
+          "description1": "AI is the cornerstone of sustainable leadership. I translate cutting-edge AI innovation into tangible business value - perfectly aligned with your vision and operational priorities.",
+          "description2": "My approach is strategic, collaborative, and relentlessly results-driven - empowering CEOs and executive teams to lead transformation, outperform competition, and secure market dominance."
+        }
+      },
+      "cta": {
+        "titles": {
+          "company": "Ready to start your AI transformation?",
+          "profile": "Ready to Drive AI-Led Growth & Innovation?"
+        },
+        "descriptions": {
+          "company": "Let's discuss how we can help accelerate your business with AI solutions tailored to your needs.",
+          "profile": "Let's connect and architect your AI success story - unlocking new revenue streams, operational excellence, and unmatched competitive advantage."
+        },
+        "buttons": {
+          "primary": {
+            "company": "START TRANSFORMATION",
+            "profile": "CONNECT NOW"
+          },
+          "secondary": "WATCH DEMO"
+        }
+      }
+    },
+    "certifications": {
+      "badge": "PROFESSIONAL RECOGNITION",
+      "title": "Leadership Certifications",
+      "description": "I'm thrilled to announce my new role as a Female Founder Member with WomenSpark, powered by PLAYBOOK. With less than 2% of VC funding flowing to women, there's an urgent need for change.",
+      "certificates": [
+        {
+          "title": "WomenSpark Membership",
+          "subtitle": "Female Founder Member",
+          "organization": "Powered by PLAYBOOK • 2025-2026",
+          "status": "Active",
+          "description": "Official Female Founder Club Member recognition, championing diversity and innovation in entrepreneurship.",
+          "badge": "MEMBERSHIP"
+        },
+        {
+          "title": "Female Founder Certificate",
+          "subtitle": "Official Certificate",
+          "organization": "Valid Till 07/08/26",
+          "status": "Verified",
+          "description": "Official certification recognizing leadership in driving diversity and meaningful change in entrepreneurship.",
+          "badge": "CERTIFIED"
+        }
+      ],
+      "mission": {
+        "title": "Driving Change Together",
+        "subtitle": "Championing diversity in entrepreneurship",
+        "stats": [
+          {
+            "value": "2025",
+            "label": "Member Since"
+          },
+          {
+            "value": "2%",
+            "label": "VC Funding to Women"
+          },
+          {
+            "value": "100%",
+            "label": "Commitment to Change"
+          }
+        ],
+        "description": "Through initiatives like WomenSpark, we're addressing systemic issues and paving the way for diversity and innovation in entrepreneurship.",
+        "callToAction": "Let's build businesses, fund dreams, and support the next generation of entrepreneurs together.",
+        "button": "Join me in championing diversity and driving meaningful change!"
+      }
+    },
+    "videoModal": {
+      "title": "KENSA AI Demo",
+      "description": "See our AI solutions in action"
     }
   }
 }

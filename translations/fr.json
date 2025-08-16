@@ -3,7 +3,9 @@
     "services": "Services",
     "process": "Processus",
     "expertise": "Expertise",
+    "industries": "Industries",
     "testimonials": "Témoignages",
+    "experience": "Expérience",
     "about": "À propos",
     "contact": "Contact",
     "getStarted": "Réserver une consultation"
@@ -228,6 +230,155 @@
     "primary": "Réservez votre session",
     "secondary": "Télécharger notre guide IA"
   },
+  "portfolio_2": {
+    "company": {
+      "badge": "LEADERS DE LA TRANSFORMATION IA",
+      "title": "KENSA AI",
+      "subtitle": "PORTFOLIO",
+      "description": "Votre Partenaire Unique pour la Transformation IA",
+      "tagline": "💡 De la stratégie à l'exécution — conduire l'avenir des affaires avec l'IA",
+      "stats": {
+        "solutions": "Solutions à partir de 20K$+",
+        "reach": "Portée Mondiale"
+      },
+      "cta": {
+        "primary": "RÉSERVER UN AUDIT IA GRATUIT",
+        "secondary": "VOIR LA DÉMO",
+        "start": "COMMENCER LA TRANSFORMATION"
+      }
+    },
+    "profile": {
+      "badge": "VISIONNAIRE IA & CATALYSEUR MONDIAL",
+      "name": "FatimaZahra",
+      "surname": "KHOUKH",
+      "title": "Fondatrice & PDG de KENSA AI",
+      "tagline": "Diriger le Marché avec la Croissance et l'Innovation Pilotées par l'IA",
+      "description": "L'IA est l'avantage décisif qui sépare les leaders des suiveurs. Je collabore avec des PDG visionnaires et des équipes dirigeantes pour livrer des solutions IA qui génèrent une croissance mesurable, optimisent les opérations et élèvent les expériences client.",
+      "contact": {
+        "email": "contact@kensaai.com",
+        "phone": "+1 437 873 47 82",
+        "website": "www.kensaai.org"
+      },
+      "cta": {
+        "connect": "SE CONNECTER MAINTENANT"
+      }
+    },
+    "tabs": {
+      "company": "Portfolio KENSA AI",
+      "profile": "Profil PDG"
+    },
+    "services": {
+      "badge": "COMMENT NOUS AIDONS",
+      "title": "Solutions IA Complètes",
+      "subtitle": "Nous combinons l'expertise en conseil stratégique avec l'exécution technologique de pointe pour livrer un impact commercial mesurable.",
+      "items": [
+        {
+          "title": "Stratégie & Conseil",
+          "description": "Nous identifions les opportunités IA à fort impact adaptées à votre entreprise",
+          "features": [
+            "Gestion des données & sécurité",
+            "Feuilles de route de transformation digitale",
+            "Gouvernance & conformité",
+            "Adoption IA à grande échelle"
+          ]
+        },
+        {
+          "title": "Éducation & Formation",
+          "description": "Nous autonomisons votre main-d'œuvre grâce à une éducation IA complète",
+          "features": [
+            "Masterclasses IA pour dirigeants",
+            "Ateliers personnalisés par industrie",
+            "Formation pratique aux outils IA",
+            "Programmes d'innovation & adoption"
+          ]
+        },
+        {
+          "title": "Exécution de Bout en Bout",
+          "description": "De l'idée à l'impact, nous livrons des solutions IA de pointe",
+          "features": [
+            "Solutions IA Agentiques Personnalisées",
+            "Systèmes de Robotique & Automatisation",
+            "Architectures IA Multi-Agents",
+            "Applications IA Quantique",
+            "Plateformes ERP & Données",
+            "CRM & Intelligence Client",
+            "Infrastructure Cloud & Automatisation",
+            "Solutions Intégrées Blockchain"
+          ]
+        },
+        {
+          "title": "Recruter les Meilleurs Talents IA",
+          "description": "Intégrez des professionnels IA d'élite mondialement avec des modèles d'engagement flexibles",
+          "features": [
+            "Sur site / Offshore / Nearshore",
+            "Payez seulement pour le temps & l'expertise nécessaires",
+            "Modèles d'engagement basés sur SOW",
+            "Accès au réseau de talents mondial"
+          ]
+        }
+      ]
+    },
+    "results": {
+      "badge": "RÉSULTATS TRANSFORMATEURS",
+      "title": "Impact Mesurable",
+      "subtitle": {
+        "company": "Résultats prouvés à travers les industries et fonctions business",
+        "profile": "Transformation réelle livrée à travers industries et continents"
+      },
+      "metrics": [
+        {
+          "value": "40%+",
+          "description": "Engagement apprenant boosté grâce à la personnalisation pilotée par IA et l'apprentissage adaptatif"
+        },
+        {
+          "value": "60%",
+          "description": "Processus répétitifs automatisés, libérant les équipes pour innover et grandir"
+        },
+        {
+          "value": "5%",
+          "description": "Traitement des réclamations raccourci, détection de fraude améliorée, satisfaction client élevée"
+        },
+        {
+          "value": "95%+",
+          "description": "Précision de détection des défauts atteinte, minimisant le gaspillage et les rappels coûteux"
+        },
+        {
+          "value": "30%+",
+          "description": "Croissance des ventes livrée en alimentant des expériences shopping hyper-personnalisées"
+        },
+        {
+          "value": "Révolutionnaire",
+          "description": "Mobilité urbaine transformée et efficacité énergétique avec intégrations IA et IoT"
+        },
+        {
+          "value": "Semaines en Jours",
+          "description": "Cycles de recrutement réduits utilisant le screening précis de candidats IA"
+        },
+        {
+          "value": "ROI Plus Élevé",
+          "description": "Routes optimisées et coûts réduits grâce à la logistique alimentée par IA"
+        }
+      ]
+    },
+    "whyChoose": {
+      "badge": {
+        "company": "POURQUOI KENSA AI ?",
+        "profile": "POURQUOI COLLABORER AVEC MOI ?"
+      },
+      "title": {
+        "company": "Excellence Stratégique",
+        "profile": "Leadership Durable"
+      },
+      "description": {
+        "company": "Nous combinons l'expertise en conseil stratégique avec l'exécution technologique de pointe pour livrer un impact commercial mesurable. Que vous exploriez l'IA pour la première fois ou que vous étendez des initiatives à l'échelle de l'entreprise, nous sommes votre partenaire de confiance.",
+        "profile": "L'IA est la pierre angulaire du leadership durable. Je traduis l'innovation IA de pointe en valeur commerciale tangible - parfaitement alignée avec votre vision et priorités opérationnelles. Mon approche est stratégique, collaborative et impitoyablement axée sur les résultats."
+      },
+      "cta": {
+        "company": "📩 Commençons votre transformation IA aujourd'hui.",
+        "profile": "Prêt à Conduire la Croissance & Innovation Pilotées par l'IA ?"
+      }
+    }
+  },
   "footer": {
     "description": "Là où la stratégie mondiale rencontre l'intelligence artificielle d'excellence.",
     "location": "🌍 Impact mondial, basé à Toronto, ONTARIO Canada",
@@ -416,7 +567,7 @@
     "viewDetails": "Voir les Détails",
     "pause": "Pause",
     "play": "Lecture",
-    "exploreMore": "Explorer Plus"
+    "exploreMore": "Explorer Plus sur Kensa AI"
   },
   "expertise": {
     "hero": {
@@ -534,6 +685,366 @@
         "primary": "Commencer la Conversation",
         "secondary": "Retour à l'Accueil"
       }
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title": "Entreprises du Portfolio",
+      "subtitle": "Découvrez les entreprises innovantes qui transforment les industries avec nos solutions IA",
+      "description": "Des startups aux entreprises Fortune 500, explorez notre portfolio d'implémentations IA réussies dans divers secteurs."
+    },
+    "filters": {
+      "all": "Toutes les Entreprises",
+      "manufacturing": "Industrie",
+      "smartCities": "Villes Intelligentes",
+      "retail": "Commerce & E-Commerce",
+      "finance": "Finance & Assurance",
+      "digital": "Transformation Digitale",
+      "healthcare": "Santé",
+      "education": "Éducation"
+    },
+    "companies": [
+      {
+        "id": "techcorp-france",
+        "name": "TechCorp France",
+        "category": "manufacturing",
+        "description": "Révolutionné l'efficacité de production avec des systèmes de maintenance prédictive et de contrôle qualité alimentés par l'IA.",
+        "results": "40% d'augmentation de l'efficacité opérationnelle",
+        "image": "/portofolio.png",
+        "tags": ["Maintenance Prédictive", "Contrôle Qualité", "Intégration IoT"]
+      },
+      {
+        "id": "retailmax",
+        "name": "RetailMax",
+        "category": "retail",
+        "description": "Amélioré l'expérience client grâce à la personnalisation pilotée par l'IA et aux moteurs de recommandation intelligents.",
+        "results": "35% d'amélioration de la satisfaction client",
+        "image": "/exp6.jpeg",
+        "tags": ["Personnalisation", "Moteur de Recommandation", "Analyse Client"]
+      },
+      {
+        "id": "financesecure",
+        "name": "FinanceSecure",
+        "category": "finance",
+        "description": "Implémenté des systèmes avancés de détection de fraude et d'évaluation des risques utilisant des algorithmes d'apprentissage automatique.",
+        "results": "2M€ d'économies annuelles grâce à la prévention de fraude",
+        "image": "/portofolio.png",
+        "tags": ["Détection de Fraude", "Évaluation des Risques", "Apprentissage Automatique"]
+      },
+      {
+        "id": "smart-toronto",
+        "name": "Initiative Toronto Intelligente",
+        "category": "smartCities",
+        "description": "Développé des solutions de mobilité urbaine intelligente et des systèmes d'optimisation énergétique pour la gestion durable des villes.",
+        "results": "60% de réduction de la consommation énergétique",
+        "image": "/exp6.jpeg",
+        "tags": ["Mobilité Urbaine", "Optimisation Énergétique", "IoT"]
+      },
+      {
+        "id": "healthtech-solutions",
+        "name": "Solutions HealthTech",
+        "category": "healthcare",
+        "description": "Accéléré le diagnostic médical et la planification de traitement avec l'analyse d'imagerie et le support de décision alimentés par l'IA.",
+        "results": "50% de précision de diagnostic plus rapide",
+        "image": "/portofolio.png",
+        "tags": ["Imagerie Médicale", "Support Diagnostic", "IA Santé"]
+      },
+      {
+        "id": "edulearn-global",
+        "name": "EduLearn Global",
+        "category": "education",
+        "description": "Transformé les expériences d'apprentissage avec des systèmes de tutorat IA adaptatifs et la livraison de curriculum personnalisé.",
+        "results": "40% d'augmentation de l'engagement d'apprentissage",
+        "image": "/exp6.jpeg",
+        "tags": ["Apprentissage Adaptatif", "Éducation Personnalisée", "Tutorat IA"]
+      },
+      {
+        "id": "digital-transform-corp",
+        "name": "Digital Transform Corp",
+        "category": "digital",
+        "description": "Modernisé les systèmes legacy avec des solutions IA cloud-native et des workflows d'automatisation intelligente.",
+        "results": "300% de ROI en 12 mois",
+        "image": "/portofolio.png",
+        "tags": ["Modernisation Legacy", "Migration Cloud", "Automatisation"]
+      },
+      {
+        "id": "manufacturing-plus",
+        "name": "Manufacturing Plus",
+        "category": "manufacturing",
+        "description": "Optimisé la gestion de la chaîne d'approvisionnement et la planification de production utilisant des algorithmes IA avancés.",
+        "results": "25% de réduction des coûts de production",
+        "image": "/exp6.jpeg",
+        "tags": ["Chaîne d'Approvisionnement", "Optimisation Production", "Algorithmes IA"]
+      }
+    ],
+    "stats": {
+      "totalCompanies": "500+",
+      "totalCompaniesLabel": "Entreprises Transformées",
+      "averageRoi": "300%",
+      "averageRoiLabel": "ROI Moyen",
+      "successRate": "98%",
+      "successRateLabel": "Taux de Réussite",
+      "globalReach": "25+",
+      "globalReachLabel": "Pays Servis"
+    },
+    "cta": {
+      "primary": "Rejoindre Notre Portfolio",
+      "secondary": "Voir les Études de Cas",
+      "contact": "Discuter de Votre Projet"
+    }
+  },
+  "portfolioV2": {
+    "header": {
+      "home": "Accueil",
+      "bookConsultation": "Réserver une Consultation"
+    },
+    "hero": {
+      "badges": {
+        "company": "LEADERS DE LA TRANSFORMATION IA",
+        "profile": "VISIONNAIRE IA & CATALYSEUR MONDIAL"
+      },
+      "company": {
+        "title": "KENSA AI",
+        "subtitle": "Portfolio",
+        "description": "Votre partenaire unique pour la transformation IA. De la stratégie à l'exécution — conduire l'avenir des affaires avec l'IA.",
+        "stats": {
+          "solutions": "Solutions à partir de 20K$+",
+          "reach": "Portée Mondiale"
+        }
+      },
+      "profile": {
+        "name": "FatimaZahra",
+        "surname": "KHOUKH",
+        "title": "Fondatrice & PDG de KENSA AI | Visionnaire IA | Catalyseur Mondial pour la Transformation des Affaires",
+        "subtitle": "Commandez le Leadership du Marché avec la Croissance et l'Innovation Pilotées par l'IA",
+        "description": "L'IA est l'avantage décisif qui sépare les leaders des suiveurs. Je collabore avec des PDG visionnaires et des équipes dirigeantes pour livrer des solutions IA qui stimulent une croissance mesurable, optimisent les opérations et élèvent les expériences client.",
+        "contact": {
+          "email": "contact@kensaai.com",
+          "phone": "+1 437 873 47 82",
+          "website": "www.kensaai.org"
+        }
+      },
+      "tabs": {
+        "company": "Portfolio",
+        "profile": "PDG"
+      },
+      "cta": {
+        "primary": {
+          "company": "RÉSERVER UN AUDIT IA GRATUIT",
+          "profile": "SE CONNECTER MAINTENANT"
+        },
+        "secondary": "VOIR LA DÉMO"
+      }
+    },
+    "services": {
+      "badge": "COMMENT NOUS AIDONS",
+      "title": "Nos Services",
+      "subtitle": "Nous combinons l'expertise en conseil stratégique avec l'exécution technologique de pointe pour livrer un impact commercial mesurable.",
+      "items": {
+        "strategy": {
+          "title": "Stratégie & Conseil",
+          "description": "Nous identifions les opportunités IA à fort impact adaptées à votre entreprise et concevons des stratégies robustes en gestion de données, transformation numérique, gouvernance et adoption IA à grande échelle.",
+          "features": [
+            "Gestion et sécurité des données",
+            "Feuilles de route de transformation numérique",
+            "Gouvernance et conformité",
+            "Adoption IA à grande échelle"
+          ]
+        },
+        "education": {
+          "title": "Éducation & Formation",
+          "description": "Nous autonomisons votre main-d'œuvre grâce à des masterclasses IA exécutives, des ateliers personnalisés, une formation pratique et des programmes d'innovation complets.",
+          "features": [
+            "Masterclasses IA exécutives",
+            "Ateliers personnalisés spécifiques à l'industrie",
+            "Formation pratique pour les outils IA",
+            "Programmes d'innovation et d'adoption"
+          ]
+        },
+        "execution": {
+          "title": "Exécution de Bout en Bout",
+          "description": "De l'idée à l'impact, nous livrons des solutions IA personnalisées, des systèmes robotiques, des architectures multi-agents et des plateformes complètes de transformation numérique.",
+          "features": [
+            "Solutions IA Agentiques Personnalisées",
+            "Systèmes de Robotique et d'Automatisation",
+            "Architectures IA Multi-Agents",
+            "Applications IA Quantique",
+            "Plateformes ERP et de Données",
+            "Solutions CRM et d'Intelligence Client",
+            "Infrastructure Cloud et Automatisation",
+            "Solutions Intégrées Blockchain"
+          ]
+        },
+        "talent": {
+          "title": "Recruter les Meilleurs Talents IA",
+          "description": "Intégrez des professionnels IA d'élite mondialement avec des modèles d'engagement flexibles incluant des options onshore, offshore et nearshore avec tarification basée sur SOW.",
+          "features": [
+            "Onshore / Offshore / Nearshore",
+            "Payez seulement pour le temps et l'expertise dont vous avez besoin (basé sur SOW)"
+          ]
+        }
+      },
+      "modal": {
+        "keyFeatures": "Caractéristiques Clés :",
+        "exploreMore": "Explorer Plus"
+      }
+    },
+    "results": {
+      "badges": {
+        "company": "POURQUOI KENSA AI ?",
+        "profile": "RÉSULTATS TRANSFORMATEURS À TRAVERS LES INDUSTRIES"
+      },
+      "titles": {
+        "company": "Excellence Stratégique",
+        "profile": "Impact Mesurable"
+      },
+      "subtitles": {
+        "company": "Que vous exploriez l'IA pour la première fois ou que vous mettiez à l'échelle des initiatives d'entreprise, nous sommes votre partenaire de confiance.",
+        "profile": "L'IA est la pierre angulaire du leadership durable. Je traduis l'innovation IA de pointe en valeur commerciale tangible."
+      },
+      "company": {
+        "items": [
+          {
+            "title": "Amélioration de l'Apprentissage",
+            "description": "Engagement apprenant stimulé de 40%+ grâce à la personnalisation et l'apprentissage adaptatif pilotés par l'IA"
+          },
+          {
+            "title": "Automatisation des Processus",
+            "description": "60% des processus répétitifs automatisés, libérant les équipes pour innover et évoluer"
+          },
+          {
+            "title": "Traitement des Réclamations",
+            "description": "Traitement des réclamations raccourci de 5%, détection de fraude améliorée, satisfaction client élevée"
+          },
+          {
+            "title": "Assurance Qualité",
+            "description": "Précision de détection de défauts de 95%+ atteinte, minimisant les déchets et les rappels coûteux"
+          },
+          {
+            "title": "Croissance des Ventes",
+            "description": "Croissance des ventes de 30%+ livrée en alimentant des expériences d'achat hyper-personnalisées"
+          },
+          {
+            "title": "Villes Intelligentes",
+            "description": "Mobilité urbaine et efficacité énergétique transformées avec les intégrations IA et IoT"
+          },
+          {
+            "title": "Acquisition de Talents",
+            "description": "Cycles de recrutement réduits de semaines à jours utilisant le criblage de candidats IA de précision"
+          },
+          {
+            "title": "Optimisation Logistique",
+            "description": "Routes optimisées et coûts réduits grâce à la logistique alimentée par l'IA"
+          }
+        ]
+      },
+      "profile": {
+        "title": "Résultats Transformateurs à Travers les Industries",
+        "items": [
+          {
+            "metric": "40%+",
+            "description": "Engagement apprenant stimulé grâce à la personnalisation et l'apprentissage adaptatif pilotés par l'IA"
+          },
+          {
+            "metric": "60%",
+            "description": "Processus répétitifs automatisés, libérant les équipes pour innover et évoluer"
+          },
+          {
+            "metric": "5%",
+            "description": "Traitement des réclamations raccourci, détection de fraude améliorée, satisfaction client élevée"
+          },
+          {
+            "metric": "95%+",
+            "description": "Précision de détection de défauts atteinte, minimisant les déchets et les rappels coûteux"
+          },
+          {
+            "metric": "30%+",
+            "description": "Croissance des ventes livrée en alimentant des expériences d'achat hyper-personnalisées"
+          },
+          {
+            "metric": "Révolutionnaire",
+            "description": "Mobilité urbaine et efficacité énergétique révolutionnées avec les intégrations IA et IoT"
+          },
+          {
+            "metric": "Semaines à Jours",
+            "description": "Cycles de recrutement réduits de semaines à jours utilisant le criblage de candidats IA de précision"
+          },
+          {
+            "metric": "ROI Plus Élevé",
+            "description": "Routes optimisées et coûts réduits, générant un ROI plus élevé grâce à la logistique alimentée par l'IA"
+          }
+        ],
+        "collaborate": {
+          "title": "Pourquoi Collaborer Avec Moi ?",
+          "description1": "L'IA est la pierre angulaire du leadership durable. Je traduis l'innovation IA de pointe en valeur commerciale tangible - parfaitement alignée avec votre vision et vos priorités opérationnelles.",
+          "description2": "Mon approche est stratégique, collaborative et implacablement axée sur les résultats - autonomisant les PDG et les équipes dirigeantes à mener la transformation, surpasser la concurrence et sécuriser la domination du marché."
+        }
+      },
+      "cta": {
+        "titles": {
+          "company": "Prêt à commencer votre transformation IA ?",
+          "profile": "Prêt à Stimuler la Croissance et l'Innovation Menées par l'IA ?"
+        },
+        "descriptions": {
+          "company": "Discutons de la façon dont nous pouvons aider à accélérer votre entreprise avec des solutions IA adaptées à vos besoins.",
+          "profile": "Connectons-nous et architecturons votre histoire de succès IA - débloquant de nouveaux flux de revenus, l'excellence opérationnelle et un avantage concurrentiel inégalé."
+        },
+        "buttons": {
+          "primary": {
+            "company": "COMMENCER LA TRANSFORMATION",
+            "profile": "SE CONNECTER MAINTENANT"
+          },
+          "secondary": "VOIR LA DÉMO"
+        }
+      }
+    },
+    "certifications": {
+      "badge": "RECONNAISSANCE PROFESSIONNELLE",
+      "title": "Certifications de Leadership",
+      "description": "Je suis ravie d'annoncer mon nouveau rôle en tant que Membre Fondatrice Féminine avec WomenSpark, alimenté par PLAYBOOK. Avec moins de 2% du financement VC allant aux femmes, il y a un besoin urgent de changement.",
+      "certificates": [
+        {
+          "title": "Adhésion WomenSpark",
+          "subtitle": "Membre Fondatrice Féminine",
+          "organization": "Alimenté par PLAYBOOK • 2025-2026",
+          "status": "Actif",
+          "description": "Reconnaissance officielle de Membre du Club des Fondatrices Féminines, championne de la diversité et de l'innovation en entrepreneuriat.",
+          "badge": "ADHÉSION"
+        },
+        {
+          "title": "Certificat de Fondatrice Féminine",
+          "subtitle": "Certificat Officiel",
+          "organization": "Valide Jusqu'au 07/08/26",
+          "status": "Vérifié",
+          "description": "Certification officielle reconnaissant le leadership dans la conduite de la diversité et du changement significatif en entrepreneuriat.",
+          "badge": "CERTIFIÉ"
+        }
+      ],
+      "mission": {
+        "title": "Conduire le Changement Ensemble",
+        "subtitle": "Championne de la diversité en entrepreneuriat",
+        "stats": [
+          {
+            "value": "2025",
+            "label": "Membre Depuis"
+          },
+          {
+            "value": "2%",
+            "label": "Financement VC aux Femmes"
+          },
+          {
+            "value": "100%",
+            "label": "Engagement au Changement"
+          }
+        ],
+        "description": "Grâce à des initiatives comme WomenSpark, nous abordons les problèmes systémiques et ouvrons la voie à la diversité et à l'innovation en entrepreneuriat.",
+        "callToAction": "Construisons des entreprises, finançons des rêves et soutenons la prochaine génération d'entrepreneurs ensemble.",
+        "button": "Rejoignez-moi pour championner la diversité et conduire un changement significatif !"
+      }
+    },
+    "videoModal": {
+      "title": "Démo KENSA AI",
+      "description": "Voyez nos solutions IA en action"
     }
   }
 }

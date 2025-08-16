@@ -10,7 +10,7 @@ type Language = 'en' | 'fr' | 'ar'
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  t: (key: string) => any
   isRTL: boolean
 }
 
@@ -33,7 +33,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const isRTL = language === 'ar'
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     // Return the key during SSR to avoid hydration mismatches
     if (!mounted) return key
     
