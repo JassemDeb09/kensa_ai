@@ -53,7 +53,7 @@ export function ExperienceSection() {
       description: t('experience.items.3.description') || "Meeting with The Honourable Edith Dumont, 30th Lieutenant Governor of Ontario - the first francophone to hold this position, following a distinguished career in education",
       category: "Partnership",
       year: "2024",
-      location: "Queen's Park, ON"
+      location: "TORONTO, ON"
     },
     {
       src: "/exp5.jpeg",
@@ -71,7 +71,7 @@ export function ExperienceSection() {
       description: t('experience.items.5.description') || "Opening new international office to expand our AI services and reach across North American markets",
       category: "Expansion",
       year: "2023",
-      location: "Hamilton, ON"
+      location: "TORONTO GLOBAL FORUM, ON"
     },
     {
       src: "/exp7.jpeg",

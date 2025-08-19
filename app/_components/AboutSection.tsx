@@ -52,7 +52,7 @@ export function AboutSection() {
             {/* Main Headline */}
             <h2 className="text-[40px] lg:text-[48px] font-light tracking-[-0.01em] text-gray-900 dark:text-white mb-8 leading-tight">
               <span className="bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] bg-clip-text text-transparent font-medium">{t('additional.about.transformationLeaders') || "AI transformation"}</span><br />
-              leaders
+              
             </h2>
             
             {/* Company Foundation */}

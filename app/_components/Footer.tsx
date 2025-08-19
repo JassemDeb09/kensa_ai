@@ -23,18 +23,26 @@ export function Footer() {
   ]
 
   return (
-    <footer id="contact" className="relative bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white py-20 overflow-hidden">
+    <footer id="contact" className={`relative bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white py-20 overflow-hidden ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* AI Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,232,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,232,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
       
       {/* AI Gradient Overlays */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-[#1e90e8]/10 to-[#3d50e3]/10 dark:from-[#1e90e8]/5 dark:to-[#3d50e3]/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-[#3d50e3]/10 to-[#1e90e8]/10 dark:from-[#3d50e3]/5 dark:to-[#1e90e8]/5 rounded-full blur-3xl"></div>
+      <div className={`absolute top-0 w-96 h-96 rounded-full blur-3xl ${
+        isRTL 
+          ? 'right-0 bg-gradient-to-l from-[#1e90e8]/10 to-[#3d50e3]/10 dark:from-[#1e90e8]/5 dark:to-[#3d50e3]/5' 
+          : 'left-0 bg-gradient-to-r from-[#1e90e8]/10 to-[#3d50e3]/10 dark:from-[#1e90e8]/5 dark:to-[#3d50e3]/5'
+      }`}></div>
+      <div className={`absolute bottom-0 w-80 h-80 rounded-full blur-3xl ${
+        isRTL 
+          ? 'left-0 bg-gradient-to-l from-[#3d50e3]/10 to-[#1e90e8]/10 dark:from-[#3d50e3]/5 dark:to-[#1e90e8]/5' 
+          : 'right-0 bg-gradient-to-r from-[#3d50e3]/10 to-[#1e90e8]/10 dark:from-[#3d50e3]/5 dark:to-[#1e90e8]/5'
+      }`}></div>
       
-      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className={`relative max-w-[1400px] mx-auto px-8 lg:px-12 ${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
-          <div className="md:col-span-1">
+          <div className={`md:col-span-1 ${isRTL ? 'text-right' : 'text-left'}`}>
             <div className="mb-6">
               {/* Company Logo */}
               <div className="relative group">
@@ -60,84 +68,166 @@ export function Footer() {
             </p>
             
             {/* Social Links */}
-            <div className={`flex gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-              <a href="#" className="w-10 h-10 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
-                <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+            <div className={`flex gap-3 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
+              <a href="#" className="w-12 h-12 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
+                <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform flex-shrink-0" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gradient-to-r from-[#3d50e3] to-[#1e90e8] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
-                <Twitter className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+              <a href="#" className="w-12 h-12 bg-gradient-to-r from-[#3d50e3] to-[#1e90e8] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
+                <Twitter className="w-5 h-5 text-white group-hover:scale-110 transition-transform flex-shrink-0" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
-                <Facebook className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+              <a href="#" className="w-12 h-12 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 group shadow-lg">
+                <Facebook className="w-5 h-5 text-white group-hover:scale-110 transition-transform flex-shrink-0" />
               </a>
             </div>
           </div>
 
           {/* AI Solutions */}
-          <div>
-            <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6">
-              {t("nav.services") || "AI Solutions"}
-            </h3>
-            <div className="space-y-3">
-              {services.map((service, index) => (
-                <div key={index} className="group cursor-pointer">
-                  <div className={`flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <ChevronRight className={`h-4 w-4 text-[#1e90e8] transition-transform duration-300 ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
-                    <span className="text-[14px]">{service}</span>
+          <div className={isRTL ? 'w-full flex justify-end' : 'text-left'}>
+            {isRTL ? (
+              /* Arabic Services Section */
+              <div className="w-full text-right" dir="rtl">
+                <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6 w-full text-right">
+                  {t("nav.services") || "الخدمات"}
+                </h3>
+                <div className="space-y-3 w-full">
+                {services.map((service, index) => (
+                  <div key={index} className="group cursor-pointer w-full">
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 flex-row-reverse w-full justify-start">
+                      <span className="text-[14px] text-right flex-1">{service}</span>
+                      <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#1e90e8] transition-transform duration-300 group-hover:translate-x-1 rotate-180" />
+                    </div>
                   </div>
+                ))}
+              </div>
+              </div>
+            ) : (
+              /* English Services Section */
+              <div className="text-left">
+                <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6">
+                  {t("nav.services") || "AI Solutions"}
+                </h3>
+                <div className="space-y-3">
+                  {services.map((service, index) => (
+                    <div key={index} className="group cursor-pointer">
+                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 justify-start">
+                        <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#1e90e8] transition-transform duration-300 group-hover:translate-x-1" />
+                        <span className="text-[14px]">{service}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
 
           {/* Industries */}
-          <div>
-            <h3 className="text-[18px] font-semibold text-[#3d50e3] mb-6">
-              {t("industries.title") || "Industries"}
-            </h3>
-            <div className="space-y-3">
-              {industries.map((industry, index) => (
-                <div key={index} className="group cursor-pointer">
-                  <div className={`flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <ChevronRight className={`h-4 w-4 text-[#3d50e3] transition-transform duration-300 ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
-                    <span className="text-[14px]">{industry}</span>
+          <div className={isRTL ? 'w-full flex justify-end' : 'text-left'}>
+            {isRTL ? (
+              /* Arabic Industries Section */
+              <div className="w-full text-right" dir="rtl">
+                <h3 className="text-[18px] font-semibold text-[#3d50e3] mb-6 w-full text-right">
+                  {t("industries.title") || "خبرتنا عبر القطاعات"}
+                </h3>
+                <div className="space-y-3 w-full">
+                {industries.map((industry, index) => (
+                  <div key={index} className="group cursor-pointer w-full">
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 flex-row-reverse w-full justify-start">
+                      <span className="text-[14px] text-right flex-1">{industry}</span>
+                      <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#3d50e3] transition-transform duration-300 group-hover:translate-x-1 rotate-180" />
+                    </div>
                   </div>
+                ))}
+              </div>
+              </div>
+            ) : (
+              /* English Industries Section */
+              <div className="text-left">
+                <h3 className="text-[18px] font-semibold text-[#3d50e3] mb-6">
+                  {t("industries.title") || "Industries"}
+                </h3>
+                <div className="space-y-3">
+                  {industries.map((industry, index) => (
+                    <div key={index} className="group cursor-pointer">
+                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 justify-start">
+                        <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#3d50e3] transition-transform duration-300 group-hover:translate-x-1" />
+                        <span className="text-[14px]">{industry}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6">
-              {t("nav.contact") || "Get In Touch"}
-            </h3>
-            <div className="space-y-4">
-              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className="w-8 h-8 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-[#1e90e8]" />
+                    {/* Contact */}
+          <div className={isRTL ? 'w-full flex justify-end' : 'text-left'}>
+            {isRTL ? (
+              /* Arabic Contact Section */
+              <div className="w-full text-right" dir="rtl">
+                <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6 w-full text-right">
+                  {t("nav.contact") || "التواصل"}
+                </h3>
+                <div className="space-y-4 w-full">
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 flex-row-reverse w-full justify-start">
+                    <span className="text-[14px] text-right flex-1">{t("footer.contact.email") || "contact@kensaai.com"}</span>
+                    <div className="w-10 h-10 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-[#1e90e8]" />
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 flex-row-reverse w-full justify-start">
+                    <span className="text-[14px] text-right flex-1">{t("footer.contact.phone") || "+1 (437) 873-47 82"}</span>
+                    <div className="w-10 h-10 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-[#3d50e3]" />
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 flex-row-reverse w-full justify-start">
+                    <span className="text-[14px] text-right flex-1">{t("footer.contact.location") || "Global impact, proudly based in Toronto,ONTARIO Canada"}</span>
+                    <div className="w-10 h-10 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-[#1e90e8]" />
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 flex-row-reverse w-full justify-start">
+                    <span className="text-[14px] text-right flex-1">{t("footer.contact.hours") || "Mon-Fri | 9AM-6PM EST"}</span>
+                    <div className="w-10 h-10 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#3d50e3]" />
+                    </div>
+                  </div>
                 </div>
-                <span className="text-[14px]">{t("footer.contact.email") || "hello@kensa.ai"}</span>
               </div>
-              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className="w-8 h-8 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-[#3d50e3]" />
+            ) : (
+              /* English Contact Section */
+              <div className="text-left">
+                <h3 className="text-[18px] font-semibold text-[#1e90e8] mb-6">
+                  {t("nav.contact") || "Get In Touch"}
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 justify-start">
+                    <div className="w-10 h-10 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-[#1e90e8]" />
+                    </div>
+                    <span className="text-[14px]">{t("footer.contact.email") || "contact@kensaai.com"}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 justify-start">
+                    <div className="w-10 h-10 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-[#3d50e3]" />
+                    </div>
+                    <span className="text-[14px]">{t("footer.contact.phone") || "+1 (437) 873-47 82"}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 justify-start">
+                    <div className="w-10 h-10 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-[#1e90e8]" />
+                    </div>
+                    <span className="text-[14px]">{t("footer.contact.location") || "Global impact, proudly based in Toronto,ONTARIO Canada"}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 justify-start">
+                    <div className="w-10 h-10 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#3d50e3]" />
+                    </div>
+                    <span className="text-[14px]">{t("footer.contact.hours") || "Mon-Fri | 9AM-6PM EST"}</span>
+                  </div>
                 </div>
-                <span className="text-[14px]">{t("footer.contact.phone") || "+1 (416) 555-0123"}</span>
               </div>
-              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className="w-8 h-8 bg-[#1e90e8]/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-[#1e90e8]" />
-                </div>
-                <span className="text-[14px]">{t("footer.contact.location") || "Toronto, ON"}</span>
-              </div>
-              <div className={`flex items-center gap-3 text-gray-600 dark:text-gray-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className="w-8 h-8 bg-[#3d50e3]/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-4 h-4 text-[#3d50e3]" />
-                </div>
-                <span className="text-[14px]">{t("footer.contact.hours") || "24/7 AI Support"}</span>
-              </div>
-            </div>
+            )}
           </div>
         </div>
 

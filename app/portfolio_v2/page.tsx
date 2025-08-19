@@ -12,6 +12,7 @@ import ProfessionalCarousel, { CarouselItem } from "@/components/professional-ca
 import { ThemeToggle } from "@/components/theme-toggle"
 import { SimpleLanguageSwitcher } from "@/components/simple-language-switcher"
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring, useInView, useAnimation } from "framer-motion"
+import { ClientOnly } from "@/components/client-only"
 import { 
   ArrowUpRight, 
   Calendar, 
@@ -305,7 +306,7 @@ export default function PortfolioV2Page() {
   return (
     <div className={`min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-['Poppins',sans-serif] ${isRTL ? 'rtl' : 'ltr'}`}>
       
-      {/* Custom Portfolio Header */}
+      {/* Header using standard design pattern */}
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-700 ${
           scrollY > 50 
@@ -316,7 +317,7 @@ export default function PortfolioV2Page() {
         <nav className="max-w-[1400px] mx-auto px-8 lg:px-12">
           <div className="flex items-center justify-between h-20">
             
-            {/* Logo - Left Side */}
+            {/* Logo */}
             <a href="/" className="flex items-center group cursor-pointer">
               <div className="relative">
                 <div className="relative">
@@ -334,53 +335,41 @@ export default function PortfolioV2Page() {
               </div>
             </a>
 
-            {/* Right Side Controls */}
+            {/* Right Side */}
             <div className={`flex items-center gap-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
-              {/* Language Switcher */}
-              <div className="hidden lg:block">
-                <SimpleLanguageSwitcher />
-              </div>
-              
-              {/* Theme Toggle */}
-              <div className="hidden lg:block">
-                <ThemeToggle />
-              </div>
+              <ClientOnly>
+                <div className="hidden lg:flex items-center gap-3">
+                  <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full px-3 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+                    <SimpleLanguageSwitcher />
+                  </div>
+                  <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full p-2 shadow-sm hover:shadow-md transition-all duration-300">
+                    <ThemeToggle />
+                  </div>
+                </div>
+              </ClientOnly>
 
               {/* Home Button */}
-              <motion.a 
+              <a 
                 href="/" 
                 className="hidden lg:flex items-center gap-2 group cursor-pointer px-4 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#1e90e8]/25 transition-all duration-300">
-                  <motion.div
-                    whileHover={{ rotate: -10 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                  </motion.div>
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
                 </div>
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-[#1e90e8] transition-colors duration-300">
-                  {t('portfolioV2.header.home')}
+                  {t('portfolioV2.header.home') || 'Home'}
                 </span>
-              </motion.a>
+              </a>
               
-              {/* Book Consultation Button */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Button
+                className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#1e90e8]/25 text-[15px]"
               >
-                <Button
-                  className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#1e90e8]/25 text-[15px]"
-                >
-                  <Calendar className="w-4 h-4" />
-                  {t('portfolioV2.header.bookConsultation')}
-                  <ArrowUpRight className="w-4 h-4" />
-                </Button>
-              </motion.div>
+                <Calendar className="w-4 h-4" />
+                {t('portfolioV2.header.bookConsultation') || 'Book Consultation'}
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
 
               {/* Mobile Menu Button */}
               <button
@@ -396,35 +385,27 @@ export default function PortfolioV2Page() {
           </div>
 
           {/* Mobile Menu */}
-          <AnimatePresence>
-            {mobileMenuOpen && (
-              <motion.div
-                className="lg:hidden overflow-hidden border-t border-gray-200/50 dark:border-gray-800/50"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+          <div className={`lg:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className="py-8 space-y-6 border-t border-gray-200/50 dark:border-gray-800/50">
+              <a
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-left text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-[#1e90e8] transition-colors"
               >
-                <div className="py-6 space-y-4">
-                  {/* Mobile Language & Theme */}
-                  <div className="flex items-center justify-center gap-4 pb-4 border-b border-gray-200/50 dark:border-gray-800/50">
-                    <SimpleLanguageSwitcher />
-                    <ThemeToggle />
-                  </div>
-                  
-                  {/* Mobile Book Consultation */}
-                  <Button
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="w-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2"
-                  >
-                    <Calendar className="w-4 h-4" />
-                    {t('portfolioV2.header.bookConsultation')}
-                    <ArrowUpRight className="w-4 h-4" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                {t('portfolioV2.header.home') || 'Home'}
+              </a>
+              <div className="pt-4">
+                <Button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full bg-gradient-to-r from-[#1e90e8] to-[#3d50e3] hover:from-[#1e90e8]/90 hover:to-[#3d50e3]/90 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  {t('portfolioV2.header.bookConsultation') || 'Book Consultation'}
+                  <ArrowUpRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </nav>
       </header>
 
